@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Product Pair shortcode styles - begin
+   ========================================================================== */
+
+.qodef-pp-holder {
+	margin: 0 auto;
+    position: relative;
+	display: table;
+
+	&.qodef-big-product-first{
+		direction: rtl;
+	}
+
+	.qodef-ppi {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 13px;
+
+		.qodef-ppi-inner{
+			.qodef-ppi-image {
+				position: relative;
+				overflow: hidden;
+				img {
+					display: block;
+				}
+			}
+			.qodef-ppi-text {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				@include qodefTransform(translateX(-50%));
+
+				.qodef-ppi-text-inner {
+					@include qodefTransition(all .2s);
+					@include qodefTransform(translateY(100%));
+
+					.qodef-yith-wcqv-holder {
+
+						a {
+							position: relative;
+							display: inline-block;
+							background-color: $first-main-color;
+							color: #fff;
+							padding: 1px 15px 0;
+							font-size: 10px;
+							font-weight: 400;
+							height: 25px;
+							line-height: 25px;
+							text-transform: lowercase;
+							letter-spacing: .1em;
+
+							&:hover {
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+
+			.qodef-ppi-text-wrapper {
+				position: relative;
+				padding-top: 21px;
+
+				.qodef-ppi-title {
+					margin: 0;
+					display: inline-block;
+					text-align: left;
+					float: left;
+					text-transform: lowercase;
+				}
+
+				.qodef-ppi-price-wrapper {
+					position: absolute;
+					right: 0;
+					width: 40%;
+					overflow: hidden;
+				}
+
+				.qodef-ppi-price {
+					margin: 0;
+					position: relative;
+					display: inline-block;
+					float: right;
+					@include qodefTransform(translateX(0));
+					@include qodefTransition(all .2s);
+				}
+
+				.qodef-ppi-category {
+					margin: 3px 0 0;
+					padding: 0;
+					float: left;
+					position: relative;
+					clear: both;
+					line-height: 1;
+
+					a{
+						font-size: 12px;
+						color: #949494;
+						text-transform: lowercase;
+					}
+				}
+
+				.qodef-qodef-small-product-add-to-cart,
+				.qodef-qodef-big-product-add-to-cart {
+					position: relative;
+					text-transform: lowercase;
+					opacity: 0;
+					@include qodefTransform(translateX(-50%));
+					@include qodefTransition(all .4s cubic-bezier(0, 0.95, 0.77, 1));
+
+					a {
+						right: 0;
+                        top: -2px;
+						position: absolute;
+						color: #949494;
+						white-space: nowrap;
+						background-color: transparent;
+						padding: 0;
+						margin: 0;
+						font-size: 12px;
+						font-weight: 400;
+
+						&:hover {
+							color: $first-main-color;
+						}
+
+						&:after {
+							content: '\e87a';
+							padding-left: 10px;
+							font-family: 'Linearicons-Free';
+							position: relative;
+							top: 1px;
+						}
+
+                        &.added {
+                            display: none;
+                        }
+					}
+				}
+			}
+
+			.qodef-ppi-trim {
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				height: calc(100% - 36px);
+				width: calc(100% - 36px);
+				border: 20px solid #fff;
+				@include qodefTransform(scale(1.2));
+				visibility: hidden;
+				-webkit-transition: -webkit-transform .7s cubic-bezier(.47,.56,0,.88), visibility .0s .7s;
+				transition: transform .7s cubic-bezier(.47,.56,0,.88), visibility .0s .7s;
+			}
+
+			&:hover {
+				.qodef-ppi-text-wrapper {
+
+					.qodef-ppi-price{
+						opacity: 0;
+						@include qodefTransform(translateX(100%));
+					}
+
+					.qodef-qodef-small-product-add-to-cart,
+					.qodef-qodef-big-product-add-to-cart{
+						opacity: 1;
+						@include qodefTransform(translateX(0));
+					}
+				}
+
+				.qodef-ppi-text-inner {
+					@include qodefTransform(translateY(0));
+				}
+
+				.qodef-ppi-trim {
+					visibility: visible;
+					@include qodefTransform(scale(1.01));
+					-webkit-transition: -webkit-transform .7s cubic-bezier(.47,.56,0,.88);
+					transition: transform .7s cubic-bezier(.47,.56,0,.88);
+				}
+			}
+
+		}
+	}
+
+}
+/* ==========================================================================
+   Product Pair shortcode styles - end
+   ========================================================================== */

@@ -1,0 +1,70 @@
+.widget.qodef-search-post-type-widget {
+    line-height: 0;
+    position: relative;
+    .qodef-search-post-type {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+
+    .qodef-post-type-search-results {
+        background: #fff;
+        height: auto;
+        display: none;
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        top: 100%;
+        ul {
+            padding: 10px 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            line-height: 0;
+            width: 100%;
+            li {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    .qodef-search-icon,
+    .qodef-search-loading {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -9px;
+        font-size: 18px;
+        color: #b5b5b5;
+        @include qodefTransition(opacity 0.2s ease-out);
+        opacity: 1;
+
+        &.qodef-hidden {
+            opacity: 0;
+        }
+    }
+
+    .wpb_widgetised_column & {
+        .qodef-search-post-type {
+            background-color: rgba(255,255,255,0.9);
+        }
+
+        .qodef-post-type-search-field {
+            border-radius: 0;
+            height: 57px;
+            line-height: calc(57px - 2px);
+            border: 0;
+            font-size: 15px;
+            color: #878787;
+        }
+
+        .qodef-post-type-search-results {
+            background-color: rgba(255,255,255,0.9);
+            border-top: 1px solid #dadada;
+            ul {
+                padding: 16px 20px;
+            }
+        }
+    }
+}

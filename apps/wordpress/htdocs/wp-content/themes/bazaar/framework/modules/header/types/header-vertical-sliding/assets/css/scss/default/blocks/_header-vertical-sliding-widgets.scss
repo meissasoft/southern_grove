@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Header Vertical - Sliding widget style - begin
+   ========================================================================== */
+
+.qodef-header-vertical-sliding {
+    .qodef-vertical-area-widget-holder{
+        width: 100%;
+        z-index: 100;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+
+        .qodef-vertical-header-widget {
+            text-align: center;
+            padding: 5px 0;
+
+            > div,
+            > a,
+            > span {
+                position: relative;
+                display: inline-block;
+                padding: 0;
+            }
+        }
+
+        .qodef-social-icon-widget-holder{
+            display: block;
+            text-align: center;
+            padding: 5px 0;
+        }
+    }
+
+    .qodef-vertival-menu-holer-widget-area{
+        padding-left: 34%;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        display: inline-block;
+    }
+}
+/* ==========================================================================
+   Header Vertical - Sliding widget style - end
+   ========================================================================== */

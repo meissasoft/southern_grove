@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Blog responsive styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+@media only screen and (max-width: 768px) {
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   Blog List shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-grid-sizer {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-four-columns .qodef-bl-item, .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-four-columns .qodef-bl-item {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-four-columns .qodef-bl-item:nth-child(3n+1), .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-four-columns .qodef-bl-item:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-five-columns .qodef-bl-item, .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-five-columns .qodef-bl-item {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-five-columns .qodef-bl-item:nth-child(3n+1), .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-five-columns .qodef-bl-item:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-four-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-four-columns .qodef-bl-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-grid-sizer {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-four-columns .qodef-bl-item, .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-four-columns .qodef-bl-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-four-columns .qodef-bl-item:nth-child(2n+1), .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-four-columns .qodef-bl-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-five-columns .qodef-bl-item, .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-five-columns .qodef-bl-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-blog-list-holder.qodef-bl-standard.qodef-bl-five-columns .qodef-bl-item:nth-child(2n+1), .qodef-blog-list-holder.qodef-bl-boxed.qodef-bl-five-columns .qodef-bl-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-three-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-three-columns .qodef-bl-grid-sizer {
+    width: 50%;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-four-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-four-columns .qodef-bl-grid-sizer {
+    width: 50%;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-grid-sizer {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-blog-list-holder.qodef-bl-standard .qodef-bl-item, .qodef-blog-list-holder.qodef-bl-boxed .qodef-bl-item {
+    width: 100% !important;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-two-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-two-columns .qodef-bl-grid-sizer {
+    width: 100%;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-three-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-three-columns .qodef-bl-grid-sizer {
+    width: 100%;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-four-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-four-columns .qodef-bl-grid-sizer {
+    width: 100%;
+  }
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-item,
+  .qodef-blog-list-holder.qodef-bl-masonry.qodef-bl-five-columns .qodef-bl-grid-sizer {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Blog List shortcode responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-blog-holder.qodef-blog-single article .qodef-post-info-bottom .qodef-post-info-bottom-left,
+  .qodef-blog-holder.qodef-blog-single article .qodef-post-info-bottom .qodef-post-info-bottom-right {
+    width: 100%;
+    float: none;
+  }
+  .qodef-blog-holder.qodef-blog-single article .qodef-post-info-bottom .qodef-post-info-bottom-right {
+    text-align: inherit;
+    margin: 10px 0 0;
+  }
+}
+
+/* ==========================================================================
+   Blog responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/blog-map-responsive.css.map */

@@ -1,0 +1,63 @@
+.qodef-cards-gallery-holder {
+    @include ipad-portrait {
+	    .fake_card {
+	        @include qodefTransform(scale(.8));
+	    }
+
+    	&.qodef-shuffled-left .card {
+	        @include qodefTransform(scale(.8));
+
+    	    &.out {
+    	        @include qodefTransform(translateX(-100%));
+    	    }
+
+    	    &:nth-last-child(6) {
+    	        @include qodefTransform(scale(.3) translateX(84%));
+    	    }
+
+    	    &:nth-last-child(5) {
+    	        @include qodefTransform(scale(.4) translateX(60%));
+    	    }
+
+    	    &:nth-last-child(4) {
+    	        @include qodefTransform(scale(.5) translateX(39%));
+    	    }
+
+    	    &:nth-last-child(3) {
+    	        @include qodefTransform(scale(.6) translateX(25%));
+    	    }
+
+    	    &:nth-last-child(2) {
+    	        @include qodefTransform(scale(.7) translateX(11.2%));
+    	    }
+    	}
+
+    	&.qodef-shuffled-right .card {
+	        @include qodefTransform(scale(.8));
+
+    	    &.out {
+    	        @include qodefTransform(translateX(100%));
+    	    }
+
+    	    &:nth-last-child(6) {
+    	        @include qodefTransform(scale(.3) translateX(-84%));
+    	    }
+
+    	    &:nth-last-child(5) {
+    	        @include qodefTransform(scale(.4) translateX(-60%));
+    	    }
+
+    	    &:nth-last-child(4) {
+    	        @include qodefTransform(scale(.5) translateX(-39%));
+    	    }
+
+    	    &:nth-last-child(3) {
+    	        @include qodefTransform(scale(.6) translateX(-25%));
+    	    }
+
+    	    &:nth-last-child(2) {
+    	        @include qodefTransform(scale(.7) translateX(-11.2%));
+    	    }
+    	}
+    }
+}

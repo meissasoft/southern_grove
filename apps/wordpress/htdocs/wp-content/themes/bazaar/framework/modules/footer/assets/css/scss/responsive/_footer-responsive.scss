@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Footer responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+	
+	.qodef-page-footer {
+		
+		.qodef-column-content {
+			
+			@media only screen and (min-width: $phone-landscape-plus-pixel) {
+				
+				&.qodef-grid-col-3 {
+					width: 50%;
+					float: left;
+					
+					&:nth-child(2n+1) {
+						clear: both;
+					}
+					
+					&:nth-child(3),
+					&:nth-child(4) {
+						margin-top: 30px;
+					}
+				}
+				
+				&.qodef-grid-col-4 {
+					width: 33.33333333333333%;
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.qodef-page-footer {
+		
+		.qodef-column-content {
+			
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+		}
+
+        .qodef-footer-top-holder{
+            .qodef-footer-top-inner{
+                &.qodef-full-width{
+                    padding: 120px 40px 95px;
+                }
+            }
+        }
+	}
+}
+
+/* ==========================================================================
+   Footer responsive style - end
+   ========================================================================== */

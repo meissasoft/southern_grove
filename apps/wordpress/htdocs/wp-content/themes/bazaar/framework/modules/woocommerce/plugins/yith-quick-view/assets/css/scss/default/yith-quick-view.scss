@@ -1,0 +1,39 @@
+ul.products {
+    > .product{
+        > .yith-wcqv-button{
+            display: none !important;
+        }
+    }
+}
+
+%yith-wcqv-button-style {
+    .qodef-yith-wcqv-holder {
+        display: inline-block;
+        vertical-align: middle;
+        height: 25px;
+
+        .yith-wcqv-button {
+            position: relative;
+            display: inline-block;
+            background-color: $first-main-color;
+            color: #fff;
+            padding: 1px 15px 0;
+            font-size: 10px;
+            font-weight: 500;
+            height: 25px;
+            line-height: 25px;
+            text-transform: lowercase;
+            letter-spacing: 0.1em;
+
+            div {
+                background-size: 15px 15px !important;
+            }
+        }
+    }
+}
+
+.qodef-pl-holder .qodef-pli-inner .qodef-pli-text-inner,
+.qodef-plc-holder .qodef-plc-item .qodef-plc-text-inner,
+ul.products > .product .qodef-pl-inner .qodef-pl-text-inner{
+    @extend %yith-wcqv-button-style;
+}

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Product Pair shortcode responsive styles - begin
+   ========================================================================== */
+
+.qodef-pp-holder {
+    margin: 0 auto;
+    position: relative;
+    display: table;
+
+    @include ipad-portrait{
+        .qodef-ppi {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+}
+/* ==========================================================================
+   Product Pair shortcode responsive styles - end
+   ========================================================================== */

@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Portfolio Single - Images layout style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+    margin: 0 0 72px;
+
+    &.qodef-ps-images-layout {
+
+        .qodef-ps-info-holder {
+            padding: 28px 0 41px;
+        }
+
+        .qodef-ps-title-holder {
+            h2 {
+                letter-spacing: 0.1em;
+                line-height: 40px;
+                margin: 20px 0 28px;
+            }
+
+            p {
+                font-size: 20px;
+                color: $default-text-color;
+            }
+        }
+
+        .qodef-ps-content-holder {
+            text-align: center;
+
+            .qodef-ps-info-holder {
+
+                .qodef-ps-info-item {
+                    padding-left: 40px;
+                    display: inline;
+                    margin-top: 6px;
+                    width: auto;
+
+                    .qodef-ps-info-title{
+                        color: #080808;
+                    }
+
+                    p {
+                        display: inline-block;
+                        padding-left: 7px;
+                    }
+
+                    a{
+                        color: #949494;
+
+                        &:hover{
+                            color: #000;
+                        }
+
+                        &:not(last-child){
+                            &:after{
+                                content: ',';
+                            }
+                        }
+                    }
+
+                    &.qodef-ps-custom-field {
+                        display: inline;
+                        margin-top: 5px;
+                        margin-bottom: 3px;
+
+                        .qodef-ps-info-title{
+                            color: #080808;
+                        }
+
+                        p {
+                            display: inline-block;
+                            padding-left: 7px;
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        .qodef-ps-content-item {
+
+            p {
+                letter-spacing: 0;
+                width: 66%;
+                margin: 0 auto;
+                line-height: 30px;
+            }
+
+            @include ipad-landscape {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        .qodef-ps-social-info-holder {
+            padding-bottom: 22px;
+
+            .qodef-ps-social-share {
+                float: right;
+                display: inline;
+                padding-right: 5px;
+
+                a{
+                    color: #929292;
+
+                    &:hover{
+                        color: #000;
+                    }
+                }
+
+                &:before {
+                    content: "share";
+                    font-size: 12px;
+                    color: $first-main-color;
+                    font-weight: 300;
+                    line-height: 25px;
+                    position: relative;
+                    bottom: 1px;
+                    padding-right: 15px;
+                }
+            }
+
+            .qodef-ps-like{
+                display: inline;
+
+                a{
+                    font-size: 13px;
+
+                    span{
+                        font-size: 12px;
+                        color: $default-text-color;
+                    }
+
+                    i{
+                        padding-right: 12px;
+                    }
+                }
+            }
+        }
+
+        .qodef-ps-image-holder {
+            margin: 0 0 27px;
+
+            .qodef-ps-image {
+                margin: 0 0 30px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Images layout style - end
+   ========================================================================== */

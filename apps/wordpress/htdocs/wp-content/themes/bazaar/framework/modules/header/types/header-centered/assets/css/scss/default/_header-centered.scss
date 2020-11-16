@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Header Centered style - begin
+   ========================================================================== */
+
+.qodef-header-centered {
+	
+    .qodef-page-header {
+	    
+        .qodef-logo-area {
+            height: 163px;
+	        overflow: visible;
+	        z-index: 2; //to be above menu area in order to cover shadow
+	        box-sizing: border-box;
+	        
+            .qodef-logo-wrapper a {
+                max-height: 110px;
+            }
+        }
+
+        .qodef-menu-area {
+	        height: 60px;
+	        z-index: 1;
+
+            .qodef-vertical-align-containers {
+	            
+                .qodef-position-center-inner {
+                    height: 100%;
+
+                    nav{
+                        ul{
+                            li{
+                                a{
+                                    text-transform: capitalize;
+
+                                    .item_text {
+                                        position: relative;
+                                        display: inline-block;
+                                        vertical-align: top;
+                                        overflow: hidden;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .qodef-sticky-header {
+	        
+            .qodef-position-left-inner {
+                height: auto;
+            }
+
+            .qodef-position-right-inner {
+                height: 100%;
+            }
+        }
+    }
+
+    &.qodef-light-header{
+
+    }
+}
+/* ==========================================================================
+   Header Centered style - end
+   ========================================================================== */

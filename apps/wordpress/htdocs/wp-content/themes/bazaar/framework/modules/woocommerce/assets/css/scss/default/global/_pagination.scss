@@ -1,0 +1,124 @@
+/* ==========================================================================
+   WooCommerce Pagination styles - begin
+   ========================================================================== */
+.qodef-woo-pagination-holder {
+    @include qodefRelativeHolderLayout();
+    margin: 0 0 80px;
+    padding: 0 7px;
+    clear: both;
+
+    .qodef-woo-pagination-inner {
+        position: relative;
+        display: table;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.woocommerce-pagination {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 99%;
+    margin: 0;
+    padding: 0;
+
+    .page-numbers {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+
+            a,
+            span {
+                position: relative;
+                display: inline-block;
+	            width: auto;
+                font-size: 12px;
+                margin: 0 3px;
+                padding: 0;
+                vertical-align: middle;
+                text-decoration: none;
+                cursor: pointer;
+                white-space: nowrap;
+                color: $default-text-color;
+                @include qodefTransition(color .2s ease-out);
+
+                &:hover,
+                &.current {
+                    color: $default-heading-color;
+                }
+            }
+
+            a {
+
+                &.next,
+                &.prev {
+                    font-size: 0;
+                    line-height: 1;
+                    margin: 0 6px 3px 4px;
+
+                    &:before {
+                        display: block;
+                        font-family: 'linea-arrows-10';
+                        font-size: 15px;
+                        line-height: inherit;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                }
+
+                &.prev {
+
+                    &:before {
+                        content: "\e03f";
+                    }
+                }
+
+                &.next {
+
+                    &:before {
+                        content: "\e04b";
+                    }
+                }
+            }
+        }
+    }
+}
+
+.qodef-woo-view-all-pagination {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 1%;
+
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        padding: 0 0 0 2px;
+        color: $default-text-color;
+
+        &:before {
+            content: '|';
+            padding: 0 14px 0 0;
+            color: $default-text-color;
+        }
+
+        &:hover {
+            color: $default-heading-color;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Pagination styles - end
+   ========================================================================== */

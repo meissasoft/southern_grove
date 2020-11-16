@@ -1,0 +1,439 @@
+/* ==========================================================================
+   Search styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+# Search opener - begin
+========================================================================== */
+.qodef-search-opener {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 1;
+  margin: 0 10px;
+}
+
+.qodef-search-opener .qodef-search-opener-wrapper > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+.qodef-search-opener .qodef-search-opener-wrapper > *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-search-opener,
+.qodef-light-header .qodef-top-bar .qodef-search-opener {
+  color: #fff !important;
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-search-opener:hover,
+.qodef-light-header .qodef-top-bar .qodef-search-opener:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-search-opener,
+.qodef-dark-header .qodef-top-bar .qodef-search-opener {
+  color: #333 !important;
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-search-opener:hover,
+.qodef-dark-header .qodef-top-bar .qodef-search-opener:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+/* ==========================================================================
+# Search opener - end
+========================================================================== */
+/* ==========================================================================
+# Search template style - begin
+========================================================================== */
+.qodef-search-page-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 80px;
+}
+
+.qodef-search-page-holder .qodef-search-page-form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 30px;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-search-title {
+  margin: 0 0 20px;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-search-label {
+  display: block;
+  font-size: 13px;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 10px;
+  clear: both;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-column-left {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-column-right {
+  display: table-cell;
+  width: 1%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-field {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 20px 0 3px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-field::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-field:-moz-placeholder {
+  color: inherit;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-field::-moz-placeholder {
+  color: inherit;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-field:-ms-input-placeholder {
+  color: inherit;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-submit {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  font-size: 18px;
+  color: #949494;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.qodef-search-page-holder .qodef-search-page-form .qodef-form-holder .qodef-search-submit:hover {
+  color: #000;
+}
+
+.qodef-search-page-holder article {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 30px 0;
+  margin: 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.qodef-search-page-holder article.sticky .qodef-post-title a {
+  color: #000;
+}
+
+.qodef-search-page-holder article.page .qodef-post-title-area .qodef-post-info > div.qodef-post-info-category {
+  display: none;
+}
+
+.qodef-search-page-holder article .qodef-post-content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-search-page-holder article .qodef-post-image {
+  display: block;
+  float: left;
+  width: 130px;
+}
+
+.qodef-search-page-holder article .qodef-post-image a, .qodef-search-page-holder article .qodef-post-image img {
+  display: block;
+}
+
+.qodef-search-page-holder article .qodef-post-title-area {
+  min-height: 130px;
+  padding: 0 0 0 150px;
+}
+
+.qodef-search-page-holder article .qodef-post-title-area.qodef-no-thumbnail {
+  padding: 0;
+  min-height: inherit;
+}
+
+.qodef-search-page-holder article .qodef-post-title-area .qodef-post-title-area-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.qodef-search-page-holder article .qodef-post-title-area .qodef-post-title-area-inner .qodef-post-title {
+  margin: 0;
+}
+
+.qodef-search-page-holder article .qodef-post-title-area .qodef-post-title-area-inner .qodef-post-excerpt {
+  margin: 7px 0 0;
+}
+
+.qodef-search-page-holder .qodef-blog-pagination {
+  margin: 50px 0 0;
+}
+
+/* ==========================================================================
+# Search template style - end
+========================================================================== */
+/* ==========================================================================
+# Fullscreen search - start
+========================================================================== */
+/* Fullscreen search general style - start
+========================================================================== */
+.qodef-fullscreen-search-holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 105;
+  opacity: 0;
+}
+
+.qodef-fullscreen-search-holder .qodef-fullscreen-search-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.qodef-fullscreen-search-holder .qodef-fullscreen-search-cell {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.qodef-fullscreen-search-holder .qodef-form-holder-inner {
+  position: relative;
+  width: 40%;
+  margin: auto;
+}
+
+.qodef-fullscreen-search-holder .qodef-form-holder-inner .qodef-line {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  border-bottom: 2px solid #c2c0c0;
+  -webkit-transition: all 0.3s 0.2s;
+  -moz-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+}
+
+.qodef-fullscreen-search-opened .qodef-fullscreen-search-holder .qodef-form-holder-inner .qodef-line {
+  width: 100%;
+  -webkit-transition: width 0.5s ease 0.6s;
+  -moz-transition: width 0.5s ease 0.6s;
+  transition: width 0.5s ease 0.6s;
+}
+
+.qodef-fullscreen-search-holder .qodef-field-holder {
+  display: block;
+  position: relative;
+}
+
+.qodef-fullscreen-search-holder .qodef-search-field {
+  margin: 0;
+  padding: 23px 21px 13px 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 30px;
+  color: #000;
+  line-height: 2em;
+  font-weight: 500;
+}
+
+.qodef-fullscreen-search-holder .qodef-search-submit {
+  margin: 0;
+  padding: 23px 0 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  font-size: 30px;
+  line-height: 1em;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s 0.2s;
+  -moz-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+}
+
+.qodef-fullscreen-search-holder .qodef-search-submit:hover {
+  color: #000;
+}
+
+.qodef-fullscreen-search-opened .qodef-fullscreen-search-holder .qodef-search-submit {
+  opacity: 1;
+  -webkit-transition: color 0.2s ease, opacity 0.2s ease-out 1.1s, bottom 0.4s ease-out 0.9s;
+  -moz-transition: color 0.2s ease, opacity 0.2s ease-out 1.1s, bottom 0.4s ease-out 0.9s;
+  transition: color 0.2s ease, opacity 0.2s ease-out 1.1s, bottom 0.4s ease-out 0.9s;
+}
+
+.qodef-fullscreen-search-holder .qodef-fullscreen-search-close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: #000;
+  font-size: 36px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.admin-bar .qodef-fullscreen-search-holder .qodef-fullscreen-search-close {
+  top: 59px;
+}
+
+.qodef-fullscreen-search-holder .qodef-fullscreen-search-close:hover {
+  color: #000;
+}
+
+/* Fullscreen search general style - end
+========================================================================== */
+/* Fullscreen search fade style - start
+========================================================================== */
+.qodef-search-fade .qodef-fullscreen-search-holder {
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  z-index: 112;
+  box-sizing: border-box;
+}
+
+.qodef-search-fade .qodef-fullscreen-search-holder .qodef-fullscreen-search-table {
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+.qodef-search-fade-out.qodef-search-fade .qodef-fullscreen-search-holder {
+  -webkit-animation: search_fade_out 0.2s ease-out both;
+  -moz-animation: search_fade_out 0.2s ease-out both;
+  animation: search_fade_out 0.2s ease-out both;
+}
+
+.qodef-search-fade-in.qodef-search-fade .qodef-fullscreen-search-holder.qodef-animate {
+  -webkit-animation: search_fade_in 0.3s ease both;
+  -moz-animation: search_fade_in 0.3s ease both;
+  animation: search_fade_in 0.3s ease both;
+}
+
+.qodef-search-fade .qodef-fullscreen-search-holder.qodef-animate .qodef-fullscreen-search-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+@-webkit-keyframes search_fade_out {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes search_fade_out {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes search_fade_in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes search_fade_in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Fullscreen search fade style - end
+========================================================================== */
+/* ==========================================================================
+# Fullscreen search - end
+========================================================================== */
+/* ==========================================================================
+   Search styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/search-map.css.map */

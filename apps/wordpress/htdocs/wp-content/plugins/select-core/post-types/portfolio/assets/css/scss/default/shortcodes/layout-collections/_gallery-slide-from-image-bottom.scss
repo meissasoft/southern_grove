@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide From Image Bottom style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+
+	&.qodef-pl-gallery-slide-from-image-bottom {
+
+		article {
+
+			&:hover {
+
+				.qodef-pli-text-holder {
+					@include qodefTransform(translateY(0));
+				}
+
+				.qodef-pli-text-wrapper {
+					@include qodefTransform(translateY(0));
+				}
+			}
+		}
+
+		.qodef-pli-text-holder {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: auto;
+			bottom: 0;
+			left: 0;
+			padding: 18px 0 5px;
+			background-color: #fff;
+			overflow: hidden;
+			-webkit-transition: -webkit-transform .4s ease-in-out;
+			-moz-transition: -moz-transform .4s ease-in-out;
+			transition: transform .4s ease-in-out;
+			@include qodefTransform(translateY(100%));
+			box-sizing: border-box;
+		}
+
+		.qodef-pli-text-wrapper {
+			-webkit-transition: -webkit-transform .4s ease-in-out;
+			-moz-transition: -moz-transform .4s ease-in-out;
+			transition: transform .4s ease-in-out;
+			@include qodefTransform(translateY(-200%));
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide From Image Bottom style - end
+   ========================================================================== */

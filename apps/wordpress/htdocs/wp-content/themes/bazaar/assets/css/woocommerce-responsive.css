@@ -1,0 +1,1462 @@
+/* ==========================================================================
+   WooCommerce Responsive styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/*------------------------------------------------------------------
+ * This is main woocommerce responsive css file for theme. It is broken into following sections:
+ * 1.  Global Responsive
+ * 2.  Single Product Responsive
+ * 3.  WooCommerce Product Lists and Shortcodes Responsive
+ * 4.  Cart Responsive
+ * 5.  Checkout Responsive
+ * 6.  My Account Responsive
+ * 7.  Shortcodes Responsive
+ * 8.  Widgets Responsive
+-------------------------------------------------------------------*/
+/* ==========================================================================
+   WooCommerce Cart page responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form,
+  .qodef-woocommerce-page.woocommerce-cart .cart-collaterals {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page table.cart td.actions .coupon input[type="text"] {
+    width: 180px;
+    margin: 0 17px 0 0;
+    padding: 9px 20px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart tr.cart_item td.product-thumbnail,
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart tr.cart_item td.product-price {
+    display: none;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart tr.cart_item td.product-name a {
+    top: 2px;
+    position: relative;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart tr.cart_item .qodef-quantity-buttons {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 40px;
+    line-height: 43px;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart tr.cart_item .qodef-quantity-buttons .qodef-quantity-label {
+    display: none;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart tr.cart_item td.product-subtotal {
+    line-height: 43px;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .woocommerce > form table.cart td.actions .coupon {
+    float: none;
+    width: 100%;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .cart-collaterals tr {
+    display: inline-block;
+    width: 100%;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .cart-collaterals tr th {
+    float: left;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .cart-collaterals tr td {
+    float: right;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .cart-collaterals tr.shipping th, .qodef-woocommerce-page.woocommerce-cart .cart-collaterals tr.shipping td {
+    float: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .cart-collaterals .checkout-button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Cart page responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Checkout page responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page .woocommerce-checkout .col-1,
+  .qodef-woocommerce-page .woocommerce-checkout .col-2 {
+    width: 100%;
+  }
+  .qodef-woocommerce-page .woocommerce-checkout .col-1 {
+    margin: 0 0 25px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-woocommerce-page .woocommerce-checkout .col-1 .form-row,
+  .qodef-woocommerce-page .woocommerce-checkout .col-2 .form-row {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-woocommerce-page .woocommerce-checkout .woocommerce-checkout-payment ul li.payment_method_paypal label img {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Checkout page responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Checkout page - Order Received responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce .col2-set.addresses .col-1,
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce .col2-set.addresses .col-2 {
+    width: 100%;
+  }
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce .col2-set.addresses .col-1 {
+    margin: 0 0 25px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Checkout page - Order Received responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Buttons responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .woocommerce-page .qodef-content a.button,
+  .woocommerce-page .qodef-content a.added_to_cart,
+  .woocommerce-page .qodef-content input[type="submit"],
+  .woocommerce-page .qodef-content button[type="submit"]:not(.qodef-woo-search-widget-button),
+  .woocommerce-page .qodef-content .wc-forward:not(.added_to_cart):not(.checkout-button),
+  div.woocommerce a.button,
+  div.woocommerce a.added_to_cart,
+  div.woocommerce input[type="submit"],
+  div.woocommerce button[type="submit"]:not(.qodef-woo-search-widget-button),
+  div.woocommerce .wc-forward:not(.added_to_cart):not(.checkout-button) {
+    padding: 8px 23px;
+    font-size: 12px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Buttons responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-woo-single-page .qodef-single-product-content .qodef-out-of-stock {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woo-single-page.qodef-woo-single-thumb-on-left-side .qodef-single-product-content .qodef-onsale {
+    left: 10px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Message Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page .woocommerce-message,
+  .qodef-woocommerce-page .woocommerce-info,
+  .qodef-woocommerce-page .woocommerce-error {
+    padding: 17px 25px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-woocommerce-page .woocommerce-message,
+  .qodef-woocommerce-page .woocommerce-info,
+  .qodef-woocommerce-page .woocommerce-error {
+    padding: 14px 20px;
+    line-height: 2em;
+  }
+  .qodef-woocommerce-page .woocommerce-message a,
+  .qodef-woocommerce-page .woocommerce-info a,
+  .qodef-woocommerce-page .woocommerce-error a {
+    float: none;
+    margin: 0 70% 15px 0;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Message Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Quantity Inputs responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-label,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-label {
+    margin-right: 0;
+  }
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-input,
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-minus,
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-plus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-input,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-minus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-plus {
+    font-size: 13px;
+  }
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-input,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-input {
+    height: 38px;
+    width: 38px;
+    margin: 0 0;
+    line-height: 36px;
+  }
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-minus,
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-plus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-minus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-plus {
+    width: 19px;
+    height: 19px;
+    line-height: 17px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .woocommerce-page .qodef-content .qodef-quantity-buttons,
+  div.woocommerce .qodef-quantity-buttons {
+    padding: 0 5px;
+  }
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-input,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-input {
+    height: 15px;
+    width: 15px;
+    margin: 0;
+  }
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-input,
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-minus,
+  .woocommerce-page .qodef-content .qodef-quantity-buttons .qodef-quantity-plus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-input,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-minus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-plus {
+    line-height: 15px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Quantity Inputs responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 680px) {
+  .qodef-woocommerce-page .woocommerce-result-count,
+  .qodef-woocommerce-page .woocommerce-ordering {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .qodef-woocommerce-page .woocommerce-ordering {
+    text-align: initial;
+  }
+  .qodef-woocommerce-page .woocommerce-ordering .orderby {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce MyAccount page responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 28%;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-content {
+    width: 72%;
+    padding: 0 0 0 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-navigation,
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-content {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    border-right: none;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-navigation ul li:not(:last-child) {
+    margin: 0 0 14px;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-content {
+    margin: 40px 0 0;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce .col2-set.addresses .col-1,
+  .qodef-woocommerce-page.woocommerce-account .woocommerce .col2-set.addresses .col-2 {
+    width: 100%;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce .col2-set.addresses .col-1 {
+    margin: 0 0 25px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce MyAccount page responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Product List page responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1201px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .woocommerce.columns-5 > .products > .product {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .woocommerce.columns-5 > .products > .product:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-3
+  .related.products > .products > .product, .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-3
+  .related.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-4
+  .related.products > .products > .product, .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-4
+  .related.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .woocommerce.columns-4 > .products > .product {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .woocommerce.columns-4 > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .woocommerce.columns-5 > .products > .product {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .woocommerce.columns-5 > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-3
+  .related.products > .products > .product, .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-3
+  .related.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-4
+  .related.products > .products > .product, .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-4
+  .related.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-3 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .woocommerce.columns-3 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-4 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .woocommerce.columns-4 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-5 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .woocommerce.columns-5 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-3
+  .related.products > .products > .product, .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product {
+    width: 100%;
+  }
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-4
+  .related.products > .products > .product, .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-2 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-3 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-4 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-5 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-6 > .products > .product {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Product List page responsive styles - end
+   ========================================================================== */
+/* Woocommerce Product Page shortcode responsive style - begin
+========================================================================== */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  div.woocommerce > .single-product .woocommerce-tabs ul.tabs > li a {
+    padding: 12px 7px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  div.woocommerce > .single-product .woocommerce-tabs ul.tabs > li a {
+    padding: 13px 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  div.woocommerce > .single-product .images.woocommerce-product-gallery--columns-4 .woocommerce-product-gallery__image:not(:first-child) {
+    width: 50%;
+  }
+}
+
+/* Woocommerce Product Page shortcode responsive style - end
+========================================================================== */
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - begin
+   ========================================================================== */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .qodef-woo-single-page.qodef-woo-single-thumb-on-left-side .qodef-single-product-content .images .woocommerce-product-gallery__image:first-child {
+    left: 150px;
+    width: calc(100% - 150px);
+  }
+  .qodef-woo-single-page.qodef-woo-single-thumb-on-left-side .qodef-single-product-content .images.woocommerce-product-gallery--with-images .woocommerce-product-gallery__image:not(:first-child) {
+    width: 145px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .qodef-woo-single-page .woocommerce-tabs ul.tabs > li a {
+    padding: 12px 7px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-woo-single-page .qodef-single-product-content .images {
+    width: 60%;
+  }
+  .qodef-woo-single-page .qodef-single-product-content .qodef-single-product-summary {
+    width: 40%;
+    padding: 0 0 0 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-woo-single-page .qodef-single-product-content .qodef-onsale,
+  .qodef-woo-single-page .qodef-single-product-content .qodef-out-of-stock,
+  .qodef-woo-single-page .qodef-single-product-content .qodef-new-product {
+    left: auto !important;
+    right: 15px;
+  }
+  .qodef-woo-single-page .qodef-single-product-content .images,
+  .qodef-woo-single-page .qodef-single-product-content .qodef-single-product-summary {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-woo-single-page .qodef-single-product-content .images .woocommerce-product-gallery__trigger {
+    right: 10px;
+  }
+  .qodef-woo-single-page .qodef-single-product-content .qodef-single-product-summary {
+    margin: 30px 0 0;
+  }
+  .qodef-woo-single-page .qodef-single-product-content .qodef-single-product-summary form .single_add_to_cart_button {
+    height: 50px;
+    box-sizing: border-box;
+    padding: 12px 32px;
+  }
+  .qodef-woo-single-page .woocommerce-tabs ul.tabs > li a {
+    padding: 13px 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woo-single-page .woocommerce-tabs #reviews .comment-respond .comment-form-comment #comment {
+    width: 100%;
+  }
+  .qodef-woo-single-page .woocommerce-tabs #reviews .comment-respond .comment-form-author input,
+  .qodef-woo-single-page .woocommerce-tabs #reviews .comment-respond .comment-form-email input {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-woo-single-page.qodef-woo-single-thumb-on-left-side .qodef-single-product-content .images.woocommerce-product-gallery--columns-4 .woocommerce-product-gallery__image:not(:first-child) {
+    width: 50%;
+  }
+  .qodef-woo-single-page .qodef-single-product-content .images.woocommerce-product-gallery--columns-4 .woocommerce-product-gallery__image:not(:first-child) {
+    width: 50%;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-shopping-cart-holder .qodef-cart-info .qodef-cart-info-number {
+    padding-top: 6px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-shopping-cart-dropdown ul {
+    margin: 20px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Product Info shortcode responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-product-detail .qodef-pd-text-holder .qodef-pd-price {
+    font-size: 105px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (max-width: 480px) {
+  .qodef-product-detail .qodef-pd-text-holder .qodef-pd-text-right,
+  .qodef-product-detail .qodef-pd-text-holder .qodef-pd-text-left {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Product Info responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Product Info shortcode responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) and (max-width: 480px) {
+  .qodef-product-info .qodef-pi-text-holder .qodef-pi-text-right,
+  .qodef-product-info .qodef-pi-text-holder .qodef-pi-text-left {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Product Info responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+# Woocommerce Product List Animated Shortcode responsive style - begin
+========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1201px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item:nth-child(6n+1) {
+    clear: none;
+  }
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .qodef-pla-holder .qodef-pla-inner .qodef-pla-text-inner .button,
+  .qodef-pla-holder .qodef-pla-inner .qodef-pla-text-inner .added_to_cart {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 36px;
+  }
+  .qodef-pla-holder .qodef-pla-text-wrapper {
+    margin: 0 0 20px;
+  }
+  .qodef-pla-holder .qodef-pla-text-wrapper .qodef-pla-title {
+    margin: 24px 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item:nth-child(5n+1) {
+    clear: none;
+  }
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item:nth-child(6n+1) {
+    clear: none;
+  }
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pla-holder.qodef-four-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pla-holder.qodef-four-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pla-holder.qodef-two-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pla-holder.qodef-three-columns .qodef-pla-item:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pla-holder.qodef-two-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pla-holder.qodef-two-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pla-holder.qodef-three-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pla-holder.qodef-three-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pla-holder.qodef-four-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pla-holder.qodef-four-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pla-holder .qodef-pla-inner .qodef-pla-text-inner .button,
+  .qodef-pla-holder .qodef-pla-inner .qodef-pla-text-inner .added_to_cart {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 27px;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-pla-holder.qodef-two-columns .qodef-pla-item {
+    width: 100%;
+  }
+  .qodef-pla-holder.qodef-three-columns .qodef-pla-item {
+    width: 100%;
+  }
+  .qodef-pla-holder.qodef-four-columns .qodef-pla-item {
+    width: 100%;
+  }
+  .qodef-pla-holder.qodef-five-columns .qodef-pla-item {
+    width: 100%;
+  }
+  .qodef-pla-holder.qodef-six-columns .qodef-pla-item {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+# Woocommerce Product List Animated Shortcode responsive style - end
+========================================================================== */
+/* ==========================================================================
+   Product List shortcode responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1201px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli:nth-child(6n+1) {
+    clear: none;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pl-sizer {
+    width: 25%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width-height {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pl-sizer {
+    width: 25%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width-height {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli:nth-child(5n+1) {
+    clear: none;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli:nth-child(6n+1) {
+    clear: none;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pl-sizer {
+    width: 33.33333%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width-height {
+    width: 66.66667%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pl-sizer {
+    width: 25%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width-height {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pl-sizer {
+    width: 25%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width-height {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pl-sizer {
+    width: 25%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width-height {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-four-columns .qodef-pli {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-four-columns .qodef-pli:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-two-columns .qodef-pli:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-three-columns .qodef-pli:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-two-columns .qodef-pli {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-two-columns .qodef-pli:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-three-columns .qodef-pli {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-three-columns .qodef-pli:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-four-columns .qodef-pli {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-four-columns .qodef-pli:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width-height,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width-height,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width-height,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width-height,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pl-sizer {
+    width: 50%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width-height,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width {
+    width: 100%;
+  }
+  .qodef-pl-holder .qodef-pl-categories {
+    float: none;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: -8px;
+  }
+  .qodef-pl-holder .qodef-pl-categories h6.qodef-pl-categories-label {
+    display: block;
+    font-size: 14px;
+  }
+  .qodef-pl-holder .qodef-pl-categories ul {
+    margin-top: 10px;
+    display: none;
+  }
+  .qodef-pl-holder .qodef-pl-categories ul li {
+    display: block;
+    padding: 0;
+    float: none;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer {
+    position: relative;
+    float: none;
+    padding-top: 20px;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer h6 {
+    display: block;
+    padding: 0;
+    font-size: 14px;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer h6:after {
+    top: -1px;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering {
+    display: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div {
+    margin: 0;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div h5 {
+    color: #000;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div h5:last-child {
+    margin: 0;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div ul {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div ul li {
+    padding: 0;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div ul a {
+    font-size: 12px;
+  }
+  .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div ul a:hover, .qodef-pl-holder .qodef-pl-ordering-outer .qodef-pl-ordering div ul a.active {
+    color: #000 !important;
+  }
+  .qodef-pl-holder .qodef-prl-loading {
+    margin: 0;
+    top: initial;
+    left: initial;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-pl-holder.qodef-standard-layout.qodef-two-columns .qodef-pli {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-three-columns .qodef-pli {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-four-columns .qodef-pli {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-five-columns .qodef-pli {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-standard-layout.qodef-six-columns .qodef-pli {
+    width: 100%;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pl-sizer,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-two-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pl-sizer,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-three-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pl-sizer,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-four-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pl-sizer,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-five-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pl-sizer,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width,
+  .qodef-pl-holder.qodef-masonry-layout.qodef-six-columns .qodef-pli.qodef-large-width-height {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   Product List shortcode responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Product Pair shortcode responsive styles - begin
+   ========================================================================== */
+.qodef-pp-holder {
+  margin: 0 auto;
+  position: relative;
+  display: table;
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-pp-holder .qodef-ppi {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* ==========================================================================
+   Product Pair shortcode responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   YITH Quick View Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  #yith-quick-view-modal #yith-quick-view-content .summary {
+    padding: 88px 50px 50px;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary .single_add_to_cart_button {
+    padding: 8px 45px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    position: relative;
+  }
+  #yith-quick-view-modal {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+  }
+  #yith-quick-view-modal .yith-wcqv-wrapper {
+    position: absolute;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .images,
+  #yith-quick-view-modal #yith-quick-view-content .summary {
+    width: 100%;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary {
+    padding: 46px 50px 50px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #yith-quick-view-modal #yith-quick-view-content .images,
+  #yith-quick-view-modal #yith-quick-view-content .summary {
+    width: 100%;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary {
+    padding: 26px 40px 26px;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary .variations tbody {
+    width: 100%;
+    display: block;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary .variations tbody tr {
+    width: 100%;
+    padding-right: 0;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary .single_add_to_cart_button {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary .qodef-quantity-buttons {
+    width: 100%;
+    text-align: center;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary table.group_table .qodef-quantity-buttons {
+    width: 100%;
+    text-align: center;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary div[itemprop="offers"] {
+    margin: 0 0 20px;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary div[itemprop="description"] {
+    display: none;
+  }
+  #yith-quick-view-modal #yith-quick-view-content .summary form.cart {
+    margin: 0 0 20px;
+  }
+}
+
+/* ==========================================================================
+   YITH Quick View responsive styles - end
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .woocommerce-wishlist .woocommerce-message,
+  .woocommerce-wishlist .woocommerce-info,
+  .woocommerce-wishlist .woocommerce-error {
+    padding: 17px 25px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .woocommerce-wishlist .woocommerce-message,
+  .woocommerce-wishlist .woocommerce-info,
+  .woocommerce-wishlist .woocommerce-error {
+    padding: 14px 20px;
+    line-height: 2em;
+  }
+  .woocommerce-wishlist .woocommerce-message a,
+  .woocommerce-wishlist .woocommerce-info a,
+  .woocommerce-wishlist .woocommerce-error a {
+    float: none;
+    margin: 0 70% 15px 0;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/woocommerce-responsive.css.map */

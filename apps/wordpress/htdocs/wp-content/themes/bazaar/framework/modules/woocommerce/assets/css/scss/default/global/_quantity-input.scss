@@ -1,0 +1,72 @@
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - begin
+   ========================================================================== */
+
+.woocommerce-page .qodef-content,
+div.woocommerce {
+
+    .sold-individually .qodef-quantity-buttons {
+        display: none;
+    }
+
+    .qodef-quantity-buttons {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: #fff;
+        border: 1px solid $default-border-color;
+        box-sizing: border-box;
+        line-height: 50px;
+        height: 50px;
+        padding: 0 20px 0 18px;
+        margin: 0px 5px 0 0;
+
+        .qodef-quantity-label,
+        .qodef-quantity-input,
+        .qodef-quantity-minus,
+        .qodef-quantity-plus {
+            display: inline-block;
+            vertical-align: middle;
+            color: $default-text-color;
+            background-color: transparent;
+            border: 0;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        .qodef-quantity-label{
+            margin-right: 50px;
+            font-size: 12px;
+        }
+
+        .qodef-quantity-input {
+            position: relative;
+            width: 27px;
+            padding: 0;
+            margin: 0;
+            font-family: inherit;
+            outline: 0;
+        }
+
+        .qodef-quantity-minus,
+        .qodef-quantity-plus {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 10px;
+            height: 22px;
+            line-height: 22px;
+            border-left: 0;
+            cursor: pointer;
+            @include qodefTransition(color .15s ease-in-out);
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - end
+   ========================================================================== */

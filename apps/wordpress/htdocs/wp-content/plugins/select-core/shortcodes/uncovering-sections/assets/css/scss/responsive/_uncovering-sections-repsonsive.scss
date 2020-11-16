@@ -1,0 +1,20 @@
+@include ipad-landscape {
+    .curtains > li {
+        position: initial;
+    }
+}
+
+.qodef-uncovering-sections {
+    @include ipad-landscape {
+        ul {
+            line-height: 0;
+        }
+        .qodef-uss-item {
+            line-height: 25px;
+            .qodef-uss-image-holder {
+                height: 100%;
+                top: 0;
+            }
+        }
+    }
+}

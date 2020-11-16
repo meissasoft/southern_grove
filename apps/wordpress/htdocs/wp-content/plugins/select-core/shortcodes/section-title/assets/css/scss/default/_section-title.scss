@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.qodef-section-title-holder {
+    @include qodefRelativeHolderLayout();
+	box-sizing: border-box;
+
+    .qodef-st-title {
+	    display: block;
+        margin: 0;
+	    
+	    .qodef-st-title-bold {
+		    font-weight: 700;
+	    }
+	    
+	    .qodef-st-title-light {
+		    font-weight: 300;
+	    }
+    }
+    
+    .qodef-st-subtitle {
+	    display: block;
+        margin: 0 0 12px;
+		font-family: 'Quentin', serif;
+		font-size: 40px;
+    }
+
+	.qodef-separator{
+		border-bottom: 3px solid $first-main-color;
+		margin: 18px 0 10px;
+		width: 65px;
+	}
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+

@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Countdown shortcode style - begin
+   ========================================================================== */
+
+.qodef-countdown {
+	@include qodefRelativeHolderLayout();
+	
+	.countdown-rtl {
+		direction: rtl;
+	}
+	
+	.countdown-row {
+		@include qodefRelativeHolderLayout();
+		text-align: center;
+		clear: both;
+		
+		$columns_label: ('countdown-show1', 'countdown-show2', 'countdown-show3', 'countdown-show4', 'countdown-show5', 'countdown-show6');
+		@for $i from 0 to length($columns_label) {
+			&.#{nth($columns_label, $i+1)} {
+				$column_width: 100% / ($i+1);
+				
+				.countdown-section {
+					width: $column_width;
+				}
+			}
+		}
+		
+		.countdown-section {
+			@include qodefRelativeHolderLayout();
+			padding: 0 5px;
+			box-sizing: border-box;
+			
+			.countdown-amount {
+				position: relative;
+				display: block;
+				color: $default-heading-color;
+				line-height: 1em;
+				font-weight: 600;
+			}
+
+
+			.countdown-period {
+				display: block;
+				font-weight: 300;
+				letter-spacing: 0;
+				padding-top: 6px
+			}
+		}
+	}
+	
+	&.qodef-dark-skin {
+		
+		.countdown-row {
+			
+			.countdown-section {
+				
+				.countdown-amount{
+					color: $default-heading-color;
+				}
+                .countdown-period {
+                    color: $default-text-color;
+                }
+			}
+		}
+	}
+	
+	&.qodef-light-skin {
+		
+		.countdown-row {
+			
+			.countdown-section {
+				
+				.countdown-amount,
+				.countdown-period {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Countdown shortcode style - end
+   ========================================================================== */

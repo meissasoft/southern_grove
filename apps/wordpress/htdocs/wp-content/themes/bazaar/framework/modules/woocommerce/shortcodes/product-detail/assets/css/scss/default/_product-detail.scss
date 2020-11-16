@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Product Info shortcode styles - begin
+   ========================================================================== */
+
+.qodef-product-detail {
+    position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	.qodef-pd-text-holder{
+		display: table;
+		position: relative;
+		z-index: 2;
+
+		.qodef-pd-text-left,
+		.qodef-pd-text-right{
+			display: table-cell;
+		}
+
+		.qodef-pd-text-right{
+			padding-top: 5px;
+			vertical-align: top;
+		}
+
+		.qodef-pd-text-left{
+			padding-right: 28px;
+			vertical-align: top;
+		}
+
+		.qodef-pd-title{
+			margin: 0 0 8px;
+		}
+
+		.qodef-pd-excerpt{
+			font-size: 17px;
+			line-height: 2em;
+		}
+
+		.qodef-pd-price{
+			.qodef-currency{
+				margin-right: 3px;
+				display: inline;
+				font-size: 35px;
+				vertical-align: top;
+				position: relative;
+				top: 12px;
+			}
+
+			text-decoration: none;
+			font-size: 124px;
+			color: #000;
+			line-height: 1;
+			font-weight: 500;
+		}
+	}
+
+	&.qodef-pd-light-skin{
+		.qodef-pd-price,
+		.qodef-pd-title,
+		.qodef-pd-excerpt{
+			color: #fff;
+		}
+	}
+}
+/* ==========================================================================
+   Product Info shortcode styles - end
+   ========================================================================== */

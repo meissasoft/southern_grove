@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Instagram widget responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large{
+
+    .qodef-instagram-feed:not(.qodef-instagram-carousel) {
+
+		li {
+
+			img {
+				width: 100%;
+			}
+		}
+
+		$instagram_columns: ('qodef-col-6', 'qodef-col-9');
+
+		@for $i from 0 to length($instagram_columns) {
+			&.#{nth($instagram_columns,$i+1)} {
+				$instagram_column_width: 100%/3;
+
+				li {
+					width: $instagram_column_width!important;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+	.qodef-instagram-feed:not(.qodef-instagram-carousel) li {
+		width: 50% !important;
+	}
+}
+/* ==========================================================================
+   Instagram widget responsive style - end
+   ========================================================================== */

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Fixed header style - begin
+   ========================================================================== */
+
+.qodef-page-header {
+    
+    .qodef-fixed-wrapper {
+        
+        &.fixed {
+            position: fixed;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+            -webkit-backface-visibility: hidden;
+            
+            .admin-bar & {
+                margin-top: 32px;
+            }
+	
+	        .qodef-menu-area {
+		        background-color: #fff;
+	        }
+        }
+	
+	    .qodef-fixed-on-scroll & {
+		
+		    .qodef-menu-area {
+			    @include qodefTransition(height .2s ease);
+		    }
+	    }
+    }
+}
+/* ==========================================================================
+   Fixed header style - end
+   ========================================================================== */

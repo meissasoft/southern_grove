@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.qodef-pricing-tables {
+    @include qodefRelativeHolderLayout();
+    clear: both;
+	
+	.qodef-pt-wrapper {
+        position: relative;
+    }
+    
+    $pricing_table_space_label: ('no', 'tiny', 'small', 'normal');
+    $pricing_table_space_width: (0, 5, 10, 15);
+    
+    @for $i from 0 to length($pricing_table_space_label) {
+        &.qodef-pt-#{nth($pricing_table_space_label,$i+1)}-space {
+            $column_width: nth($pricing_table_space_width,$i+1);
+            $column_width_margin: $column_width * 2;
+	
+	        .qodef-pt-wrapper {
+		        @if($column_width == 0) {
+			        margin: 0;
+		        } @else {
+			        margin: 0 -#{$column_width}px;
+		        }
+	        }
+	
+	        .qodef-price-table {
+                padding: 0 #{$column_width}px;
+                margin: 0 0 #{$column_width_margin}px;
+            }
+        }
+    }
+	
+	$pricing_table_columns: ('qodef-two-columns', 'qodef-three-columns', 'qodef-four-columns', 'qodef-five-columns');
+    @for $i from 0 to length($pricing_table_columns) {
+        &.#{nth($pricing_table_columns, $i+1)} {
+            $column_width: 100%/($i+2);
+	
+	        .qodef-price-table {
+                width: $column_width;
+            }
+        }
+    }
+}
+
+.qodef-price-table {
+    position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	float: left;
+    box-sizing: border-box;
+
+    .qodef-pt-inner {
+        @include qodefRelativeHolderLayout();
+        background-color: #f2f2f2;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 17px 30px;
+                text-align: left;
+
+                &.qodef-pt-title-holder {
+                    position: relative;
+                    text-align: left;
+                    padding-bottom: 13px;
+	                
+                    .qodef-pt-title {
+                        display: block;
+                        margin: 20px 0 15px;
+                        padding: 28px 0 0 38px;
+	                    box-sizing: border-box;
+                    }
+                }
+
+                &.qodef-pt-prices {
+                    position: relative;
+					padding: 0 0 2px 63px;
+	                
+                    .qodef-pt-value {
+                        position: relative;
+                        vertical-align: middle;
+                        font-size: 40px;
+                        line-height: 1em;
+                        font-weight: 500;
+                        color: $default-heading-color;
+                        left: 3px;
+                    }
+
+                    .qodef-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+	                    left: -5px;
+                        font-size: 40px;
+                        line-height: 1em;
+                        font-weight: 500;
+                        color: $default-heading-color;
+                    }
+
+                    .qodef-pt-mark {
+                        position: relative;
+                        display: block;
+	                    margin: 1px 0 0;
+                    }
+                }
+
+                &.qodef-pt-subtitle{
+                    padding: 22px 40px 22px 68px;
+                    font-size: 17px;
+                    color: #949494;
+                    font-weight: 300;
+                    line-height: 2em;
+                }
+
+                &.qodef-pt-separator{
+                    padding: 0 69px;
+
+                    .qodef-separator{
+                        border-bottom: 3px solid #000;
+                        margin: 0;
+                        width: 32%;
+                    }
+                }
+
+                &.qodef-pt-content {
+                    padding: 12px 0 12px 35px;
+
+                    ul{
+                        li{
+                            padding: 17px 30px 11px;
+                            line-height: 1;
+
+                            &:before{
+                                padding-right: 13px;
+                                content:"\4e";
+                                font-family: "ElegantIcons";
+                                color: #000;
+                                font-size: 18px;
+                                position: relative;
+                                top: 5px;
+                            }
+                        }
+                    }
+                }
+
+                &.qodef-pt-button {
+                    padding: 73px 0 67px 69px;
+                    a{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark-skin{
+
+        .qodef-pt-inner {
+            background-color: #000;
+
+            .qodef-pt-title{
+                color: #fff
+            }
+            .qodef-pt-prices {
+                .qodef-pt-value {
+                    color: #fff;
+                }
+                .qodef-pt-price {
+                    color: #fff;
+                }
+            }
+            .qodef-pt-separator {
+                .qodef-separator {
+                    border-color: #fff;
+                }
+            }
+
+            .qodef-pt-content ul li:before{
+                color: #fff;
+            }
+
+            .qodef-pt-button a{
+                color: #fff;
+
+                &:hover{
+                    color: #fff!important;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Fixed header responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape {
+    
+    .qodef-boxed .qodef-page-header .qodef-fixed-wrapper.fixed {
+        width: $grid-width-laptop-landscape-boxed;
+    }
+}
+/* ==========================================================================
+   Fixed header responsive style - end
+   ========================================================================== */

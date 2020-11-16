@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Blog List shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+    
+    .qodef-blog-list-holder {
+        
+        &.qodef-bl-masonry {
+            
+            $masonry_columns_number: ('five');
+            
+            @for $i from 0 to length($masonry_columns_number) {
+                &.qodef-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+                    $column_width: 100%/4;
+    
+                    .qodef-bl-item,
+                    .qodef-bl-grid-sizer {
+                        width: $column_width;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include laptop-landscape-medium {
+    
+    .qodef-blog-list-holder {
+        
+        &.qodef-bl-standard,
+        &.qodef-bl-boxed {
+    
+            $columns_number: ('four', 'five');
+            
+            @for $i from 0 to length($columns_number) {
+                &.qodef-bl-#{nth($columns_number,$i+1)}-columns {
+                    $column_width: 100% / 3;
+    
+                    .qodef-bl-item {
+                        width: $column_width;
+                    }
+                    
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+                        
+                        .qodef-bl-item {
+                            
+                            &:nth-child(3n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        &.qodef-bl-masonry {
+            
+            $masonry_columns_number: ('four', 'five');
+            
+            @for $i from 0 to length($masonry_columns_number) {
+                &.qodef-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+                    $column_width: 100% / 3;
+                    
+                    .qodef-bl-item,
+                    .qodef-bl-grid-sizer {
+                        width: $column_width;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+    
+    .qodef-blog-list-holder {
+        
+        &.qodef-bl-standard,
+        &.qodef-bl-boxed {
+            
+            $columns_number: ('four', 'five');
+            
+            @for $i from 0 to length($columns_number) {
+                &.qodef-bl-#{nth($columns_number,$i+1)}-columns {
+                    
+                    .qodef-bl-item {
+                        width: 50%;
+                    }
+                    
+                    @media only screen and (min-width: $phone-landscape-plus-pixel) {
+                        
+                        .qodef-bl-item {
+                            
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        &.qodef-bl-masonry {
+            
+            $masonry_columns_number: ('three', 'four', 'five');
+            
+            @for $i from 0 to length($masonry_columns_number) {
+                &.qodef-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+                    
+                    .qodef-bl-item,
+                    .qodef-bl-grid-sizer {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+    
+    .qodef-blog-list-holder {
+        
+        &.qodef-bl-standard,
+        &.qodef-bl-boxed {
+            
+            .qodef-bl-item {
+                width: 100% !important; // !important is set to override all other stronger selectors
+            }
+        }
+        
+        &.qodef-bl-masonry {
+            
+            $masonry_columns_number: ('two', 'three', 'four', 'five');
+            
+            @for $i from 0 to length($masonry_columns_number) {
+                &.qodef-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+                    
+                    .qodef-bl-item,
+                    .qodef-bl-grid-sizer {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List shortcode responsive style - end
+   ========================================================================== */

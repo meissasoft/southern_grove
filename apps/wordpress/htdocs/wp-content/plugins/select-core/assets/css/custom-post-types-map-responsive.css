@@ -1,0 +1,285 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns .qodef-pl-grid-sizer {
+    width: 25%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article.qodef-pl-masonry-large-width, .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article.qodef-pl-masonry-large-width-height {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-four-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-four-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-five-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-five-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns .qodef-pl-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article.qodef-pl-masonry-large-width, .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article.qodef-pl-masonry-large-width-height {
+    width: 66.66667%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns .qodef-pl-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article.qodef-pl-masonry-large-width, .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article.qodef-pl-masonry-large-width-height {
+    width: 66.66667%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-three-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-three-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-four-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-five-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery.qodef-pl-five-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-three-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-three-columns .qodef-pl-grid-sizer {
+    width: 50%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-three-columns article.qodef-pl-masonry-large-width, .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-three-columns article.qodef-pl-masonry-large-width-height {
+    width: 100%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns .qodef-pl-grid-sizer {
+    width: 50%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article.qodef-pl-masonry-large-width, .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article.qodef-pl-masonry-large-width-height {
+    width: 100%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns .qodef-pl-grid-sizer {
+    width: 50%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article.qodef-pl-masonry-large-width, .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article.qodef-pl-masonry-large-width-height {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery article {
+    width: 100% !important;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-two-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-two-columns .qodef-pl-grid-sizer {
+    width: 100%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-three-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-three-columns .qodef-pl-grid-sizer {
+    width: 100%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-four-columns .qodef-pl-grid-sizer {
+    width: 100%;
+  }
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns article,
+  .qodef-portfolio-list-holder.qodef-pl-masonry.qodef-pl-five-columns .qodef-pl-grid-sizer {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Portfolio shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+.qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images {
+  /***** Columns Layout - begin *****/
+  /***** Columns Layout - end *****/
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images.qodef-ps-four-columns .qodef-ps-image {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images.qodef-ps-four-columns .qodef-ps-image:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images.qodef-ps-three-columns .qodef-ps-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images.qodef-ps-three-columns .qodef-ps-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images.qodef-ps-four-columns .qodef-ps-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images.qodef-ps-four-columns .qodef-ps-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images .qodef-ps-image {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-image.qodef-ps-masonry-large-item {
+    width: 66.66667%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-five-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-five-columns .qodef-ps-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-five-columns .qodef-ps-image.qodef-ps-masonry-large-item {
+    width: 66.66667%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-three-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-three-columns .qodef-ps-grid-sizer {
+    width: 50%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-three-columns .qodef-ps-image.qodef-ps-masonry-large-item {
+    width: 100%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-grid-sizer {
+    width: 50%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-image.qodef-ps-masonry-large-item {
+    width: 100%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-five-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-five-columns .qodef-ps-grid-sizer {
+    width: 50%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-five-columns .qodef-ps-image.qodef-ps-masonry-large-item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-two-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-two-columns .qodef-ps-grid-sizer {
+    width: 100%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-three-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-three-columns .qodef-ps-grid-sizer {
+    width: 100%;
+  }
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-image,
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-masonry-images.qodef-ps-four-columns .qodef-ps-grid-sizer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-info-holder {
+    margin: 30px 0 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials standard responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-testimonials-holder.qodef-testimonials-standard .qodef-testimonials .qodef-testimonial-text {
+    padding: 0 3%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-testimonials-holder.qodef-testimonials-standard .qodef-testimonials {
+    padding: 0 25px;
+  }
+  .qodef-testimonials-holder.qodef-testimonials-standard .qodef-testimonials .qodef-testimonial-text {
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   Testimonials standard responsive style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/select-core/assets/css/custom-post-types-map-responsive.css.map */

@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.qodef-iwt {
+	@include qodefRelativeHolderLayout();
+
+
+	.qodef-iwt-icon {
+
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+            color: inherit;
+		}
+
+		.qodef-icon-shortcode {
+			line-height: 1;
+
+			&.qodef-circle,
+			&.qodef-square {
+				line-height: 2;
+			}
+		}
+	}
+
+	.qodef-iwt-title {
+		margin: 0;
+		line-height: 40px;
+		letter-spacing: 0.1em;
+		padding-top: 2px;
+
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+            color: inherit;
+		}
+	}
+
+	.qodef-iwt-title-text {
+		display: block;
+	}
+
+	.qodef-iwt-text {
+		margin: 8px 0 0;
+		color: $default-text-color;
+	}
+
+	&.qodef-iwt-icon-left {
+		width: auto;
+
+		.qodef-iwt-icon,
+		.qodef-iwt-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		.qodef-iwt-icon {
+			position: relative;
+			top: 13px;
+			right: 12px;
+
+			.qodef-icon-shortcode {
+				font-size: 2.5em;
+				color: $default-text-color;
+			}
+
+			img {
+				max-width: none;
+			}
+		}
+
+		.qodef-iwt-content {
+			padding: 0 0 0 13px;
+		}
+	}
+
+	&.qodef-iwt-icon-left-from-title {
+
+		.qodef-iwt-icon,
+		.qodef-iwt-title-text {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.qodef-iwt-icon {
+
+			.qodef-icon-element {
+				@include qodefTransition(none);
+			}
+
+			img {
+				max-width: none;
+			}
+		}
+
+		.qodef-iwt-title-text {
+			padding: 0 0 0 17px;
+		}
+	}
+
+	&.qodef-iwt-icon-top {
+		text-align: center;
+
+		.qodef-iwt-content {
+			padding: 23px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

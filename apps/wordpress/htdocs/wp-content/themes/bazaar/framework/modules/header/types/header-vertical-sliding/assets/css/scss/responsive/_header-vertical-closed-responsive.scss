@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Header Vertical - Sliding responsive style - begin
+   ========================================================================== */
+
+.qodef-header-vertical-sliding .qodef-grid,
+.qodef-header-vertical-sliding .qodef-container-inner,
+.qodef-header-vertical-sliding .qodef-grid-section .qodef-section-inner,
+.qodef-header-vertical-sliding .qodef-slider .carousel-inner .qodef-slider-content-outer{
+    @include vertical-menu-laptop-wide-landscape {
+        width: $grid-width-laptop-wide-landscape;
+    }
+
+    @include vertical-menu-laptop-landscape {
+        width: $vertical-grid-width-laptop-landscape;
+    }
+
+    @include vertical-menu-ipad-landscape {
+        width: $vertical-grid-width-ipad-landscape;
+    }
+
+}
+
+@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+	
+	.qodef-header-vertical-sliding .qodef-404-page .qodef-content {
+		margin: 0 !important;
+	}
+}
+
+@include ipad-landscape {
+
+    .qodef-header-vertical-sliding {
+        .qodef-vertical-menu-area {
+            display: none;
+        }
+        .qodef-content,
+        footer {
+            padding-left: 0;
+        }
+    }
+    .qodef-header-vertical-sliding .carousel-inner {
+        left: 0 !important;
+        width: 100%;
+    }
+}
+/* ==========================================================================
+   Header Vertical - Sliding responsive style - end
+   ========================================================================== */

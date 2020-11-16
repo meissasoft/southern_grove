@@ -1,0 +1,29 @@
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium {
+    .qodef-shopping-cart-holder {
+
+        .qodef-cart-info {
+
+            .qodef-cart-info-number {
+                padding-top: 6px!important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-shopping-cart-dropdown {
+
+        ul {
+            margin: 20px;
+        }
+    }
+}
+
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - end
+   ========================================================================== */

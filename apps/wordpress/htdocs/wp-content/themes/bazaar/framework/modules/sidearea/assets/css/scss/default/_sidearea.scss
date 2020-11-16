@@ -1,0 +1,166 @@
+/* ==========================================================================
+# Side area style - begin
+========================================================================== */
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener .qodef-sidearea-image {
+    img {
+        &.qodef-sidearea-image-dark{
+            opacity: 0;
+        }
+        &.qodef-sidearea-image-light {
+            opacity: 1;
+        }
+    }
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener,
+.qodef-dark-header .qodef-top-bar .qodef-side-menu-button-opener {
+	color: $header-dark-color !important; //Color can be set inline from widget opener;
+	
+	&.opened,
+	&:hover {
+		color: $header-dark-hover-color !important; //Color can be set inline from widget opener;
+	}
+}
+
+.qodef-side-menu-button-opener {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	
+	.qodef-side-menu-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 8px 0 0;
+		color: currentColor;
+	}
+
+    .qodef-sidearea-image {
+        position: relative;
+        display: block;
+        line-height: 1em;
+        vertical-align: middle;
+        height: 16px;
+
+        img {
+            height: 100%;
+            @include qodefTransition(opacity .2s ease);
+            &.qodef-sidearea-image-light {
+                opacity: 0;
+                @include qodefTransform(translateY(-100%));
+            }
+        }
+    }
+	
+	&.opened,
+	&:hover {
+		color: $first-main-color;
+	}
+}
+
+.qodef-side-menu {
+    position: fixed;
+    top: 0;
+	right: -600px;
+	width: 600px;
+    height: 100%;
+    min-height: 100%;
+	padding: 68px 84px 36px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 9999;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+    @include qodefBoxShadow(-1px 0 4px 0 rgba(0,0,0,.1));
+    @include qodefTransition(all .6s cubic-bezier(.77,0,.175,1));
+
+
+    .qodef-close-side-menu-holder {
+        position: absolute;
+	    top: 35px;
+	    right: 45px;
+        z-index: 1000;
+	
+	    .admin-bar & {
+		    top: 63px;
+	    }
+    }
+
+	a.qodef-close-side-menu {
+		display: block;
+		color: $default-heading-color;
+		font-size: 36px;
+		z-index: 1000;
+
+		&:hover {
+			color: $default-text-color;
+		}
+
+		span {
+			display: block;
+			line-height: inherit;
+
+			&:before {
+				display: block;
+				line-height: inherit;
+			}
+		}
+	}
+
+    .qodef-side-area-holders {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .qodef-side-menu-top {
+        display: table-row;
+        width: 100%;
+        height: 90%;
+    }
+
+    .qodef-side-menu-bottom {
+        display: table-row;
+        width: 100%;
+        height: 10%;
+    }
+}
+
+.qodef-side-menu-slide-from-right {
+	
+	&.qodef-right-side-menu-opened {
+		
+		.qodef-wrapper {
+			
+			.qodef-cover {
+				z-index: 3000;
+			}
+		}
+		
+		.qodef-side-menu {
+			right: 0;
+			visibility: visible;
+		}
+	}
+
+    .qodef-wrapper {
+
+        .qodef-cover {
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+        }
+    }
+}
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

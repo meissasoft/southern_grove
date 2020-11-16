@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Image With Text shortcode responsive style - begin
+   ========================================================================== */
+
+@include phone-portrait {
+	.qodef-image-with-text-holder {
+		&.qodef-iwt-text-over-image {
+			.qodef-iwt-text {
+				display: none;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Image With Text shortcode responsive style - end
+   ========================================================================== */

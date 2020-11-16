@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.qodef-image-with-text-holder {
+    @include qodefRelativeHolderLayout();
+	
+    .qodef-iwt-custom-link {
+    	@include qodefAbsoluteHolderLayout();
+    	z-index: 100;
+    }
+
+	&.qodef-has-shadow {
+		
+		.qodef-iwt-image {
+			box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.13); 
+		}
+	}
+	
+	.qodef-iwt-image {
+		@include qodefRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	&:not(.qodef-iwt-text-over-image) {
+		.qodef-iwt-text-holder {
+			@include qodefRelativeHolderLayout();
+		}
+		
+		.qodef-iwt-title {
+			margin: 32px 0 0;
+		}
+		
+		.qodef-iwt-text {
+			margin: 14px 0 0;
+		}
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-custom-link {
+		
+		.qodef-iwt-image {
+			
+			a {
+				
+				&:hover {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+				
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include qodefTransition(opacity .2s ease-in-out);
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-lightbox {
+		
+		.qodef-iwt-image {
+			
+			a {
+				
+				&:hover {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+				
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include qodefTransition(opacity .2s ease-in-out);
+				}
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-zoom {
+		
+		.qodef-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include qodefTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				-webkit-transition: -webkit-transform .3s ease-in-out;
+				-moz-transition: -moz-transform .3s ease-in-out;
+				transition: transform .3s ease-in-out;
+				@include qodefTransform(scale(1));
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-grayscale {
+		
+		.qodef-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include qodefTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+
+	&.qodef-iwt-text-over-image {
+		.qodef-iwt-text-holder {
+			@include qodefAbsoluteHolderLayout();
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 20px;
+			background-color: #fff;
+			opacity: 0;
+			@include qodefTransition(opacity .15s ease-out);
+
+			.qodef-iwt-title {
+				margin-top: 0;
+				@include qodefTransform(translate3d(0, 40px, 0));
+				@include qodefTransition(all .0s .2s);
+
+				&:after {
+					content:'';
+					display: block;
+					margin: 15px auto 0;
+					width: 64px;
+					height: 3px;
+					background-color: #000;
+					@include qodefTransform(scaleX(0));
+					@include qodefTransition(all .0s .2s);
+				}
+			}
+
+			.qodef-iwt-text {
+				font-family: 'Quentin';
+				font-size: 30px;
+				@include qodefTransform(translate3d(0, 40px, 0));
+				@include qodefTransition(all .0s .2s);
+			}
+		}
+
+		&:hover {
+			.qodef-iwt-text-holder {
+				opacity: 1;
+			}
+
+			.qodef-iwt-title,
+			.qodef-iwt-text {
+				@include qodefTransform(translate3d(0,0,0));		
+				@include qodefTransition(all .4s cubic-bezier(0, 0.95, 0.77, 1));
+			}
+
+			.qodef-iwt-title:after {
+				@include qodefTransform(scaleX(1));
+				@include qodefTransition(all .4s cubic-bezier(0.88, 0.03, 0.25, 1) .1s);
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

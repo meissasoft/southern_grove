@@ -1,0 +1,48 @@
+/* ==========================================================================
+# Search opener - begin
+========================================================================== */
+
+.qodef-search-opener {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 1;
+    margin: 0 10px;
+
+    .qodef-search-opener-wrapper {
+    
+        > * {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: inherit;
+        
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+    }
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-search-opener,
+.qodef-light-header .qodef-top-bar .qodef-search-opener {
+    color: $header-light-color !important; //Color can be set inline from widget opener
+
+    &:hover {
+        color: $header-light-hover-color !important;
+    }
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-search-opener,
+.qodef-dark-header .qodef-top-bar .qodef-search-opener {
+    color: $header-dark-color !important; //Color can be set inline from widget opener
+
+    &:hover {
+        color: $header-dark-hover-color !important;
+    }
+}
+/* ==========================================================================
+# Search opener - end
+========================================================================== */

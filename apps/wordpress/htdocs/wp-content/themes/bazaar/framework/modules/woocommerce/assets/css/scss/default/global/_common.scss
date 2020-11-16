@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Common styles - begin
+   ========================================================================== */
+
+.woocommerce-page .qodef-content,
+div.woocommerce {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea {
+        position: relative;
+        width: 100%;
+        margin: 0 0 14px;
+        padding: 15px 20px;
+        font-family: inherit;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: inherit;
+        color: $default-text-color;
+        background-color: #fff;
+        border: 1px solid $default-border-color;
+        outline: 0;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        height: 50px;
+        border-radius: 0;
+
+        @include qodefPlaceholder {
+            color: $default-text-color;
+        }
+
+        &:focus{
+            background: #fafafa;
+        }
+    }
+
+    label{
+        color: $default-heading-color;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+}
+
+/* ==========================================================================
+   Common styles - end
+   ========================================================================== */

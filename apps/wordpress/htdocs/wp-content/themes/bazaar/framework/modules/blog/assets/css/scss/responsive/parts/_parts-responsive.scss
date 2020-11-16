@@ -1,0 +1,19 @@
+@include ipad-portrait {
+    
+    .qodef-related-posts-holder {
+        
+        .qodef-related-post {
+            width: 50% !important;
+        }
+    }
+}
+
+@include phone-portrait {
+    
+    .qodef-related-posts-holder {
+        
+        .qodef-related-post {
+            width: 100% !important;
+        }
+    }
+}

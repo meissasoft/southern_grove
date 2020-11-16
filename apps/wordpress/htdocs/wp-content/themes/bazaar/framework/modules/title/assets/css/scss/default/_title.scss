@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Title style - begin
+   ========================================================================== */
+
+.qodef-title-holder {
+    @include qodefRelativeHolderLayout();
+    height: 500px;
+    background-color: #f6f6f6;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    z-index: 101;
+	
+	&.qodef-title-full-width {
+		
+		.qodef-grid {
+			@include qodefRelativeHolderLayout();
+			margin: 0;
+			padding: 0 60px;
+			box-sizing: border-box;
+		}
+	}
+	
+	&.qodef-bg-responsive {
+		height: auto !important; // because of inline style
+		
+		.qodef-title-image {
+			display: block;
+		}
+		
+		.qodef-title-wrapper {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include qodefTransform(translateY(-50%));
+		}
+	}
+	
+	&.qodef-bg-parallax {
+		background-attachment: fixed;
+	}
+	
+	.qodef-title-image {
+		display: none;
+		
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+    
+    .qodef-title-wrapper {
+        @include qodefTableLayout();
+    }
+    
+    .qodef-title-inner {
+        @include qodefTableCellLayout();
+    }
+}
+/* ==========================================================================
+   Title style - end
+   ========================================================================== */

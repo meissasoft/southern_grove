@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Twitter widget style - begin
+   ========================================================================== */
+
+.widget.widget_qodef_twitter_widget {
+
+    margin: 0 0 20px;
+
+    > h4 {
+        margin: 0 0 8px;
+    }
+
+    .qodef-twitter-widget {
+        @include qodefRelativeHolderLayout();
+        margin: 0;
+
+        li {
+            @include qodefRelativeHolderLayout();
+
+            &:not(:last-child) {
+                margin: 0 0 12px !important;
+            }
+
+            .qodef-tweet-text {
+                position: relative;
+
+                a {
+                    position: relative;
+                    line-height: inherit;
+                    color: inherit;
+
+                    &.qodef-tweet-time {
+                        display: block;
+
+                        span {
+                            margin: 0 2px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.qodef-twitter-standard {
+
+            li {
+
+                .qodef-twitter-icon {
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+
+                    i {
+                        font-size: 18px;
+                    }
+                }
+
+                .qodef-tweet-text {
+                    padding: 0 0 0 28px;
+                    font-size: 15px;
+
+                    a,
+                    span {
+                        color: $default-heading-color;
+                    }
+
+                    a {
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.qodef-twitter-slider {
+            @include qodefRelativeHolderLayout();
+            padding: 0 40px;
+            text-align: center;
+            box-sizing: border-box;
+
+            li {
+                overflow: hidden;
+
+                .qodef-twitter-icon {
+
+                    i {
+                        font-size: 16px;
+                        color: $first-main-color;
+                    }
+                }
+
+                .qodef-tweet-text {
+                    font-size: 14px;
+
+                    a,
+                    span {
+                        color: $first-main-color;
+                    }
+
+                    a {
+
+                        &:hover {
+                            color: $default-heading-color;
+                        }
+
+                        &.qodef-tweet-time {
+                            margin: 21px 0 0;
+                        }
+                    }
+                }
+            }
+    
+            .owl-nav {
+                
+                .owl-prev {
+                    left: 0;
+                }
+    
+                .owl-next {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Twitter widget style - end
+   ========================================================================== */

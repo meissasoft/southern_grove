@@ -1,0 +1,436 @@
+/* ==========================================================================
+   YITH Quick View styles - begin
+   ========================================================================== */
+#yith-quick-view-modal,
+.yith-quick-view.yith-modal {
+
+    .yith-quick-view-overlay {
+        background-color: rgba($default-heading-color, .7);
+    }
+
+    .yith-wcqv-wrapper {
+        padding: 0;
+        max-width: 1080px;
+        height: auto !important;
+    }
+
+    .yith-wcqv-main {
+	    @include qodefRelativeHolderLayout();
+	    padding: 0;
+	    overflow: hidden !important;
+	    box-shadow: none;
+    }
+
+    #yith-quick-view-content {
+
+        .woocommerce-product-gallery__wrapper{
+            margin: 0;
+
+            div:not(:first-child){
+                display: none!important;
+            }
+        }
+
+        .product{
+            margin: 0;
+
+        }
+
+        .product-type-grouped {
+            .summary {
+                p.price {
+                    margin: 0 0 30px;
+                }
+            }
+        }
+
+        .product-type-external {
+            .summary {
+                .qodef-single-product-share-wish {
+                    margin-top: 47px;
+                }
+            }
+        }
+
+        .product-type-variable {
+
+            .summary {
+                p.price {
+                    margin: 0 0 30px;
+                }
+            }
+
+            form {
+                .select2-container--default{
+                    float: none;
+                }
+
+                .single_variation_wrap {
+                    margin: 5px 0 0;
+                }
+            }
+        }
+
+        .images,
+        .summary {
+            position: relative;
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .images {
+
+            a, img {
+                display: block;
+            }
+        }
+
+        .summary {
+            padding: 65px 49px 50px;
+
+            .single_add_to_cart_button {
+                padding: 12px 46px;
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: lowercase;
+            }
+
+            .variations {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0 20px;
+                border: none;
+                padding: 0;
+
+
+                select {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-color: #fff;
+                    border: 1px solid #e1e1e1;
+                    box-sizing: border-box;
+                    line-height: 50px;
+                    height: 50px;
+                    padding: 0 16px 0 16px;
+                    margin: 0 -4px 0 0;
+                    color: $default-text-color;
+                    font-weight: 300;
+                    font-size: 13px;
+                    font-family: $default-text-font;
+                }
+
+                tr {
+                    border: 0;
+                    display: block;
+                    float: left;
+
+                    &:first-child {
+                        padding-right: 6px;
+                    }
+                }
+
+                td {
+                    padding: 0;
+                    text-align: left;
+                    display: block;
+                }
+
+                td.label{
+                    width: 12%;
+                }
+
+                .select2-container{
+                    min-width: 180px;
+                }
+
+                .reset_variations {
+                    color: $default-heading-color;
+                    position: relative;
+                    top: -5px;
+                    right: -10px;
+                }
+            }
+
+            .single_variation_wrap {
+                margin: 35px 0 0;
+
+                .single_variation {
+                    margin: 0 0 35px;
+                }
+            }
+
+            table.group_table {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                border: none;
+                padding: 0;
+
+                tbody {
+                    display: block;
+                }
+
+                tr {
+                    border: 1px solid $default-border-color;
+                    display: table;
+                    margin-bottom: 13px;
+                    width: 100%;
+                    background-color: #fff;
+                }
+
+                td {
+                    box-sizing: border-box;
+                    padding: 0 10px;
+                    text-align: left;
+                    display: inline-block;
+
+                    &:first-child {
+                        padding: 0;
+                    }
+
+                    &.label {
+                        text-align: left;
+                        vertical-align: middle;
+                    }
+
+                    &.price {
+                        display: table-cell;
+                        font-size: 16px;
+                        margin: 0;
+                        text-align: center;
+                        vertical-align: middle;
+
+                    }
+                }
+
+                .qodef-quantity-buttons {
+                    margin: 0;
+                    border: 0;
+                    background: transparent;
+                    padding: 0px 10px;
+
+                    .qodef-quantity-label{
+                        display: none;
+                    }
+
+                    .qodef-quantity-input{
+                        width: 20px;
+                        margin: 0;
+                    }
+                }
+
+                a {
+                    color: $default-text-color;
+
+                    &:hover {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+
+            .qodef-yith-product-title {
+                display: block;
+                margin: 0 0 14px;
+                text-transform: lowercase;
+            }
+
+            div[itemprop="offers"] {
+                position: relative;
+                display: block;
+            }
+
+            .price {
+                position: relative;
+                display: block;
+                margin: 0 0 53px;
+                line-height: 1;
+                color: $default-heading-color;
+                font-size: 24px;
+
+                * {
+                    font-size: inherit;
+                    line-height: inherit;
+                }
+
+                del {
+                    margin: 0 8px 0 0;
+                    font-size: 16px;
+                    color: $default-text-color;
+                }
+
+                ins {
+                    font-size: 23px;
+                    text-decoration: none;
+                }
+            }
+	
+	        .woocommerce-product-rating {
+		        @include qodefRelativeHolderLayout();
+		        line-height: 1;
+		        margin: 0 0 16px;
+	        }
+
+            div[itemprop="description"],
+            .woocommerce-product-details__short-description{
+                @include qodefRelativeHolderLayout();
+	            margin: 0 0 47px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            form.cart {
+                @include qodefRelativeHolderLayout();
+                margin: 0 0 80px;
+
+                .button{
+                    letter-spacing: 0;
+                }
+            }
+
+            .qodef-single-product-share-wish {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                vertical-align: middle;
+                margin: 0px;
+
+                .yith-wcwl-wishlistexistsbrowse,
+                .yith-wcwl-wishlistaddedbrowse {
+                    a {
+                        &:after {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+
+                .clear{
+                    display: none;
+                }
+
+                > div{
+                    padding: 0 20px;
+
+                    &:after{
+                        content: "|";
+                        color: #d3d3d3;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    &:first-child{
+                        padding-left: 0;
+
+                        &:after{
+                            display: none;
+                        }
+                    }
+
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                }
+
+                .qodef-woo-social-share-holder {
+                    float: left;
+                    position: relative;
+
+                    > * {
+                        display: table-cell;
+                        vertical-align: top;
+                        line-height: 22px;
+                    }
+
+                    > span {
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: $first-main-color;
+                        padding: 0 9px 0 0;
+                    }
+                }
+            }
+
+            .yith-wcwl-add-to-wishlist {
+                width: auto;
+                background-color: transparent;
+                float: left;
+
+                .yith-wcwl-add-button,
+                .yith-wcwl-wishlistaddedbrowse,
+                .yith-wcwl-wishlistexistsbrowse {
+                    a {
+                        font-size: 12px;
+                        color: #949494;
+                        text-transform: lowercase;
+                        line-height: 22px;
+
+                        &:after {
+                            content: "\e089";
+                            font-size: 13px;
+                            float: left;
+                            color: $default-heading-color;
+                            padding-right: 10px;
+                            line-height: 19px;
+                        }
+
+                    }
+                }
+
+                .yith-wcwl-add-button {
+                    a {
+                        &:after {
+                            content: "\e030";
+                        }
+                    }
+                }
+            }
+
+            p.stock.out-of-stock,
+            p.stock.in-stock {
+                color: $default-heading-color;
+                font-weight: bold;
+                margin: 0 0 18px;
+            }
+        }
+    }
+
+    #yith-quick-view-close {
+        top: 11px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        line-height: 30px;
+	    font-weight: 400;
+        text-align: center;
+        opacity: 1;
+        border: 0;
+        color: $default-heading-color;
+
+        &:before {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            font-family: 'ElegantIcons';
+            content: "\4d";
+	        font-size: 30px;
+            line-height: inherit;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+/* ==========================================================================
+   YITH Quick View  styles - end
+   ========================================================================== */

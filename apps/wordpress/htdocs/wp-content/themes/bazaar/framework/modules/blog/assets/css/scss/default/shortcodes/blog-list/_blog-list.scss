@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Blog List shortcode global style - begin
+   ========================================================================== */
+
+.qodef-blog-list-holder {
+	@include qodefRelativeHolderLayout();
+	clear: both;
+	
+	.qodef-blog-list {
+		@include qodefRelativeHolderLayout();
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.qodef-bl-item {
+		@include qodefRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	.qodef-bli-inner {
+		@include qodefRelativeHolderLayout();
+	}
+	
+	.qodef-bli-content {
+		@include qodefRelativeHolderLayout();
+		box-sizing: border-box;
+	}
+	
+	.qodef-post-image {
+		@include qodefRelativeHolderLayout();
+		margin: 0 0 32px;
+		
+		img {
+			display: block;
+		}
+		
+		a {
+			display: block;
+			
+			&:after {
+				@include qodefAbsoluteHolderLayout();
+				content: '';
+				background: rgba(#fff, .35);
+				opacity: 0;
+				@include qodefTransition(opacity 0.5s ease);
+			}
+			
+			&:hover {
+				
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	.qodef-bli-info {
+		@include qodefRelativeHolderLayout();
+		margin: 0;
+		clear: both;
+		
+		> div {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+			line-height: 1.2;
+			float: left;
+			padding: 0 20px 0 0;
+			
+			a {
+				color: #999999;
+				
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+	
+	.qodef-post-title {
+		margin: 0;
+		text-transform: lowercase;
+	}
+	
+	.qodef-post-excerpt {
+		@include qodefRelativeHolderLayout();
+		margin: 12px 0 0;
+		
+		p {
+			margin: 0;
+		}
+		
+		&:after {
+			content: '...';
+		}
+	}
+	
+	.qodef-post-read-more-button {
+		@include qodefRelativeHolderLayout();
+		margin: 12px 0 0;
+
+		a{
+			font-size: 13px;
+			color: #000;
+            letter-spacing: 0;
+		}
+	}
+	
+	/***** Columns Space style - begin *****/
+	
+	$columns_space_label: ('no', 'tiny', 'small', 'normal', 'large');
+	$columns_space: (0, 5, 10, 15, 30);
+	
+	@for $i from 0 to length($columns_space_label) {
+		&.qodef-bl-#{nth($columns_space_label,$i+1)}-space {
+			$column_width: nth($columns_space, $i+1);
+			$column_width_margin: $column_width * 2;
+			
+			.qodef-bl-wrapper {
+				@if($column_width == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$column_width}px;
+				}
+			}
+			
+			.qodef-bl-item {
+				padding: 0 #{$column_width}px;
+				margin: 0 0 #{$column_width_margin}px;
+			}
+		}
+	}
+	
+	/***** Columns Space style - end *****/
+}
+/* ==========================================================================
+   Blog List shortcode global style - end
+   ========================================================================== */

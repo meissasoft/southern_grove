@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Call To Action shortcode style - begin
+   ========================================================================== */
+
+.qodef-call-to-action-holder {
+    @include qodefRelativeHolderLayout();
+	
+	.qodef-cta-text-holder,
+	.qodef-cta-button-holder {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.qodef-cta-text-holder {
+		
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+		}
+	}
+	
+	.qodef-cta-button-holder {
+		
+		.qodef-btn {
+			white-space: nowrap;
+		}
+	}
+	
+	/***** Layout Style - begin *****/
+	
+	&.qodef-normal-layout {
+		
+		.qodef-cta-inner {
+			display: table;
+		}
+		
+		&:not(.qodef-content-in-grid) {
+			
+			.qodef-cta-inner {
+				width: 100%;
+			}
+		}
+		
+		.qodef-cta-text-holder,
+		.qodef-cta-button-holder {
+			display: table-cell;
+			box-sizing: border-box;
+		}
+		
+		.qodef-cta-button-holder {
+			text-align: right;
+		}
+	}
+	
+	&.qodef-simple-layout {
+		
+		.qodef-cta-inner {
+			text-align: center;
+		}
+		
+		.qodef-cta-text-holder,
+		.qodef-cta-button-holder {
+			width: 100%;
+		}
+		
+		.qodef-cta-button-holder {
+			margin: 28px 0 0;
+		}
+	}
+	
+	/***** Layout Style - end *****/
+	
+	/***** Columns Space - begin *****/
+	
+	&.qodef-two-halves-columns {
+		
+		.qodef-cta-text-holder,
+		.qodef-cta-button-holder {
+			width: 50%;
+		}
+	}
+	
+	&.qodef-two-thirds-columns {
+		
+		.qodef-cta-text-holder {
+			width: 66.66666666666667%;
+		}
+		
+		.qodef-cta-button-holder {
+			width: 33.33333333333333%;
+		}
+	}
+	
+	&.qodef-three-quarters-columns {
+		
+		.qodef-cta-text-holder {
+			width: 75%;
+		}
+		
+		.qodef-cta-button-holder {
+			width: 25%;
+		}
+	}
+	
+	&.qodef-four-fifths-columns {
+		
+		.qodef-cta-text-holder {
+			width: 80%;
+		}
+		
+		.qodef-cta-button-holder {
+			width: 20%;
+		}
+	}
+	
+	/***** Columns Space - end *****/
+}
+/* ==========================================================================
+   Call To Action shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Header Standard style - begin
+   ========================================================================== */
+
+.qodef-header-standard {
+	
+	.qodef-menu-area {
+		
+		&.qodef-menu-left {
+			
+			.qodef-main-menu {
+				width: auto;
+				padding: 0 0 0 20px;
+			}
+			
+			.qodef-vertical-align-containers {
+				
+				.qodef-position-left-inner {
+					height: 100%;
+				}
+			}
+		}
+		
+		&.qodef-menu-center {
+			
+			.qodef-vertical-align-containers {
+				
+				.qodef-position-center-inner {
+					height: 100%;
+				}
+			}
+		}
+		
+		&.qodef-menu-right {
+			
+			.qodef-main-menu {
+				width: auto;
+			}
+			
+			.qodef-vertical-align-containers {
+				
+				.qodef-position-right-inner {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Header Standard style - end
+   ========================================================================== */

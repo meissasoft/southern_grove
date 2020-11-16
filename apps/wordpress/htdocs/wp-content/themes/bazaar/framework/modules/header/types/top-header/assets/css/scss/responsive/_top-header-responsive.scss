@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Top header responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium {
+	
+	.qodef-top-bar {
+		
+		.qodef-grid {
+			
+			.qodef-vertical-align-containers {
+				
+				.qodef-top-bar-in-grid-padding & {
+					padding: 0 40px;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.qodef-top-bar {
+		display: none;
+	}
+}
+/* ==========================================================================
+   Top header responsive style - end
+   ========================================================================== */

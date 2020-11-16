@@ -1,0 +1,859 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Shortcodes responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Button shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .qodef-btn.qodef-btn-large, .qodef-btn.qodef-btn-huge {
+    padding: 12px 32px;
+    font-size: 13px;
+  }
+}
+
+/* ==========================================================================
+   Button shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Call To Action shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 1201px) and (max-width: 1300px) {
+  .qodef-call-to-action-holder .qodef-grid {
+    width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-call-to-action-holder.qodef-three-quarters-columns .qodef-cta-text-holder, .qodef-call-to-action-holder.qodef-four-fifths-columns .qodef-cta-text-holder {
+    width: 66.66666666666667%;
+  }
+  .qodef-call-to-action-holder.qodef-three-quarters-columns .qodef-cta-button-holder, .qodef-call-to-action-holder.qodef-four-fifths-columns .qodef-cta-button-holder {
+    width: 33.33333333333333%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-inner,
+  .qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-text-holder,
+  .qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-button-holder {
+    display: block;
+  }
+  .qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-button-holder {
+    margin: 28px 0 0;
+    text-align: initial;
+  }
+  .qodef-call-to-action-holder.qodef-two-halves-columns .qodef-cta-text-holder,
+  .qodef-call-to-action-holder.qodef-two-halves-columns .qodef-cta-button-holder, .qodef-call-to-action-holder.qodef-two-thirds-columns .qodef-cta-text-holder,
+  .qodef-call-to-action-holder.qodef-two-thirds-columns .qodef-cta-button-holder, .qodef-call-to-action-holder.qodef-three-quarters-columns .qodef-cta-text-holder,
+  .qodef-call-to-action-holder.qodef-three-quarters-columns .qodef-cta-button-holder, .qodef-call-to-action-holder.qodef-four-fifths-columns .qodef-cta-text-holder,
+  .qodef-call-to-action-holder.qodef-four-fifths-columns .qodef-cta-button-holder {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Call To Action shortcode responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-cards-gallery-holder .fake_card {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card.out {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(6) {
+    -webkit-transform: scale(0.3) translateX(84%);
+    -moz-transform: scale(0.3) translateX(84%);
+    transform: scale(0.3) translateX(84%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(5) {
+    -webkit-transform: scale(0.4) translateX(60%);
+    -moz-transform: scale(0.4) translateX(60%);
+    transform: scale(0.4) translateX(60%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(4) {
+    -webkit-transform: scale(0.5) translateX(39%);
+    -moz-transform: scale(0.5) translateX(39%);
+    transform: scale(0.5) translateX(39%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(3) {
+    -webkit-transform: scale(0.6) translateX(25%);
+    -moz-transform: scale(0.6) translateX(25%);
+    transform: scale(0.6) translateX(25%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(2) {
+    -webkit-transform: scale(0.7) translateX(11.2%);
+    -moz-transform: scale(0.7) translateX(11.2%);
+    transform: scale(0.7) translateX(11.2%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card.out {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(6) {
+    -webkit-transform: scale(0.3) translateX(-84%);
+    -moz-transform: scale(0.3) translateX(-84%);
+    transform: scale(0.3) translateX(-84%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(5) {
+    -webkit-transform: scale(0.4) translateX(-60%);
+    -moz-transform: scale(0.4) translateX(-60%);
+    transform: scale(0.4) translateX(-60%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(4) {
+    -webkit-transform: scale(0.5) translateX(-39%);
+    -moz-transform: scale(0.5) translateX(-39%);
+    transform: scale(0.5) translateX(-39%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(3) {
+    -webkit-transform: scale(0.6) translateX(-25%);
+    -moz-transform: scale(0.6) translateX(-25%);
+    transform: scale(0.6) translateX(-25%);
+  }
+  .qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(2) {
+    -webkit-transform: scale(0.7) translateX(-11.2%);
+    -moz-transform: scale(0.7) translateX(-11.2%);
+    transform: scale(0.7) translateX(-11.2%);
+  }
+}
+
+/* ==========================================================================
+   Countdown shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .qodef-countdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-countdown .countdown-row.countdown-show4 .countdown-section, .qodef-countdown .countdown-row.countdown-show6 .countdown-section {
+    width: 33.33333333333333%;
+  }
+  .qodef-countdown .countdown-row.countdown-show5 .countdown-section {
+    width: 20%;
+  }
+  .qodef-countdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-countdown .countdown-row.countdown-show5 .countdown-section {
+    width: 20%;
+  }
+  .qodef-countdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 35px !important;
+    margin-bottom: 0 !important;
+    line-height: 1em !important;
+  }
+  .qodef-countdown .countdown-row .countdown-section .countdown-period {
+    margin-top: 0 !important;
+    font-size: 12px !important;
+    line-height: 1em !important;
+  }
+}
+
+/* ==========================================================================
+   Countdown shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Elements Holder shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-two-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-three-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-four-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-five-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-six-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-one-column-alignment-left .qodef-eh-item .qodef-eh-item-content {
+    text-align: left;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-one-column-alignment-right .qodef-eh-item .qodef-eh-item-content {
+    text-align: right;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1280.qodef-one-column-alignment-center .qodef-eh-item .qodef-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-two-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-three-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-four-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-five-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-six-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-one-column-alignment-left .qodef-eh-item .qodef-eh-item-content {
+    text-align: left;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-one-column-alignment-right .qodef-eh-item .qodef-eh-item-content {
+    text-align: right;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-1024.qodef-one-column-alignment-center .qodef-eh-item .qodef-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-two-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-three-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-four-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-five-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-six-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-one-column-alignment-left .qodef-eh-item .qodef-eh-item-content {
+    text-align: left;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-one-column-alignment-right .qodef-eh-item .qodef-eh-item-content {
+    text-align: right;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-768.qodef-one-column-alignment-center .qodef-eh-item .qodef-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-two-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-three-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-four-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-five-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-six-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-one-column-alignment-left .qodef-eh-item .qodef-eh-item-content {
+    text-align: left;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-one-column-alignment-right .qodef-eh-item .qodef-eh-item-content {
+    text-align: right;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-680.qodef-one-column-alignment-center .qodef-eh-item .qodef-eh-item-content {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-two-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-three-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-four-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-five-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-six-columns .qodef-eh-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-one-column-alignment-left .qodef-eh-item .qodef-eh-item-content {
+    text-align: left;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-one-column-alignment-right .qodef-eh-item .qodef-eh-item-content {
+    text-align: right;
+  }
+  .qodef-elements-holder.qodef-responsive-mode-480.qodef-one-column-alignment-center .qodef-eh-item .qodef-eh-item-content {
+    text-align: center;
+  }
+  .qodef-elements-holder .qodef-eh-item-content {
+    padding: 0 10px;
+  }
+}
+
+/* ==========================================================================
+   Elements Holder shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Google Map shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-google-map-overlay {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Google Map shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   #Hiding Images Shortcode Responsive Styles - Start
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-hiding-images .qodef-hi-main-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-hiding-images .qodef-hi-main-image {
+    width: 65%;
+  }
+  .qodef-hiding-images .qodef-hi-other-image img {
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
+  }
+  .qodef-hiding-images .qodef-hi-other-image > a:hover img {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  }
+  .qodef-hiding-images .qodef-hi-other-image:nth-child(odd) {
+    top: 15%;
+  }
+  .qodef-hiding-images .qodef-hi-other-image:nth-child(even) {
+    bottom: 30%;
+  }
+}
+
+/* ==========================================================================
+   #Hiding Images Shortcode Responsive Styles - End
+   ========================================================================== */
+/* ==========================================================================
+   Image Gallery shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1281px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image:nth-child(6n+1) {
+    clear: none;
+  }
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-grid-sizer {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-grid-sizer {
+    width: 25%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 50%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-grid-sizer {
+    width: 25%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-four-columns .qodef-ig-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-two-columns .qodef-ig-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-three-columns .qodef-ig-image:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-four-columns .qodef-ig-image:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 66.66667%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-grid-sizer {
+    width: 33.33333%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 66.66667%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-grid-sizer {
+    width: 50%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-three-columns .qodef-ig-image {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-grid-sizer {
+    width: 50%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-grid-sizer {
+    width: 50%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-grid-sizer {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-two-columns .qodef-ig-image {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-three-columns .qodef-ig-image {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-four-columns .qodef-ig-image {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-two-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-two-columns .qodef-ig-grid-sizer {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-two-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-grid-sizer {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-grid-sizer {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-grid-sizer {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image,
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-grid-sizer {
+    width: 100%;
+  }
+  .qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image.qodef-large-masonry-item {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Image Gallery shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Image With Text shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 480px) {
+  .qodef-image-with-text-holder.qodef-iwt-text-over-image .qodef-iwt-text {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Image With Text shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Pricing Tables shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-pricing-tables.qodef-four-columns .qodef-price-table {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 681px) {
+  .qodef-pricing-tables.qodef-four-columns .qodef-price-table:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-pricing-tables.qodef-five-columns .qodef-price-table {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 681px) {
+  .qodef-pricing-tables.qodef-five-columns .qodef-price-table:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-pricing-tables.qodef-three-columns .qodef-price-table {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-pricing-tables .qodef-price-table {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   Pricing Tables shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Section Title shortcode responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-section-title-holder.qodef-st-two-columns {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-section-title-holder {
+    padding: 0 !important;
+  }
+  .qodef-section-title-holder.qodef-st-two-columns .qodef-st-title,
+  .qodef-section-title-holder.qodef-st-two-columns .qodef-st-text {
+    width: 100%;
+    float: none !important;
+    text-align: initial !important;
+  }
+  .qodef-section-title-holder.qodef-st-two-columns .qodef-st-text {
+    margin: 14px 0 0;
+  }
+  .qodef-section-title-holder.qodef-st-disable-title-break .qodef-st-title br {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Section Title shortcode responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Tabs shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-tabs.qodef-tabs-standard .qodef-tabs-nav li a {
+    padding: 17px 18px;
+  }
+  .qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li {
+    margin: 0 8px 0 0;
+  }
+  .qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li a {
+    padding: 7px 18px;
+  }
+  .qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li {
+    margin: 0 26px 0 0;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav {
+    width: 180px;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tab-container {
+    width: calc(100% - 180px) !important;
+    padding: 0 0 0 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-tabs.qodef-tabs-standard .qodef-tabs-nav li {
+    display: block;
+    float: none;
+  }
+  .qodef-tabs.qodef-tabs-standard .qodef-tabs-nav li a {
+    width: 100%;
+  }
+  .qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li {
+    display: block;
+    float: none;
+    margin: 0 0 8px;
+  }
+  .qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li a {
+    width: 100%;
+  }
+  .qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li {
+    margin: 0 20px 0 0;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav,
+  .qodef-tabs.qodef-tabs-vertical .qodef-tab-container {
+    display: inline-block;
+    width: 100% !important;
+    height: auto;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav {
+    border-right: 0;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tab-container {
+    padding: 31px 0 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-tabs.qodef-tabs-simple .qodef-tabs-nav {
+    padding: 0 0 20px;
+  }
+  .qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li {
+    display: block;
+    float: none;
+    margin: 0 0 20px;
+  }
+  .qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li a {
+    padding: 0;
+    width: 100%;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li {
+    display: block;
+    float: none;
+    margin: 0 0 20px;
+  }
+  .qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li a {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Tabs shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+# Team responsive style - begin
+========================================================================== */
+/* ==========================================================================
+# Team responsive style - end
+========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .curtains > li {
+    position: initial;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-uncovering-sections ul {
+    line-height: 0;
+  }
+  .qodef-uncovering-sections .qodef-uss-item {
+    line-height: 25px;
+  }
+  .qodef-uncovering-sections .qodef-uss-item .qodef-uss-image-holder {
+    height: 100%;
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/select-core/assets/css/shortcodes-map-responsive.css.map */

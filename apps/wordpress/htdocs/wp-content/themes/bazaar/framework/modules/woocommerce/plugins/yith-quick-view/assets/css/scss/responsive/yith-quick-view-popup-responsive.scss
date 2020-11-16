@@ -1,0 +1,122 @@
+/* ==========================================================================
+   YITH Quick View Responsive styles - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+
+    #yith-quick-view-modal {
+
+        #yith-quick-view-content {
+
+            .summary {
+                padding: 88px 50px 50px;
+
+                .single_add_to_cart_button {
+                    padding: 8px 45px;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+@include ipad-portrait{
+    body{
+        position: relative; //in order to make popup scrollable
+    }
+
+    #yith-quick-view-modal {
+        position: absolute;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+
+        .yith-wcqv-wrapper{
+            position: absolute;
+        }
+
+        #yith-quick-view-content {
+
+            .images,
+            .summary {
+                    width: 100%;
+            }
+
+            .summary {
+                padding: 46px 50px 50px;
+            }
+
+        }
+
+    }
+}
+
+@include phone-landscape {
+
+    #yith-quick-view-modal {
+
+        #yith-quick-view-content {
+
+            .images,
+            .summary {
+                width: 100%;
+            }
+
+            .summary {
+                padding: 26px 40px 26px;
+
+                .variations {
+                    tbody {
+                        width: 100%;
+                        display: block;
+
+                        tr {
+                            width: 100%;
+                            padding-right: 0;
+                        }
+                    }
+                }
+
+                .single_add_to_cart_button {
+                    text-align: center;
+                    width: 100%;
+                    margin-top: 15px;
+                }
+
+                .qodef-quantity-buttons {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                table.group_table {
+
+                    .qodef-quantity-buttons {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                div[itemprop="offers"] {
+                    margin: 0 0 20px;
+                }
+
+                div[itemprop="description"] {
+                    display: none;
+                }
+
+                form.cart {
+                    margin: 0 0 20px;
+                }
+            }
+
+        }
+
+    }
+}
+
+/* ==========================================================================
+   YITH Quick View responsive styles - end
+   ========================================================================== */

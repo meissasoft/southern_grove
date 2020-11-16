@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Blog Single style - begin
+   ========================================================================== */
+
+.qodef-blog-holder.qodef-blog-single {
+	
+	article {
+		margin: 0 0 30px;
+		
+		.qodef-post-heading {
+			margin-bottom: 35px;
+		}
+		
+		.qodef-post-text {
+			padding: 0 0 21px;
+		}
+		
+		.qodef-post-info-top {
+			margin-bottom: 15px;
+			
+			> div {
+				position: relative;
+				display: inline-block;
+				padding-right: 8px;
+				margin-right: 12px;
+				color: #999999;
+				
+				a {
+					color: inherit;
+					font-size: 12px;
+					
+					&:hover {
+						color: $default-heading-color;
+					}
+				}
+
+				.qodef-post-info-author-text {
+					text-transform: lowercase;
+					font-size: 12px;
+
+					.author-icon {
+						padding-right: 10px;
+						font-size: 13px;
+					}
+
+				}
+
+                .category-icon{
+                    margin-right: 5px;
+                    position: relative;
+                    top: 3px;
+                }
+
+			}
+
+			.qodef-post-info-comments-holder{
+				a {
+					.comment-icon {
+						padding-right: 10px;
+					}
+				}
+			}
+
+			.qodef-post-title{
+				margin: 0 0 8px;
+				text-transform: lowercase;
+			}
+		}
+		
+		.qodef-post-info-bottom {
+			@include qodefRelativeHolderLayout();
+			margin: 51px 0 0;
+			
+			.qodef-tags-holder{
+				text-align: center;
+
+				a{
+					padding: 2px 19px;
+					color: #999999;
+					border: 1px solid #d3d3d3;
+                    @include qodefTransition(all .2s ease-in-out);
+
+                    &:hover{
+                        color: #6e6e6e;
+                        border-color: #6e6e6e;
+                    }
+				}
+			}
+		}
+
+		&.format-quote{
+			.qodef-post-text-main{
+                padding: 60px 53px 42px;
+				background-color: #f2f2f2;
+
+				.qodef-post-quote-holder{
+					text-align: center;
+				}
+			}
+
+
+            .qodef-post-info-top{
+                margin-top: 30px;
+            }
+		}
+
+		&.format-link{
+			.qodef-post-text-main{
+				position: relative;
+				padding: 62px 53px 64px;
+				background-color: #f2f2f2;
+				text-align: center;
+
+				.qodef-post-mark {
+					width: 50px;
+					vertical-align: top;
+					text-align: center;
+					position: absolute;
+					right: 8px;
+					top: 23px;
+
+					.qodef-link-mark {
+						padding-top: 5px;
+						font-size: 26px;
+						color: $first-main-color;
+					}
+				}
+			}
+
+            .qodef-post-info-top{
+                margin-top: 20px;
+            }
+		}
+	}
+}
+/* ==========================================================================
+   Blog Single style - end
+   ========================================================================== */

@@ -1,0 +1,311 @@
+/* ==========================================================================
+   Header Vertical navigation style - begin
+   ========================================================================== */
+
+.qodef-header-vertical {
+
+    .qodef-vertical-alignment-center {
+	    
+        .qodef-vertical-menu-outer {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        height: 100%;
+	        width: 100%;
+	        display: table;
+	        padding: 100px 0 150px;
+        }
+
+        .qodef-vertical-menu {
+            display: table-cell;
+            height: auto;
+            min-height: 0;
+            vertical-align: middle;
+        }
+    }
+    
+    .qodef-vertical-menu-outer {
+        @include qodefRelativeHolderLayout();
+	    box-sizing: border-box;
+    }
+
+    .qodef-vertical-menu {
+        @include qodefRelativeHolderLayout();
+        margin: 97px 0 116px;
+        padding: 0;
+        z-index: 100;
+        
+        ul {
+            position: relative;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            
+            li {
+                position: relative;
+                padding: 0;
+                margin: 0;
+                
+                a {
+	                position: relative;
+	                display: block;
+	                margin: 0;
+	                padding: 5px 0 0;
+                    color: $default-text-color;
+                    font-size: 13px;
+                    line-height: 26px;
+                    
+                    &:hover {
+                        color: $first-main-color;
+                        
+                        .qodef-menu-arrow {
+                            @include qodefTransform(rotate(0deg));
+                        }
+                    }
+                    
+                    .item_outer {
+                        position: relative;
+                        display: block;
+                        padding: 0 15px 0 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    .qodef-menu-arrow {
+                        position: absolute;
+                        top: 1px;
+                        right: 0;
+	                    font-size: inherit;
+	                    line-height: inherit;
+                        margin: 0;
+                        -webkit-transition: -webkit-transform .2s ease-in-out;
+                        -moz-transition: -moz-transform .2s ease-in-out;
+                        transition: transform .2s ease-in-out;
+                        @include qodefTransform(rotate(-90deg));
+                    }
+                    
+                    .qodef-menu-featured-icon {
+                        position: relative;
+                        top: -4px;
+                        left: 3px;
+                        color: $default-heading-color;
+                        font-size: 12px;
+                        margin: 0;
+                    }
+                    
+                    .menu_icon:not(.blank):not(.null) {
+                        padding: 0 5px 0 0;
+                    }
+                }
+	
+	            &.qodef-active-item > a,
+	            &.current_page_item > a,
+	            &.current-menu-item > a,
+	            &.current-menu-ancestor > a {
+		            color: $first-main-color;
+                    
+                    .qodef-menu-arrow {
+                        @include qodefTransform(rotate(0deg));
+                    }
+                }
+                
+                ul {
+                    padding: 7px 0;
+                    
+                    li {
+                        
+                        &.sub {
+                            
+                            > a {
+                                
+                                .item_outer {
+                                    position: relative;
+                                    display: block;
+                                    
+                                    &:after {
+                                        position: absolute;
+                                        top: -1px;
+                                        right: 0;
+                                        margin: 0;
+                                        font-family: 'FontAwesome';
+	                                    font-size: inherit;
+	                                    line-height: inherit;
+                                        content: "\f105";
+                                    }
+                                }
+                            }
+                            
+                            &.current_page_item > a,
+                            &.current-menu-ancestor > a {
+                                
+                                .item_outer:after {
+                                    content: "\f107";
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .second {
+                    display: none;
+                    @include qodefTransform(translateZ(0));
+                    
+                    .inner {
+                        position: relative;
+                        display: block;
+                        padding: 0;
+                        z-index: 997;
+                    }
+                }
+            }
+        }
+        
+        > ul {
+            
+            > li {
+                
+                > a {
+                    padding: 8px 0 3px;
+                    font-size: 15px;
+                    line-height: 30px;
+                    color: $default-heading-color;
+                    font-weight: 600;
+                    
+                    span.item_text {
+	                    position: relative;
+	                    display: inline-block;
+	                    vertical-align: top;
+                        overflow: hidden;
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            width: 100%;
+                            height: 1px;
+                            background-color: rgba(0,0,0,.4);
+                            opacity: 0;
+                            @include qodefTransform(scaleX(0));
+                        }
+
+                        &:before {
+                            opacity: 1;
+                            left: 0;
+                            -webkit-transform-origin: 0% 50%;
+                            transform-origin: 0% 50%;
+                        }
+
+                        &:after {
+                            right: 0;
+                            -webkit-transform-origin: 100% 50%;
+                            transform-origin: 100% 50%;
+                            -webkit-transition: -webkit-transform .2s, opacity .0s .2s;
+                            transition: transform .2s, opacity .0s .2s;
+                        }
+                    }
+                }
+
+
+                &:hover{
+                    span.item_text{
+                        &:before,
+                        &:after {
+                            opacity: 1;
+                            @include qodefTransform(scaleX(1));
+                        }
+
+                        &:before {
+                            opacity: 0;
+                            -webkit-transition: -webkit-transform .2s, opacity .0s .2s;
+                            transition: transform .2s, opacity .0s .2s;
+                        }
+
+                        &:after {
+                            -webkit-transition: -webkit-transform .0s .2s, opacity .0s .2s;
+                            transition: transform .0s .2s, opacity .0s .2s;
+                        }
+                    }
+                }
+
+                &.open,
+                &.qodef-active-item {
+                    > a{
+                        span.item_text{
+                            &:after {
+                                opacity: 1;
+                                @include qodefTransform(scaleX(1));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.qodef-light-header.qodef-header-vertical .qodef-vertical-menu ul li {
+    
+    a {
+        color: $header-light-color !important;
+
+        span.item_text {
+
+            &:before,
+            &:after {
+                background: #fff;
+            }
+        }
+        
+        &:hover {
+            color: $header-light-hover-color !important;
+        }
+    }
+    
+    ul li {
+        
+        &.current_page_item > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a {
+            color: $header-light-hover-color !important;
+        }
+    }
+}
+
+.qodef-light-header.qodef-header-vertical .qodef-vertical-menu > ul > li {
+    
+    &.qodef-active-item > a,
+    &.current-menu-ancestor > a {
+        color: $header-light-hover-color !important;
+    }
+}
+
+.qodef-dark-header.qodef-header-vertical .qodef-vertical-menu ul li {
+    
+    a {
+        color: $header-dark-color !important;
+        
+        &:hover {
+            color: $header-dark-hover-color !important;
+        }
+    }
+    
+    ul li {
+        
+        &.current_page_item > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a {
+            color: $header-dark-hover-color !important;
+        }
+    }
+}
+
+.qodef-dark-header.qodef-header-vertical .qodef-vertical-menu > ul > li {
+    
+    &.qodef-active-item > a,
+    &.current-menu-ancestor > a {
+        color: $header-dark-hover-color !important;
+    }
+}
+/* ==========================================================================
+   Header Vertical navigation style - end
+   ========================================================================== */

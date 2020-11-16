@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Centered Title type style - begin
+   ========================================================================== */
+
+.qodef-title-holder {
+	
+	&.qodef-centered-type {
+		
+		.qodef-title-inner {
+			text-align: center;
+		}
+		
+		.qodef-page-title {
+			margin: 0;
+		}
+		
+		.qodef-page-subtitle {
+			display: block;
+			margin: 10px 0 0;
+			box-sizing: border-box;
+		}
+	}
+}
+/* ==========================================================================
+   Centered Title type style - end
+   ========================================================================== */

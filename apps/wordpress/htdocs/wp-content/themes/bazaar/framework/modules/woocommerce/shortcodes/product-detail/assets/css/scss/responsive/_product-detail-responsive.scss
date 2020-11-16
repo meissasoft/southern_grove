@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Product Info shortcode responsive styles - begin
+   ========================================================================== */
+
+@include ipad-landscape{
+	.qodef-product-detail{
+		.qodef-pd-text-holder {
+			.qodef-pd-price {
+				font-size: 105px;
+			}
+
+			@include phone-portrait{
+				.qodef-pd-text-right,
+				.qodef-pd-text-left{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   Product Info responsive styles - end
+   ========================================================================== */

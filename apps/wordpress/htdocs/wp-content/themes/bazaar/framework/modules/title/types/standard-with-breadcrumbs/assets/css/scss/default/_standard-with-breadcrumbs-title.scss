@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Standard With Breadcrumbs Title type style - begin
+   ========================================================================== */
+
+.qodef-title-holder {
+	
+	&.qodef-standard-with-breadcrumbs-type {
+		
+		.qodef-title-info,
+		.qodef-breadcrumbs-info {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.qodef-title-info {
+			width: 99%;
+		}
+		
+		.qodef-breadcrumbs-info {
+			width: 1%;
+			text-align: right;
+			white-space: nowrap;
+		}
+		
+		.qodef-page-title {
+			margin: 0;
+		}
+		
+		.qodef-page-subtitle {
+			margin: 5px 0 0;
+		}
+		
+		.qodef-breadcrumbs {
+			color: $default-text-color;
+			
+			&.qodef-has-inline-style {
+				
+				a {
+					opacity: 1;
+					@include qodefTransition(opacity .2s ease-out);
+					
+					&:hover {
+						color: inherit;
+						opacity: 0.9;
+					}
+				}
+			}
+			
+			a,
+			span {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				color: inherit;
+			}
+			
+			a:hover {
+				color: $default-heading-color;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Standard With Breadcrumbs Title type style - end
+   ========================================================================== */

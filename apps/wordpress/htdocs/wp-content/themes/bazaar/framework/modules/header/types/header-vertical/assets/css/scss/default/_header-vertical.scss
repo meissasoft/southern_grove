@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Header Vertical style - begin
+   ========================================================================== */
+$vertical-menu-width: 300px;
+
+@import 'blocks/header-vertical-navigation.scss';
+@import 'blocks/header-vertical-widgets.scss';
+
+.qodef-header-vertical {
+	
+	&.admin-bar {
+		
+		.qodef-vertical-menu-area {
+			top: 32px;
+			height: calc(100% - 32px);
+		}
+	}
+
+    .qodef-content,
+    footer {
+        padding-left: $vertical-menu-width;
+        box-sizing: border-box;
+    }
+
+    .qodef-vertical-menu-area {
+        position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: $vertical-menu-width;
+        height: 100%;
+        padding: 92px 35px 10px;
+        background-color: transparent;
+        outline: none;
+        z-index: 101;
+        -webkit-backface-visibility: hidden;
+        box-sizing: border-box;
+	    
+	    &.qodef-with-scroll {
+		    overflow: hidden;
+	    }
+    }
+
+    .qodef-vertical-menu-area-inner {
+        @include qodefRelativeHolderLayout();
+        height: 100%;
+
+        &.qodef-vertical-align-left {
+            text-align: left;
+        }
+
+        &.qodef-vertical-align-center {
+            text-align: center;
+
+            .qodef-logo-wrapper img {
+                margin: 0 auto;
+            }
+        }
+    }
+	
+	.qodef-logo-wrapper {
+		@include qodefRelativeHolderLayout();
+		z-index: 100;
+		
+		a {
+			display: block;
+			position: relative;
+			height: 100%;
+		}
+		
+		img {
+			display: block;
+			height: auto;
+			max-height: 100%;
+			@include qodefTransition(opacity 0.3s ease);
+		}
+	}
+
+    .qodef-vertical-area-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: $vertical-menu-width;
+        height: 100%;
+        background-color: #fff;
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+        opacity: 1;
+        @include qodefTransition(opacity 0.5s ease, background-color 0.5s ease);
+    }
+    
+    &.qodef-header-vertical-shadow-disable .qodef-vertical-area-background {
+        box-shadow: none;
+    }
+    
+    &.qodef-header-vertical-border-disable .qodef-vertical-area-background {
+        border: none;
+    }
+}
+
+.qodef-light-header {
+	
+	.qodef-vertical-menu-area {
+		
+		.qodef-logo-wrapper {
+			
+			.qodef-light-logo {
+				opacity: 1;
+			}
+			
+			.qodef-normal-logo,
+			.qodef-dark-logo {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.qodef-dark-header {
+	
+	.qodef-vertical-menu-area {
+		
+		.qodef-logo-wrapper {
+			
+			.qodef-dark-logo {
+				opacity: 1;
+			}
+			
+			.qodef-normal-logo,
+			.qodef-light-logo {
+				opacity: 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Header Vertical style - end
+   ========================================================================== */

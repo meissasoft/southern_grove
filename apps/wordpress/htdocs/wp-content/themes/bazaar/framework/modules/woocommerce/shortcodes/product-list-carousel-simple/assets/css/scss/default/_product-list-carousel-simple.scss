@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Product List Simple - Carousel shortcode styles - begin
+   ========================================================================== */
+
+.qodef-plcs-holder {
+    @include qodefRelativeHolderLayout();
+
+    .qodef-owl-slider{
+
+        .owl-nav {
+            .owl-prev,
+            .owl-next{
+                top: auto;
+                bottom: 12px;
+                @include qodefTransform(0);
+
+                span{
+                    font-size: 20px;
+                    color: #a19f9f;
+                    @include qodefTransition(color .2s);
+                }
+
+                &:hover {
+                    > span {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .owl-next{
+                right: 20px;
+
+                .qodef-next-icon{
+                    &:before{
+                        content: "\e876";
+                        font-family: 'Linearicons-Free';
+                    }
+                }
+            }
+            .owl-prev{
+                left: auto;
+                right: 46px;
+
+                .qodef-prev-icon{
+                    &:before{
+                        content: "\e875";
+                        font-family: 'Linearicons-Free';
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Product List Simple - Carousel shortcode styles - end
+   ========================================================================== */

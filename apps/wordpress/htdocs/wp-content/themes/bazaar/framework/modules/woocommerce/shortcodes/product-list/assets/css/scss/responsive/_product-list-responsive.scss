@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Product List shortcode responsive styles - begin
+   ========================================================================== */
+@include laptop-landscape-large {
+
+    .qodef-pl-holder {
+	    
+	    &.qodef-standard-layout {
+		    $standard_list_columns: ('six');
+		
+		    @for $i from 0 to length($standard_list_columns) {
+			    &.qodef-#{nth($standard_list_columns,$i+1)}-columns {
+				    $column_width: 100%/5;
+				
+				    .qodef-pli {
+					    width: $column_width;
+					
+					    @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+						    &:nth-child(6n+1) {
+							    clear: none;
+						    }
+						
+						    &:nth-child(5n+1) {
+							    clear: both;
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+	    
+	    &.qodef-masonry-layout {
+		    $masonry_list_columns: ('five', 'six');
+		
+		    @for $i from 0 to length($masonry_list_columns) {
+			    &.qodef-#{nth($masonry_list_columns,$i+1)}-columns {
+				    $column_width: 100%/4;
+				
+				    .qodef-pli,
+				    .qodef-pl-sizer {
+					    width: $column_width;
+				    }
+				
+				    .qodef-pli.qodef-large-width,
+                    .qodef-pli.qodef-large-width-height {
+					    width: $column_width*2;
+				    }
+			    }
+		    }
+	    }
+    }
+}
+
+@include laptop-landscape {
+
+    .qodef-pl-holder {
+	    
+	    &.qodef-standard-layout {
+		    $standard_list_columns: ('five', 'six');
+		
+		    @for $i from 0 to length($standard_list_columns) {
+			    &.qodef-#{nth($standard_list_columns,$i+1)}-columns {
+				    $column_width: 100%/4;
+				
+				    .qodef-pli {
+					    width: $column_width;
+					    $standard_list_columns_label: #{nth($standard_list_columns,$i+1)};
+					
+					    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						    @if $standard_list_columns_label == "five" {
+							    &:nth-child(5n+1) {
+								    clear: none;
+							    }
+						    } @else if $standard_list_columns_label == "six" {
+							    &:nth-child(6n+1) {
+								    clear: none;
+							    }
+						    }
+						
+						    &:nth-child(4n+1) {
+							    clear: both;
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+	    
+	    &.qodef-masonry-layout {
+		    $masonry_list_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		    @for $i from 0 to length($masonry_list_columns) {
+			    &.qodef-#{nth($masonry_list_columns,$i+1)}-columns {
+				    $column_width: 100%/($i+2);
+				
+				    @if ($i+2) == 5 {
+					    $column_width: 100%/4;
+				    } @else if ($i+2) == 6 {
+					    $column_width: 100%/4;
+				    }
+				
+				    .qodef-pli,
+				    .qodef-pl-sizer {
+					    width: $column_width;
+				    }
+				
+				    .qodef-pli.qodef-large-width,
+                    .qodef-pli.qodef-large-width-height {
+					    width: $column_width*2;
+				    }
+			    }
+		    }
+	    }
+    }
+}
+
+@include ipad-landscape {
+
+    .qodef-pl-holder {
+	    
+	    &.qodef-standard-layout {
+		    $standard_list_columns_clear: ('two', 'three');
+		    $standard_list_columns: ('four', 'five', 'six');
+		
+		    @for $i from 0 to length($standard_list_columns) {
+			    &.qodef-#{nth($standard_list_columns,$i+1)}-columns {
+				    $column_width: 100%/3;
+				
+				    .qodef-pli {
+					    width: $column_width;
+					
+					    @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+						    &:nth-child(3n+1) {
+							    clear: both;
+						    }
+					    }
+				    }
+			    }
+		    }
+		
+		    @for $i from 0 to length($standard_list_columns_clear) {
+			    &.qodef-#{nth($standard_list_columns_clear,$i+1)}-columns {
+				    .qodef-pli {
+					
+					    @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+						    &:nth-child(#{$i+2}n+1) {
+							    clear: both;
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+	    
+	    &.qodef-masonry-layout {
+		    $masonry_list_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		    @for $i from 0 to length($masonry_list_columns) {
+			    &.qodef-#{nth($masonry_list_columns,$i+1)}-columns {
+				    $column_width: 50%;
+				
+				    .qodef-pli,
+				    .qodef-pl-sizer {
+					    width: $column_width;
+				    }
+				
+				    .qodef-pli.qodef-large-width,
+                    .qodef-pli.qodef-large-width-height {
+					    width: $column_width*2;
+				    }
+			    }
+		    }
+	    }
+    }
+}
+
+@include ipad-portrait {
+
+    .qodef-pl-holder {
+	    
+	    &.qodef-standard-layout {
+		    $standard_list_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		    @for $i from 0 to length($standard_list_columns) {
+			    &.qodef-#{nth($standard_list_columns,$i+1)}-columns {
+				    $column_width: 50%;
+				
+				    .qodef-pli {
+					    width: $column_width;
+					
+					    @media only screen and (min-width: $phone-landscape-plus-pixel) {
+						    &:nth-child(2n+1) {
+							    clear: both;
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+	    
+	    &.qodef-masonry-layout {
+		    $masonry_list_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		    @for $i from 0 to length($masonry_list_columns) {
+			    &.qodef-#{nth($masonry_list_columns,$i+1)}-columns {
+				    $column_width: 50%;
+				
+				    .qodef-pli,
+				    .qodef-pl-sizer {
+					    width: $column_width;
+				    }
+				
+				    .qodef-pli.qodef-large-width-height,
+					.qodef-pli.qodef-large-width{
+					    width: $column_width*2;
+				    }
+			    }
+		    }
+	    }
+
+        .qodef-pl-categories{
+            float: none;
+            padding-top: 20px;
+            padding-bottom: 0;
+            margin-bottom: -8px;
+
+            h6.qodef-pl-categories-label {
+                display: block;
+                font-size: 14px;
+            }
+
+            ul {
+                margin-top: 10px;
+                display: none;
+
+                li {
+                    display: block;
+                    padding: 0;
+                    float: none;
+                }
+            }
+        }
+
+        .qodef-pl-ordering-outer{
+            position: relative;
+            float: none;
+            padding-top: 20px;
+
+            h6{
+                display: block;
+                padding: 0;
+                font-size: 14px;
+
+                &:after {
+                    top: -1px;
+                }
+
+
+            }
+
+            .qodef-pl-ordering{
+                display: none;
+                position: relative;
+                top: auto;
+                left: auto;
+                opacity: 1;
+                visibility: visible;
+                background: transparent;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+
+                div {
+                    margin: 0;
+
+                    h5{
+                        color: $default-heading-color;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+
+
+                        &:last-child{
+                            margin: 0;
+                        }
+                    }
+
+                    ul{
+                        margin: 0;
+                        padding: 0 0 10px;
+
+                        li{
+                            padding: 0;
+                        }
+
+                        a{
+                            font-size: 12px;
+
+                            &:hover,
+                            &.active{
+                                color: $default-heading-color !important;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .qodef-prl-loading{
+            margin: 0;
+            top: initial;
+            left: initial;
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .qodef-pl-holder {
+        
+        &.qodef-standard-layout {
+            $standard_list_columns: ('two', 'three', 'four', 'five', 'six');
+    
+            @for $i from 0 to length($standard_list_columns) {
+                &.qodef-#{nth($standard_list_columns,$i+1)}-columns {
+                    $column_width: 100%;
+            
+                    .qodef-pli {
+                        width: $column_width;
+                    }
+                }
+            }
+        }
+        
+        &.qodef-masonry-layout {
+            $masonry_list_columns: ('two', 'three', 'four', 'five', 'six');
+    
+            @for $i from 0 to length($masonry_list_columns) {
+                &.qodef-#{nth($masonry_list_columns,$i+1)}-columns {
+                    .qodef-pli,
+                    .qodef-pl-sizer,
+                    .qodef-pli.qodef-large-width,
+                    .qodef-pli.qodef-large-width-height {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Product List shortcode responsive styles - end
+   ========================================================================== */

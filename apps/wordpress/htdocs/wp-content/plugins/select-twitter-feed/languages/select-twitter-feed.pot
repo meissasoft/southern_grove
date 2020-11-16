@@ -1,0 +1,81 @@
+# Copyright (C) 2020 Select Themes
+# This file is distributed under the same license as the Select Twitter Feed plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Select Twitter Feed 1.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/select-twitter-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-22T13:06:23+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: select-twitter-feed\n"
+
+#. Plugin Name of the plugin
+msgid "Select Twitter Feed"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds Twitter feed functionality to our theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Select Themes"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:12
+msgid "Select Twitter Widget"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:14
+msgid "Display your Twitter feed"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:26
+msgid "Title"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:31
+msgid "Type"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:33
+msgid "Standard"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:34
+msgid "Slider"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:40
+msgid "User ID"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:45
+msgid "Number of Tweets"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:50
+msgid "Show Tweet Icon"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:52
+#: widgets/qodef-twitter-widget.php:62
+msgid "Yes"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:53
+#: widgets/qodef-twitter-widget.php:61
+msgid "No"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:59
+msgid "Show Tweet Time"
+msgstr ""
+
+#: widgets/qodef-twitter-widget.php:68
+msgid "Tweets Cache Time"
+msgstr ""

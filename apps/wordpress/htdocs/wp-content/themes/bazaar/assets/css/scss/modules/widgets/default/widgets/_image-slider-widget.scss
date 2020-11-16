@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Image Slider widget style - begin
+   ========================================================================== */
+
+.widget.qodef-image-slider-widget {
+    @include qodefRelativeHolderLayout();
+    
+    .qodef-is-widget-inner {
+        @include qodefRelativeHolderLayout();
+    }
+    
+    .qodef-widget-title {
+        margin: 0 0 32px;
+    }
+    
+    img {
+        display: block;
+    }
+}
+/* ==========================================================================
+   Image Slider widget style - end
+   ========================================================================== */

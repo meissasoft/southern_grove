@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Mobile header style - begin
+   ========================================================================== */
+
+.qodef-mobile-header {
+	position: relative;
+	display: none;
+    z-index: 111;
+
+    /* #General mobile header styles
+    ========================================================================== */
+    .qodef-mobile-header-inner {
+        position: relative;
+        height: 70px;
+        background-color: #fff;
+        border-bottom: 1px solid $default-border-color;
+        box-sizing: border-box;
+
+        .qodef-mobile-header-holder {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+        }
+    }
+
+    .qodef-grid {
+        height: 100%;
+    }
+
+    .qodef-vertical-align-containers {
+        padding: 0;
+    }
+
+    /* #End of general mobile header styles
+   ========================================================================== */
+
+    /* #Mobile logo styles
+    ========================================================================== */
+    .qodef-mobile-logo-wrapper {
+        
+        a {
+            display: block;
+        }
+    
+        img {
+	        display: block;
+            height: 100%;
+            width: auto;
+        }
+    }
+    /* #End of mobile logo styles
+    ========================================================================== */
+
+    /* #Mobile menu opener styles
+    ========================================================================== */
+    .qodef-mobile-menu-opener {
+	    position: relative;
+	    height: 100%;
+	    float: left;
+	    z-index: 2;
+
+        a {
+            display: table;
+            height: 100%;
+            padding-right: 10px;
+    
+            > * {
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
+                line-height: 1em;
+            }
+
+            .qodef-mobile-menu-icon {
+                font-size: 20px;
+            }
+
+            .qodef-mobile-menu-text {
+	            @include qodefTypographyLayout();
+	            padding-left: 5px;
+            }
+        }
+	    
+        &.qodef-mobile-menu-opened {
+	        
+            a {
+                color: $first-main-color;
+            }
+        }
+    }
+    /* #End of mobile menu opener styles
+    ========================================================================== */
+	
+	/* #Mobile menu navigation styles
+    ========================================================================== */
+	.qodef-mobile-nav {
+		display: none;
+		background-color: #fff;
+		border-bottom: 1px solid $default-border-color;
+		
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			
+			li {
+				position: relative;
+				padding: 0;
+				margin: 0;
+				
+				a, h5 { //h5 is here because of no link option in navigation
+					position: relative;
+					display: block;
+					padding: 9px 0;
+					margin: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+					color: #000;
+					border-bottom: 1px solid $default-border-color;
+					
+					&:hover {
+						color: $first-main-color;
+					}
+				}
+			}
+			
+			//dropdowns
+			ul {
+				display: none;
+				margin-left: 15px;
+				
+				li {
+					
+					&.current-menu-ancestor > a,
+					&.current-menu-item > a {
+						color: $first-main-color;
+					}
+					
+					a, h5 {
+                        font-size: 13px;
+						line-height: 24px;
+                        color: #949494;
+                        font-weight: 300;
+					}
+
+                    .mobile_arrow{
+                        i{
+                            line-height: 1em;
+                            position: relative;
+                            bottom: 6px;
+                        }
+                    }
+
+				}
+			}
+		}
+		
+		.qodef-grid > ul {
+			
+			> li {
+				
+				> a,
+				> h5 {
+					padding-left: 4px;
+					font-size: 14px;
+				}
+				
+				&.qodef-active-item > a {
+					color: $first-main-color;
+				}
+				
+				&.qodef-active-item > .mobile_arrow > .qodef-sub-arrow {
+					@include qodefTransform(rotate(90deg));
+				}
+			}
+		}
+		
+		.mobile_arrow {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 50px;
+			height: 100%;
+			padding-right: 12px;
+			font-size: 15px;
+			line-height: inherit;
+			text-align: right;
+
+            i{
+                line-height: 40px
+            }
+			
+			&:hover {
+				cursor: pointer;
+			}
+			
+			.qodef-sub-arrow {
+				@include qodefTransition(transform 0.2s ease-in-out);
+			}
+			
+			//@TODO remove this line of code when new headers are enabled
+			.fa-angle-down {
+				display: none; //temporarily
+			}
+		}
+		
+		li.qodef-opened > .mobile_arrow > .qodef-sub-arrow {
+			@include qodefTransform(rotate(90deg));
+		}
+		
+		& > ul > li:last-child > a,
+		& > .qodef-grid > ul > li:last-child > a {
+			border-bottom: none;
+		}
+	}
+	/* #End of mobile menu navigation styles
+	========================================================================== */
+}
+/* ==========================================================================
+   Mobile header style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Sticky Mobile header style - begin
+   ========================================================================== */
+.qodef-sticky-up-mobile-header {
+	
+    .qodef-animate-mobile-header {
+	    
+        .qodef-mobile-header-inner {
+            width: 100%;
+
+            //Added left and right transition values because of sidearea transitions on open/close
+            -webkit-transition: -webkit-transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            -moz-transition: -moz-transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            @include qodefTransform(translateY(-100%));
+        }
+    }
+
+    .mobile-header-appear {
+	    
+        .qodef-mobile-header-inner {
+	        position: fixed;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+            @include qodefTransform(translateY(0));
+        }
+    }
+	
+	&.admin-bar {
+		
+		.mobile-header-appear {
+			
+			.qodef-mobile-header-inner {
+				@include qodefTransform(translateY(32px));
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Sticky Mobile header style - end
+   ========================================================================== */

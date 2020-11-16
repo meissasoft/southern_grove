@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+
+.qodef-banner-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	
+	.touch & {
+		cursor: pointer;
+	}
+
+	.qodef-banner-overlay {
+		@include qodefAbsoluteHolderLayout();
+		z-index: 10;
+	}
+	
+	&.qodef-visible-on-hover {
+		
+		&:hover {
+			
+			.qodef-banner-text-holder {
+				opacity: 1;
+			}
+		}
+		
+		.qodef-banner-text-holder {
+			opacity: 0;
+			@include qodefTransition(opacity .2s ease-out);
+		}
+	}
+	
+	&.qodef-disabled {
+		
+		.qodef-banner-text-holder {
+			display: none;
+		}
+	}
+
+	&.qodef-zoom-image {
+		.qodef-banner-overlay {
+			opacity: 0;
+			@include qodefTransition(opacity .3s);
+		}
+
+		.qodef-banner-image {
+			overflow: hidden;
+
+			img {
+				@include qodefTransform(translate3d(0,0,0));
+				@include qodefTransition(all .7s cubic-bezier(0, 0.95, 0.77, 1));
+			}
+		}
+
+		&:hover {
+			.qodef-banner-overlay {
+				opacity: 1;
+			}
+
+			.qodef-banner-image img {
+				@include qodefTransform(translate3d(0,0,0) scale(1.1));
+			}
+		}
+	}
+	
+	&.qodef-banner-info-centered {
+		
+		.qodef-banner-text-holder {
+			padding: 70px 20px;
+			text-align: center;
+
+            @include phone-landscape {
+                padding: 10px;
+                .qodef-banner-text-inner {
+                    vertical-align: middle;
+                }
+                .qodef-additional-image {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+		}
+	}
+	
+	.qodef-banner-image {
+		@include qodefRelativeHolderLayout();
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.qodef-banner-text-holder {
+		@include qodefAbsoluteHolderLayout();
+		z-index: 10;
+		padding: 35px;
+		box-sizing: border-box;
+		
+		@include ipad-portrait {
+			padding: 25px;
+		}
+	}
+	
+	.qodef-banner-text-outer {
+		@include qodefTableLayout();
+	}
+	
+	.qodef-banner-text-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		vertical-align: bottom;
+	}
+	
+	.qodef-banner-subtitle {
+		margin: 0 0 4px;
+		color: #fff;
+	}
+	
+	.qodef-banner-title {
+		margin: 0;
+		color: #fff;
+		
+		.qodef-banner-title-light {
+			font-weight: 300;
+		}
+	}
+	
+	.qodef-banner-link-text {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 11px 0 0;
+		color: #fff;
+		line-height: 1em;
+		z-index: 2;
+		@include qodefTransform(translateZ(0));
+		
+		&:hover {
+			
+			.qodef-banner-link-hover {
+				width: 100%;
+			}
+		}
+		
+		.qodef-banner-link-original {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			
+			span {
+				color: inherit;
+			}
+		}
+		
+		.qodef-banner-link-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0.1%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			overflow: hidden;
+			@include qodefTransition(width .4s ease-in-out);
+			
+			span {
+				color: $first-main-color;
+			}
+		}
+		
+		.qodef-banner-link-icon,
+		.qodef-banner-link-label {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		.qodef-banner-link-icon {
+			margin: 0 2px 0 0;
+			font-size: 15px;
+		}
+		
+		.qodef-banner-link-label {
+			font-size: 14px;
+			line-height: inherit;
+		}
+	}
+
+	.qodef-banner-link {
+		@include qodefAbsoluteHolderLayout();
+		z-index: 100;
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

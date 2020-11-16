@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Switch Images style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+
+	&.qodef-pl-standard-switch-images {
+
+		&.qodef-pl-shadow-around-item {
+			.qodef-pl-item-inner {
+				-webkit-box-shadow: 5px 5px 20px -2px rgba(0,0,0,.1);
+				-moz-box-shadow: 5px 5px 20px -2px rgba(0,0,0,.1);
+				box-shadow: 5px 5px 20px -2px rgba(0,0,0,.1);
+			}
+		}
+
+		article {
+
+			.qodef-pli-image {
+
+				img {
+					@include qodefTransition(opacity .2s ease-in-out);
+
+					&:nth-child(1) {
+						opacity: 1;
+					}
+
+					&:nth-child(2) {
+						@include qodefAbsoluteHolderLayout();
+						opacity: 0;
+					}
+				}
+			}
+
+			&.qodef-pl-has-switch-image {
+
+				&:hover {
+
+					.qodef-pli-image {
+
+						img {
+
+							&:nth-child(1) {
+								opacity: 1;
+							}
+
+							&:nth-child(2) {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.qodef-pli-text-holder {
+			@include qodefRelativeHolderLayout();
+			margin: 35px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Switch Images style - end
+   ========================================================================== */

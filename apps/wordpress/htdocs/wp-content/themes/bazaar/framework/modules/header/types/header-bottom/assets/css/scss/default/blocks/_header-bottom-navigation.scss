@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Header Vertical - Sliding navigation style - begin
+   ========================================================================== */
+
+.qodef-header-bottom {
+
+    .qodef-vertical-menu-nav-holder-outer{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 1;
+        background-color: #fff;
+        padding: 0 80px;
+        box-sizing: border-box;
+
+        .qodef-vertical-menu-nav-holder{
+            display: table;
+            height: 100%;
+            width: 100%;
+
+            .qodef-vertical-menu-holder-nav-inner{
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .qodef-vertical-alignment-top {
+        .qodef-vertical-menu-nav-holder-outer{
+            .qodef-vertical-menu-nav-holder{
+                .qodef-vertical-menu-holder-nav-inner{
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+
+    .qodef-fullscreen-menu {
+        position: relative;
+        z-index: 101;
+        text-align: left;
+
+        ul {
+            position: relative;
+            list-style-type: none;
+        }
+
+        > ul > li {
+            position: relative;
+            text-align: left;
+
+            &.qodef-active-item{
+
+                > a{
+                    color: #000;
+                }
+            }
+        }
+
+        ul li a:hover {
+            color: #000;
+        }
+
+        & > ul > li > a {
+            position: relative;
+            display: block;
+            font-size: 30px;
+            line-height: 42px;
+            font-weight: 600;
+            color: #000;
+            padding: 3px 0;
+            text-decoration: none;
+            text-transform: capitalize;
+            margin: 0;
+            cursor: pointer;
+            overflow: hidden;
+
+            span{
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    width: 100%;
+                    height: 2px;
+                    background-color: rgba($first-main-color,.7);
+                    opacity: 0;
+                    @include qodefTransform(scaleX(0));
+                }
+
+                &:before {
+                    opacity: 1;
+                    left: 0;
+                    -webkit-transform-origin: 0% 50%;
+                    transform-origin: 0% 50%;
+                }
+
+                &:after {
+                    right: 0;
+                    -webkit-transform-origin: 100% 50%;
+                    transform-origin: 100% 50%;
+                    -webkit-transition: -webkit-transform .2s, opacity .0s .2s;
+                    transition: transform .2s, opacity .0s .2s;
+                }
+            }
+        }
+
+        .sub_menu{
+            padding: 7px 0 10px;
+            li{
+                text-align: left;
+                margin: 3px 0 3px 4px;
+
+                a{
+                    color: #949494;
+                    font-size: 15px;
+                    line-height: 20px;
+
+                    span:before{
+                        border: none;
+                    }
+                }
+            }
+        }
+
+    }
+}
+/* ==========================================================================
+   Header Vertical - Sliding navigation style - end
+   ========================================================================== */

@@ -1,0 +1,263 @@
+/* ==========================================================================
+   WooCommerce Checkout page styles - begin
+   ========================================================================== */
+
+.qodef-woocommerce-page {
+
+    .checkout_coupon {
+        display: block;
+        margin: 0 0 34px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    form.woocommerce-checkout{
+        padding-top: 24px;
+        text-transform: lowercase;
+    }
+
+    &.woocommerce-checkout form.login {
+        display: block;
+        margin: 0 0 34px;
+        text-transform: lowercase;
+
+        > *:first-child {
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .button {
+            height: 38px;
+            line-height: 38px;
+            padding: 0 28px;
+        }
+
+        input[type='checkbox'] {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            top: -1px;
+            margin: 0 3px 0 5px;
+        }
+
+        .lost_password {
+            display: block;
+            margin: 15px 0 0;
+        }
+    }
+
+    .woocommerce-checkout .col2-set:before,
+    .woocommerce-checkout .col2-set:after {
+        content: '';
+        display: table;
+    }
+
+    .woocommerce-checkout .col2-set:after {
+        clear: both;
+    }
+
+    .woocommerce-checkout {
+
+        .col-1,
+        .col-2 {
+            position: relative;
+            display: inline-block;
+            width: 49%;
+            margin-right: 1%;
+            float: left;
+            vertical-align: middle;
+
+            h3 {
+                margin: 8px 0 25px;
+                text-transform: lowercase;
+                font-size: 23px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            label:not(.checkbox) {
+                display: block;
+                margin: 0 0 5px;
+            }
+
+            .form-row {
+                width: 49%;
+                margin-right: 2%;
+                float: left;
+            }
+
+            .form-row-last {
+                margin-right: 0;
+            }
+
+            .form-row-wide,
+            .form-row.notes {
+                width: 100%;
+            }
+        }
+
+        .col-2 {
+            margin-left: 1%;
+            margin-right: 0;
+
+            .woocommerce-shipping-fields{
+                #ship-to-different-address{
+                    margin-bottom: 23px;
+                }
+            }
+        }
+
+        .create-account {
+            margin: 0 0 15px;
+
+            input, label {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        h3#order_review_heading {
+            margin: 45px 0 5px 0;
+            text-transform: lowercase;
+            font-size: 23px;
+        }
+
+        table {
+            padding: 0;
+            margin: 0 0 35px;
+
+            tr {
+                border: 0;
+                border-bottom: 1px solid $default-border-color;
+
+                &.shipping {
+
+                    #shipping_method {
+                        list-style: none;
+                        margin: 0;
+
+                        li {
+                            margin: 3px 0;
+                            padding: 0;
+
+                            > * {
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin: 0;
+                            }
+
+                            label{
+                                font-size: 14px;
+                                color: $default-text-color;
+                                font-weight: 300;
+                            }
+                        }
+
+                        .woocommerce-Price-amount.amount {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            td, th {
+                padding: 14px 0;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th {
+                border: 0;
+                font-weight: 500;
+                color: #000;
+                font-size: 16px;
+            }
+
+            .variation {
+
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .product-quantity {
+                font-weight: 400;
+            }
+
+            .woocommerce-Price-amount.amount {
+                font-weight: 500;
+            }
+        }
+
+        .select2-container {
+            border-radius: 0;
+            margin-bottom: 14px;
+        }
+
+        .select2-container--default {
+            .select2-selection--single {
+                height: 50px;
+                line-height: 48px;
+            }
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            top: -1px;
+            margin: 0 3px 0 5px;
+        }
+
+        .woocommerce-checkout-payment {
+            display: block;
+            margin: 20px 0 110px;
+
+            ul {
+                list-style: none;
+                margin: 0 0 35px;
+                padding: 0;
+
+                li {
+                    padding: 14px 0;
+                    border-bottom: 1px solid $default-border-color;
+
+                    input, label {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+
+                    &.payment_method_paypal {
+
+                        label {
+
+                            img {
+                                vertical-align: middle;
+                                margin: 0 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Checkout page styles - end
+   ========================================================================== */

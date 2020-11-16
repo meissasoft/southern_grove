@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.qodef-ps-related-posts-holder {
+	@include qodefRelativeHolderLayout();
+	margin: 30px 0 0;
+	clear: both;
+	
+	.qodef-ps-related-posts {
+		margin: 0 -15px;
+	}
+	
+	.qodef-ps-related-post {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 25%;
+		float: left;
+		padding: 0 15px;
+		box-sizing: border-box;
+		
+		@include ipad-landscape {
+			width: 50%;
+			
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+		}
+		
+		@include phone-landscape {
+			width: 100%;
+		}
+	}
+	
+	.qodef-ps-related-image {
+		@include qodefRelativeHolderLayout();
+		
+		a, img {
+			display: block;
+		}
+	}
+	
+	.qodef-ps-related-text {
+		@include qodefRelativeHolderLayout();
+		margin: 20px 0 0;
+		
+		.qodef-ps-related-title {
+			margin: 0;
+		}
+		
+		.qodef-ps-related-categories {
+			margin: 6px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

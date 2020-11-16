@@ -1,0 +1,346 @@
+/* ==========================================================================
+   Default WordPress widgets styles - begin
+   ========================================================================== */
+
+.widget {
+    margin: 0 0 $widget-bottom-margin;
+    padding: 0;
+
+    .qodef-widget-title-holder {
+        margin-bottom: $widget-list-item-padding;
+
+        .qodef-widget-title {
+            color: $widget-heading-color;
+            margin-bottom: 3px;
+            text-transform: lowercase;
+        }
+
+        .qodef-separator {
+            border-color: $widget-text-color;
+            border-bottom-width: 3px;
+            width: 30px;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            font-size: 12px;
+            display: block;
+            line-height: $widget-list-item-height;
+            margin: 0;
+            padding: $widget-list-item-padding 0;
+
+            &:last-child {
+                border: 0;
+                padding-bottom: 0;
+            }
+
+            a {
+                color: $widget-link-color;
+
+                &:hover {
+                    color: $widget-link-hover-color;
+                }
+            }
+        }
+
+        .children,
+        .sub-menu {
+            border-top: 1px solid $widget-list-item-border-color;
+            margin-top: $widget-list-item-padding;
+        }
+    }
+
+    // widgets with lists and animation on link hover
+    &.widget_pages,
+    &.widget_archive,
+    &.widget_categories,
+    &.widget_meta,
+    &.widget_recent_entries,
+    &.widget_nav_menu {
+
+        .qodef-widget-title {
+            margin-bottom: 0;
+        }
+
+        ul {
+
+            li {
+                overflow: hidden;
+
+                a {
+                    display: inline;
+                    overflow: hidden;
+                    padding: 0;
+                    position: relative;
+                    color: #949494;
+                    font-weight: 400;
+
+                    @include qodefTransition(color .2s ease);
+
+                    &:hover {
+                        color: $widget-link-hover-color;
+
+                    }
+                }
+            }
+        }
+    }
+
+    // widgets with lists and w/o animation on link hover
+    &.widget_recent_comments,
+    &.widget_rss {
+
+        .qodef-widget-title {
+            margin-bottom: 0;
+        }
+    }
+
+    // calendar
+    #wp-calendar {
+        text-align: center;
+        width: 100%;
+
+        caption {
+            margin: 0 0 $widget-list-item-padding;
+
+        }
+
+        th, td {
+            padding: 3px 4px;
+        }
+
+        td#today {
+            color: $widget-text-color;
+            background-color: $widget-list-item-background-color;
+        }
+
+        tfoot a {
+            color: $widget-link-color;
+
+            &:hover {
+                color: $widget-link-hover-color;
+            }
+        }
+    }
+
+    // rss
+    &.widget_rss {
+
+        .rss-widget-icon {
+            display: inline-block;
+        }
+
+        .rss-date {
+            display: block;
+            margin-bottom: $widget-list-item-padding;
+        }
+
+        cite {
+            display: block;
+            margin-top: calc(#{$widget-list-item-padding} / 2);
+        }
+    }
+
+    // search
+    &.widget_search {
+
+        .input-holder {
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+
+            input,
+            button {
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+                box-sizing: border-box;
+                color: $widget-text-color;
+                display: inline-block;
+                float: left;
+                font-family: $default-text-font;
+                font-size: 15px;
+                font-weight: inherit;
+                height: $widget-search-form-height;
+                line-height: calc(#{$widget-search-form-height} - 2px);
+                outline: 0;
+                position: relative;
+                vertical-align: top;
+                -webkit-appearance: none;
+
+                @include qodefTransition(color .2s ease-in-out);
+            }
+
+            input.search-field {
+                width: calc(100% - #{$widget-search-form-height});
+                padding: 0 0 0 21px;
+
+                @include qodefPlaceholder {
+                    color: $widget-text-color;
+                }
+            }
+
+            input[type="search"]::-webkit-search-decoration,
+            input[type="search"]::-webkit-search-cancel-button,
+            input[type="search"]::-webkit-search-results-button,
+            input[type="search"]::-webkit-search-results-decoration {
+                display: none;
+            }
+
+
+            button {
+                background: $widget-list-item-background-color;
+                color: $widget-text-color;
+                cursor: pointer;
+                font-size: 18px;
+                width: $widget-search-form-height;
+
+                @include qodefTransition(color .2s ease-in-out);
+
+                &:hover {
+                    color: $widget-link-hover-color;
+                }
+
+                span {
+                    display: block;
+                    left: 0;
+                    line-height: inherit;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+
+                    &:before {
+                        display: block;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    // search post type
+    &.qodef-search-post-type-widget {
+        .qodef-search-post-type {
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+        }
+        .qodef-post-type-search-field {
+            background-color: transparent;
+            box-sizing: border-box;
+            color: $widget-text-color;
+            display: inline-block;
+            float: left;
+            font-family: $default-text-font;
+            font-size: 12px;
+            font-weight: inherit;
+            height: $widget-search-form-height;
+            line-height: calc(#{$widget-search-form-height} - 2px);
+            outline: 0;
+            position: relative;
+            vertical-align: top;
+            -webkit-appearance: none;
+            padding: 0 25px 0 20px;
+            border: 0;
+            outline: 0;
+            width: 100%; /* width of loading icon */
+
+            @include qodefTransition(color .2s ease-in-out);
+
+            @include qodefPlaceholder {
+                color: $widget-text-color;
+            }
+        }
+
+        .qodef-post-type-search-results {
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+            border-top: 0;
+            box-sizing: border-box;
+            ul li {
+                a {
+                    color: #949494;
+                    font-weight: 400;
+
+                    @include qodefTransition(color .2s ease);
+
+                    &:hover {
+                        color: #000;
+
+                    }
+                }
+            }
+        }
+    }
+
+    // combobox
+    &.widget_archive,
+    &.widget_categories,
+    &.widget_text {
+
+        select {
+            background-color: transparent;
+            border-color: $widget-list-item-border-color;
+            border-style: $widget-list-item-border-style;
+            border-width: $widget-list-item-border-width;
+            border-radius: 0;
+            box-sizing: border-box;
+            color: $widget-text-color;
+            display: inline-block;
+            font-family: $default-text-font;
+            font-size: 15px;
+            font-weight: inherit;
+            height: $widget-search-form-height;
+            line-height: calc(#{$widget-search-form-height} - 2px);
+            margin-top: $widget-list-item-padding;
+            outline: 0;
+            padding: 0 0 0 21px;
+            position: relative;
+            vertical-align: top;
+            width: 100%;
+
+            @include qodefTransition(color .2s ease-in-out);
+
+            option {
+            }
+        }
+    }
+
+
+    // tag cloud
+    &.widget_tag_cloud {
+
+        a {
+            border-radius: 2px;
+            color: $widget-text-color;
+            display: inline-block;
+            font-size: 11px !important;
+            font-family: $default-text-font;
+            font-weight: inherit;
+            line-height: $widget-tag-cloud-height;
+            text-transform: uppercase;
+            margin: 0 7px 7px 0;
+            padding: 0 19px;
+
+            &:hover {
+                color: $widget-link-hover-color;
+            }
+        }
+    }
+
+    &.widget_text{
+        a{
+            color: #949494;
+
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Portfolio shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+	
+	.qodef-portfolio-list-holder {
+		
+		&.qodef-pl-masonry {
+			
+			$masonry_columns_number: ('five');
+			
+			@for $i from 0 to length($masonry_columns_number) {
+				&.qodef-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+					$column_width: 100%/4;
+					
+					article,
+					.qodef-pl-grid-sizer {
+						width: $column_width;
+					}
+					
+					article {
+						
+						&.qodef-pl-masonry-large-width,
+                        &.qodef-pl-masonry-large-width-height {
+							width: $column_width * 2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include laptop-landscape-medium {
+	
+	.qodef-portfolio-list-holder {
+		
+		&.qodef-pl-gallery {
+			
+			$gallery_columns_number: ('four', 'five');
+			
+			@for $i from 0 to length($gallery_columns_number) {
+				&.qodef-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+					$gallery_item_size: 100% / 3;
+					
+					article {
+						width: $gallery_item_size;
+					}
+					
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(3n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.qodef-pl-masonry {
+			
+			$masonry_columns_number: ('four', 'five');
+			
+			@for $i from 0 to length($masonry_columns_number) {
+				&.qodef-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+					$column_width: 100% / 3;
+					
+					article,
+					.qodef-pl-grid-sizer {
+						width: $column_width;
+					}
+					
+					article {
+						
+						&.qodef-pl-masonry-large-width,
+                        &.qodef-pl-masonry-large-width-height {
+							width: $column_width * 2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.qodef-portfolio-list-holder {
+		
+		&.qodef-pl-gallery {
+			
+			$gallery_columns_number: ('three', 'four', 'five');
+			
+			@for $i from 0 to length($gallery_columns_number) {
+				&.qodef-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+					
+					article {
+						width: 50%;
+					}
+					
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(2n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.qodef-pl-masonry {
+			
+			$masonry_columns_number: ('three', 'four', 'five');
+			
+			@for $i from 0 to length($masonry_columns_number) {
+				&.qodef-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+					
+					article,
+					.qodef-pl-grid-sizer {
+						width: 50%;
+					}
+					
+					article {
+						
+						&.qodef-pl-masonry-large-width,
+                        &.qodef-pl-masonry-large-width-height {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.qodef-portfolio-list-holder {
+		
+		&.qodef-pl-gallery {
+			
+			article {
+				width: 100% !important; // !important is set to override all other stronger selectors
+			}
+		}
+		
+		&.qodef-pl-masonry {
+			
+			$masonry_columns_number: ('two', 'three', 'four', 'five');
+			
+			@for $i from 0 to length($masonry_columns_number) {
+				&.qodef-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+					
+					article,
+					.qodef-pl-grid-sizer {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio shortcode responsive style - end
+   ========================================================================== */

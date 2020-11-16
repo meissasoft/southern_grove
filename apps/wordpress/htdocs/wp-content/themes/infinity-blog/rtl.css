@@ -1,0 +1,82 @@
+/*
+Theme Name: Infinity Blog
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+body .col-xs-1,
+body .col-xs-10,
+body .col-xs-11,
+body .col-xs-12,
+body .col-xs-2,
+body .col-xs-3,
+body .col-xs-4,
+body .col-xs-5,
+body .col-xs-6,
+body .col-xs-7,
+body .col-xs-8,
+body .col-xs-9 {
+    float: right;
+}
+
+@media (min-width: 992px) {
+    body .col-md-1,
+    body .col-md-10,
+    body .col-md-11,
+    body .col-md-12,
+    body .col-md-2,
+    body .col-md-3,
+    body .col-md-4,
+    body .col-md-5,
+    body .col-md-6,
+    body .col-md-7,
+    body .col-md-8,
+    body .col-md-9 {
+        float: right;
+    }
+}
+
+.top-header .main-navigation .menu ul li i {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.owl-carousel .owl-stage-outer {
+    direction: ltr;
+}
+
+.site-content .twp-infinity-article .entry-content .twp-content-image,
+.site-content .twp-infinity-article .entry-content .twp-content-details {
+    float: right;
+}
+
+.site-content .twp-infinity-article .entry-content .twp-content-image {
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.bordered-widget-title.widget-title:after {
+    left: inherit;
+    right: 0;
+}
+
+.entry-header .entry-title {
+    text-align: right;
+}
+
+.btn-link i {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 10px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.twp-content-details .btn-link{
+    margin-right: 0;
+    margin-left: inherit;
+}

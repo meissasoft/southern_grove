@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Breadcrumbs Title type style - begin
+   ========================================================================== */
+
+.qodef-title-holder {
+	
+	&.qodef-breadcrumbs-type {
+		
+		.qodef-breadcrumbs {
+			@include qodefRelativeHolderLayout();
+			color: $default-text-color;
+			
+			&.qodef-has-inline-style {
+				
+				a {
+					opacity: 1;
+					@include qodefTransition(opacity .2s ease-out);
+					
+					&:hover {
+						color: inherit;
+						opacity: 0.9;
+					}
+				}
+			}
+			
+			a,
+			span {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				color: inherit;
+			}
+			
+			a:hover {
+				color: $default-heading-color;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Breadcrumbs Title type style - end
+   ========================================================================== */

@@ -1,0 +1,151 @@
+/* ==========================================================================
+# Search template style - begin
+========================================================================== */
+
+.qodef-search-page-holder {
+    @include qodefRelativeHolderLayout();
+    margin: 0 0 80px;
+    
+    .qodef-search-page-form {
+        @include qodefRelativeHolderLayout();
+        margin: 0 0 30px;
+        
+        .qodef-search-title {
+            margin: 0 0 20px;
+        }
+        
+        .qodef-search-label {
+            display: block;
+            font-size: 13px;
+        }
+        
+        .qodef-form-holder {
+            @include qodefRelativeHolderLayout();
+            margin: 0 0 10px;
+            clear: both;
+            border-bottom: 1px solid $default-border-color;
+            
+            .qodef-column-left {
+                display: table-cell;
+                vertical-align: top;
+            }
+            
+            .qodef-column-right {
+                display: table-cell;
+                width: 1%;
+                text-align: left;
+                vertical-align: top;
+            }
+            
+            .qodef-search-field {
+                position: relative;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                margin: 0;
+                padding: 0 20px 0 3px;
+                font-family: inherit;
+                font-size: inherit;
+                color: inherit;
+                background-color: transparent;
+                border: none;
+                outline: 0;
+                vertical-align: middle;
+                -webkit-appearance: none;
+                box-sizing: border-box;
+                
+                @include qodefPlaceholder {
+                    color: inherit;
+                }
+            }
+            
+            .qodef-search-submit {
+                position: relative;
+                display: inline-block;
+                width: auto;
+                height: 40px;
+                line-height: 40px;
+                padding: 0;
+                font-size: 18px;
+                color: $default-text-color;
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                vertical-align: middle;
+                @include qodefTransition(color .2s ease-in-out);
+                
+                &:hover {
+                    color: $default-heading-color;
+                }
+            }
+        }
+    }
+    
+    article {
+        @include qodefRelativeHolderLayout();
+        padding: 30px 0;
+        margin: 0;
+        border-bottom: 1px solid $default-border-color;
+        
+        &.sticky {
+            
+            .qodef-post-title a {
+                color: $first-main-color;
+            }
+        }
+        
+        &.page {
+            
+            .qodef-post-title-area .qodef-post-info > div.qodef-post-info-category {
+                display: none;
+            }
+        }
+        
+        .qodef-post-content {
+            @include qodefRelativeHolderLayout();
+        }
+        
+        .qodef-post-image {
+            display: block;
+            float: left;
+            width: 130px;
+            
+            a, img {
+                display: block;
+            }
+        }
+        
+        .qodef-post-title-area {
+            min-height: 130px;
+            padding: 0 0 0 150px;
+            
+            &.qodef-no-thumbnail{
+                padding: 0;
+                min-height: inherit;
+            }
+            
+            .qodef-post-title-area-inner {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                box-sizing: border-box;
+                
+                .qodef-post-title {
+                    margin: 0;
+                }
+                
+                .qodef-post-excerpt {
+                    margin: 7px 0 0;
+                }
+            }
+        }
+    }
+    
+    .qodef-blog-pagination {
+        margin: 50px 0 0;
+    }
+}
+/* ==========================================================================
+# Search template style - end
+========================================================================== */

@@ -1,0 +1,191 @@
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    
+    .qodef-woo-single-page {
+
+        &.qodef-woo-single-thumb-on-left-side {
+
+            .qodef-single-product-content {
+
+                .images {
+
+                    .woocommerce-product-gallery__image {
+
+                        &:first-child {
+                            left: 150px;
+                            width: calc(100% - 150px);
+                        }
+                    }
+
+
+                    &.woocommerce-product-gallery--with-images {
+
+                        .woocommerce-product-gallery__image {
+
+                            &:not(:first-child) {
+                                width: 145px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $ipad-landscape-plus-pixel) and (max-width: $laptop-landscape) {
+
+    .qodef-woo-single-page {
+
+        .woocommerce-tabs {
+
+            ul.tabs {
+
+                > li {
+
+                    a {
+                        padding: 12px 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include laptop-landscape-medium {
+
+    .qodef-woo-single-page {
+
+        .qodef-single-product-content {
+            .images{
+                width: 60%;
+            }
+            .qodef-single-product-summary{
+                width: 40%;
+                padding: 0 0 0 60px;
+
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+    
+    .qodef-woo-single-page {
+        
+        .qodef-single-product-content {
+
+            .qodef-onsale,
+            .qodef-out-of-stock,
+            .qodef-new-product {
+                left: auto!important;
+                right: 15px;
+            }
+            
+            .images,
+            .qodef-single-product-summary {
+                float: none;
+                width: 100%;
+                padding: 0;
+            }
+	        
+	        .images {
+		
+		        .woocommerce-product-gallery__trigger {
+			        right: 10px;
+		        }
+	        }
+            
+            .qodef-single-product-summary {
+                margin: 30px 0 0;
+
+                form{
+                    .single_add_to_cart_button{
+                        height: 50px;
+                        box-sizing: border-box;
+                        padding: 12px 32px;
+                    }
+                }
+            }
+        }
+        
+        .woocommerce-tabs {
+            
+            ul.tabs {
+                
+                > li {
+                    
+                    a {
+                        padding: 13px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait{
+    .qodef-woo-single-page{
+        .woocommerce-tabs{
+            #reviews .comment-respond .comment-form-comment #comment{
+                width: 100%;
+            }
+
+            #reviews  .comment-respond .comment-form-author,
+            #reviews  .comment-respond .comment-form-email {
+                input {
+                    width: 100%;
+                }
+            }
+
+
+        }
+    }
+}
+
+@include phone-landscape {
+    
+    .qodef-woo-single-page {
+	
+	    &.qodef-woo-single-thumb-on-left-side {
+		
+		    .qodef-single-product-content {
+			
+			    .images {
+				
+				    &.woocommerce-product-gallery--columns-4 {
+					
+					    .woocommerce-product-gallery__image {
+						
+						    &:not(:first-child) {
+							    width: 50%;
+						    }
+					    }
+				    }
+			    }
+		    }
+	    }
+        
+        .qodef-single-product-content {
+            
+            .images {
+    
+                &.woocommerce-product-gallery--columns-4 {
+        
+                    .woocommerce-product-gallery__image {
+            
+                        &:not(:first-child) {
+	                        width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - end
+   ========================================================================== */

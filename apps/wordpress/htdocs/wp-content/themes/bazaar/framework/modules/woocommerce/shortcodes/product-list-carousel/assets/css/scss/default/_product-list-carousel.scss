@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Product List - Carousel shortcode styles - begin
+   ========================================================================== */
+
+.qodef-plc-holder {
+    padding-top: 50px;
+    @include qodefRelativeHolderLayout();
+
+    .qodef-owl-slider{
+        .owl-nav {
+            .owl-prev,
+            .owl-next{
+                top: -30px;
+                color: #b6b6b6;
+                @include qodefTransform(0);
+
+                span{
+                    font-size: 24px;
+                    color: #b6b6b6;
+                    @include qodefTransition(color .2s);
+                }
+
+                &:hover {
+                    > span {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .owl-next{
+                right: 6px;
+            }
+            .owl-prev{
+                left: auto;
+                right: 23px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Product List - Carousel shortcode styles - end
+   ========================================================================== */

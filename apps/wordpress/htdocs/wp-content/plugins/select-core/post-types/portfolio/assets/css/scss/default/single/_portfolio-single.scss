@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+	@include qodefRelativeHolderLayout();
+	margin: 0 0 50px;
+	
+    .qodef-ps-image-holder {
+	    @include qodefRelativeHolderLayout();
+	    
+	    .qodef-ps-image {
+		    @include qodefRelativeHolderLayout();
+		    box-sizing: border-box;
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+	
+	.qodef-ps-info-holder {
+		@include qodefRelativeHolderLayout();
+		
+		.qodef-ps-info-item {
+			@include qodefRelativeHolderLayout();
+			margin: 0 0 10px;
+			
+			p, a {
+				margin: 0;
+			}
+		}
+		
+		.qodef-ps-info-title {
+			margin: 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+	
+	.qodef-ps-image-holder {
+		
+		&.qodef-ps-gallery-images {
+			
+			/***** Columns Layout - begin *****/
+			
+			$columns_number: ('two', 'three', 'four');
+			
+			@for $i from 0 to length($columns_number) {
+				&.qodef-ps-#{nth($columns_number,$i+1)}-columns {
+					
+					.qodef-ps-image {
+						width: 100% / ($i+2);
+					}
+					
+					@if ($i > 1) { // set different break point for four columns
+						@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+							
+							.qodef-ps-image {
+								
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					} @else {
+						@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+							
+							.qodef-ps-image {
+								
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			/***** Columns Layout - end *****/
+			
+			/***** Space Between Columns Space - begin *****/
+			
+			$columns_space_label: ('no', 'tiny', 'small', 'normal');
+			$columns_space: (0, 5, 10, 15);
+			
+			@for $i from 0 to length($columns_space_label) {
+				&.qodef-ps-#{nth($columns_space_label,$i+1)}-space {
+					$item_space: nth($columns_space, $i+1);
+					$item_bottom_margin: $item_space * 2;
+					
+					@if($item_space == 0) {
+						.qodef-ps-image-inner {
+							margin: 0;
+						}
+					} @else {
+						$reduced_margin: 40 - $item_bottom_margin; // 40 is bottom margin of image holder
+						margin: 0 0 #{$reduced_margin}px;
+						
+						.qodef-ps-image-inner {
+							margin: 0 -#{$item_space}px;
+						}
+					}
+					
+					.qodef-ps-image {
+						padding: 0 #{$item_space}px;
+						margin: 0 0 #{$item_bottom_margin}px;
+					}
+				}
+			}
+			
+			/***** Space Between Columns Space - end *****/
+		}
+		
+		&.qodef-ps-masonry-images {
+			
+			.qodef-ps-image,
+			.qodef-ps-grid-sizer {
+				width: 25%;
+			}
+			
+			.qodef-ps-grid-gutter {
+				width: 0;
+			}
+			
+			/***** Columns Layout - begin *****/
+			
+			$columns_number: ('two', 'three', 'four');
+			
+			@for $i from 0 to length($columns_number) {
+				&.qodef-ps-#{nth($columns_number,$i+1)}-columns {
+					$column_width: 100%/($i+2);
+					
+					.qodef-ps-image,
+					.qodef-ps-grid-sizer {
+						width: $column_width;
+					}
+					
+					.qodef-ps-image.qodef-ps-masonry-large-item {
+						width: $column_width * 2;
+					}
+				}
+			}
+			
+			/***** Columns Layout - end *****/
+			
+			/***** Space Between Columns Space - begin *****/
+			
+			$columns_space_label: ('no', 'tiny', 'small', 'normal');
+			$columns_space: (0, 5, 10, 15);
+			
+			@for $i from 0 to length($columns_space_label) {
+				&.qodef-ps-#{nth($columns_space_label,$i+1)}-space {
+					$item_space: nth($columns_space, $i+1);
+					$item_bottom_margin: $item_space * 2;
+					
+					@if($item_space == 0) {
+						.qodef-ps-image-inner {
+							margin: 0;
+						}
+					} @else {
+						$reduced_margin: 40 - $item_bottom_margin; // 40 is bottom margin of image holder
+						margin: 0 0 #{$reduced_margin}px;
+						
+						.qodef-ps-image-inner {
+							margin: 0 -#{$item_space}px;
+						}
+					}
+					
+					.qodef-ps-image {
+						padding: 0 #{$item_space}px;
+						margin: 0 0 #{$item_bottom_margin}px;
+					}
+				}
+			}
+			
+			/***** Space Between Columns Space - end *****/
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

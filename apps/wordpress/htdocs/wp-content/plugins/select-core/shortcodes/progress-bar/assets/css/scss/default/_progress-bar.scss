@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Progress Bar shortcode style - begin
+   ========================================================================== */
+
+.qodef-progress-bar {
+    margin-bottom: 12px;
+    @include qodefRelativeHolderLayout();
+    
+    .qodef-pb-title-holder {
+        position: relative;
+        margin: 10px 0 12px;
+        
+        .qodef-pb-title {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 100;
+        }
+    }
+	
+    .qodef-pb-percent {
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        width: auto;
+	    display: inline-block;
+	    vertical-align: middle;
+	    opacity: 0;
+	    z-index: 10;
+        
+        &:after {
+            content: '%';
+        }
+    }
+    
+    .qodef-pb-content-holder {
+        position: relative;
+        height: 6px;
+        overflow: hidden;
+        background-color: #dbdbdb;
+        
+        .qodef-pb-content {
+            height: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: $first-main-color;
+        }
+    }
+}
+/* ==========================================================================
+   Progress Bar shortcode style - end
+   ========================================================================== */

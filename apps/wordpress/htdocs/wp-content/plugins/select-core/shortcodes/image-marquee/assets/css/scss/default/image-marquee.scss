@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Image Gallery shortcode style - begin
+   ========================================================================== */
+
+   .qodef-image-marquee-holder {
+		display: inline-block;
+		vertical-align: middle;
+		overflow: hidden;
+
+      .qodef-image-marquee {
+         position:relative;
+         width: 124%;
+         left: -12%;
+      }
+
+      .qodef-image {
+         img {
+            display: block;
+         }
+         
+         &.qodef-original {
+            position: relative;
+         }
+
+         &.qodef-aux {
+            position: absolute;
+            top:0;
+         }
+      }      
+   }
+
+/* ==========================================================================
+	Image Gallery shortcode style - begin
+	========================================================================== */

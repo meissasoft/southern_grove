@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Title responsive styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Title responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-title-holder.qodef-title-full-width .qodef-grid {
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-title-holder.qodef-has-bg-image {
+    height: auto !important;
+    padding: 0 !important;
+    background-image: none !important;
+  }
+  .qodef-title-holder.qodef-has-bg-image .qodef-title-image {
+    display: block;
+  }
+  .qodef-title-holder.qodef-has-bg-image .qodef-title-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 100% !important;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+/* ==========================================================================
+   Title responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Centered Title type responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-title-holder.qodef-centered-type .qodef-page-subtitle {
+    padding: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Centered Title type responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Standard With Breadcrumbs Title type responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-title-holder.qodef-standard-with-breadcrumbs-type .qodef-title-info,
+  .qodef-title-holder.qodef-standard-with-breadcrumbs-type .qodef-breadcrumbs-info {
+    display: block;
+    width: 100%;
+  }
+  .qodef-title-holder.qodef-standard-with-breadcrumbs-type .qodef-breadcrumbs-info {
+    margin: 10px 0 0;
+    text-align: initial;
+    white-space: inherit;
+  }
+}
+
+/* ==========================================================================
+   Standard With Breadcrumbs Title type responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Title responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/title-map-responsive.css.map */

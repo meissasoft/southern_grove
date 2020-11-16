@@ -1,0 +1,39 @@
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-header-bottom-menu-opener .qodef-header-bottom-image {
+    img {
+        &.qodef-header-bottom-image-dark{
+            opacity: 0;
+        }
+        &.qodef-header-bottom-image-light {
+            opacity: 1;
+        }
+    }
+}
+
+.qodef-header-bottom {
+    .qodef-header-bottom-menu-opener {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+
+        .qodef-header-bottom-image {
+            position: relative;
+            display: block;
+            line-height: 1em;
+            vertical-align: middle;
+            height: 100%;
+            width: 16px;
+
+            img {
+                position: relative;
+                top: 50%;
+                @include qodefTransform(translateY(-50%));
+                @include qodefTransition(opacity .2s ease);
+                &.qodef-header-bottom-image-light {
+                    opacity: 0;
+                    @include qodefTransform(translateY(-100%));
+                }
+            }
+        }
+    }
+}

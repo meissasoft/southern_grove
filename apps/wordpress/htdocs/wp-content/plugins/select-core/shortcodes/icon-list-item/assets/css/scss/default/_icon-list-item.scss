@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Icon List Item shortcode style - begin
+   ========================================================================== */
+
+.qodef-icon-list-holder {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    height: auto;
+    width: 100%;
+    margin-bottom: 8px;
+	
+	.qodef-il-icon-holder,
+	.qodef-il-text {
+		position: relative;
+		display: table-cell;
+		vertical-align: top;
+	}
+
+    .qodef-il-icon-holder {
+	    width: 1%;
+	    
+	    > * {
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: top;
+		    color: $default-heading-color;
+		    font-size: 17px;
+		    line-height: inherit;
+		
+		    &:before {
+			    display: block;
+			    line-height: inherit;
+		    }
+	    }
+    }
+
+    .qodef-il-text {
+	    width: 99%;
+	    padding: 0 0 0 13px;
+	    box-sizing: border-box;
+    }
+}
+/* ==========================================================================
+   Icon List Item shortcode style - end
+   ========================================================================== */

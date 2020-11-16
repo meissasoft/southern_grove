@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Product Info shortcode styles - begin
+   ========================================================================== */
+
+.qodef-product-info {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    .qodef-product-info-inner{
+        display: table;
+    }
+
+    .qodef-pi-text-holder{
+        display: table-cell;
+        vertical-align: bottom;
+        text-align: right;
+        position: relative;
+        left: 35px;
+        bottom: 61px;
+        z-index: 3;
+
+        .qodef-pi-title{
+            margin: 20px 0 5px;
+            text-transform: lowercase;
+        }
+
+        .qodef-pi-price{
+            margin-bottom: 16px;
+
+            >span,ins{
+                text-decoration: none;
+                font-size: 20px;
+            }
+            del{
+                font-size: 15px;
+            }
+        }
+
+        .qodef-btn{
+            color: #000;
+        }
+    }
+
+    .qodef-pi-image{
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        overflow: hidden;
+
+        .qodef-pi-trim {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            height: calc(100% - 36px);
+            width: calc(100% - 36px);
+            border: 20px solid #fff;
+            @include qodefTransform(scale(1.2));
+            visibility: hidden;
+            -webkit-transition: -webkit-transform .7s cubic-bezier(.47,.56,0,.88), visibility .0s .7s;
+            transition: transform .7s cubic-bezier(.47,.56,0,.88), visibility .0s .7s;
+        }
+    }
+
+    &:hover {
+        .qodef-pi-trim {
+            visibility: visible;
+            @include qodefTransform(scale(1.01));
+            -webkit-transition: -webkit-transform .7s cubic-bezier(.47,.56,0,.88);
+            transition: transform .7s cubic-bezier(.47,.56,0,.88);
+        }
+    }
+
+    .qodef-pi-image {
+
+        img {
+            display: block;
+        }
+    }
+
+    .qodef-pi-add-to-cart {
+
+        .qodef-btn.qodef-btn-solid {
+
+        }
+    }
+
+    &.info-on-the-right{
+        .qodef-pi-info-inner{
+            direction: rtl;
+
+            .qodef-pi-text-holder{
+                text-align: left;
+                left: auto;
+                right: 35px;
+                direction: ltr;
+            }
+        }
+    }
+
+    &.minimal{
+        .qodef-pi-text-holder{
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+/* ==========================================================================
+   Product Info shortcode styles - end
+   ========================================================================== */

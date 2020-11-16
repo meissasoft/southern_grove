@@ -1,0 +1,85 @@
+/* ==========================================================================
+Crossfade Images shortcode styles - start
+========================================================================== */
+.qodef-crossfade-images {
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	box-shadow: 0px 11px 16.92px 1.08px rgba(0, 0, 0, 0.08); 
+	@include qodefTransition(all .3s);
+
+	&:hover {
+		box-shadow: 0px 13px 18px 1.08px rgba(0, 0, 0, 0.18); 
+	}
+
+	.qodef-cfi-link {
+		position: absolute;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+		z-index: 100;
+	}
+
+	.qodef-cfi-img-holder {
+		@include qodefTransition(all .3s);
+
+		.qodef-cfi-img-holder-inner {
+			position: relative;
+			overflow: hidden;
+
+			img {
+				vertical-align: middle;
+				@include qodefTransition(all .3s ease);
+			}
+
+			.qodef-cfi-image-hover{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 10;
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				opacity: 0;
+				@include qodefTransform(scale(1.3));
+				@include qodefTransition(all .3s ease);
+			}
+		}
+	}
+
+
+	.qodef-cfi-title-holder {
+		text-align: center;
+		margin: 30px 0;
+
+		.qodef-cfi-title {
+			text-transform: none;
+			font-weight: 400;
+			font-size: 19px;
+		}
+	}
+
+	&:hover {
+		.qodef-cfi-img-holder {
+
+			.qodef-cfi-img-holder-inner {
+				img {
+					@include qodefTransform(scale(.8));
+					opacity: 0;
+				}
+				.qodef-cfi-image-hover{
+					opacity: 1;
+					@include qodefTransform(scale(1));
+					-webkit-transition: -webkit-transform .3s .05s, opacity .3s .05s;
+					transition: transform .3s .05s, opacity .3s .05s;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+Crossfade Images shortcode styles - end
+========================================================================== */

@@ -1,0 +1,145 @@
+// widgets spacing
+$widget-bottom-margin: 23px;
+
+// list items dimensions
+$widget-list-item-height: 20px;
+$widget-list-item-padding: 24px;
+
+// list items color
+$widget-list-item-background-color: #999999;
+
+// list items border
+$widget-list-item-border-color: #cccccc;
+$widget-list-item-border-width: 1px;
+$widget-list-item-border-style: solid;
+
+// text
+$widget-text-color: #ffffff;
+$widget-heading-color: #fff;
+
+// links
+$widget-link-color: #949494;
+$widget-link-hover-color: #fff;
+
+// specific widgets
+$widget-search-form-height: 52px;
+$widget-tag-cloud-height: 30px;
+
+footer {
+    @import 'widgets/default-wordpress-widgets-flat';
+
+    .widget {
+        .qodef-widget-title {
+                margin: 0;
+        }
+
+        &.qodef-blog-list-widget{
+            .qodef-post-info-date{
+                a{
+                    color: #fff;
+
+                    &:hover{
+                        color: #949494;
+                    }
+                }
+            }
+        }
+
+        &.widget_text{
+            a{
+                color: #949494;
+
+                &:hover{
+                    color: #fff;
+                }
+
+            }
+        }
+
+        ul{
+            li{
+                padding: 8px;
+            }
+        }
+
+        &.widget_nav_menu ul li {
+            a {
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .qodef-footer-bottom-holder{
+        .qodef-grid-col-6:not(:last-child){
+            .widget{
+                margin: 0;
+                text-align: left;
+            }
+        }
+        .qodef-grid-col-6:nth-child(2){
+            .widget{
+                margin: 0;
+                text-align: right;
+            }
+        }
+
+        .widget{
+
+            &.widget_nav_menu{
+                ul{
+                    display: table;
+                    li{
+                        margin: 0;
+                        padding: 0 19px;
+                        display: table-cell;
+                        vertical-align: middle;
+
+                        &:first-child{
+                            margin-left: 0;
+                            padding-left: 0;
+                        }
+
+                        &:last-child{
+                            padding: 0 0 0 20px;
+                        }
+
+                        a{
+                            color: #949494;
+                            @include qodefTransition(color .2s ease-in-out);
+
+                            &:after {
+                                content: "";
+                            }
+
+                            &:hover {
+                                padding-left: 0;
+                                color: #000;
+
+                                &:after {
+                                    left: 0;
+                                }
+                            }
+                        }
+                        .sub-menu{
+                            display: none;
+                        }
+                    }
+                }
+
+                @include phone-portrait{
+                    ul {
+                        display: block;
+                        li {
+                            display: block;
+                            margin: 0;
+                            padding: 0!important;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

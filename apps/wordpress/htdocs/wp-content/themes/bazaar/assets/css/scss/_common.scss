@@ -1,0 +1,798 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+   #Comments styles - start
+   ========================================================================== */
+
+.qodef-comment-holder {
+    @include qodefRelativeHolderLayout();
+    padding: 0;
+    box-sizing: border-box;
+
+    .qodef-comment-holder-inner {
+        padding: 81px 0 20px;
+    }
+	
+	.qodef-comment {
+		
+		&.qodef-pingback-comment {
+			
+			.qodef-comment-text {
+				padding: 0;
+			}
+		}
+	}
+
+    .qodef-comment-list {
+        list-style: none;
+        position: relative;
+        z-index: 150;
+        padding: 0;
+        margin: 0;
+
+        li {
+            @include qodefRelativeHolderLayout();
+            margin: 25px 0 0;
+            padding: 29px 0 0;
+        }
+
+        > li:first-child {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .children {
+            padding: 0 0 0 114px;
+        }
+    }
+
+    .qodef-comments-title {
+        margin-bottom: 48px;
+
+        > * {
+            margin: 0;
+        }
+    }
+
+    .qodef-comment-image {
+        position: relative;
+        display: block;
+        top: 10px;
+        left: 0;
+        width: 82px;
+        height: 82px;
+        float: left;
+
+        img {
+            display: block;
+            border-radius: 4em;
+        }
+    }
+
+    .qodef-comment-text {
+        padding: 7px 0 0 114px;
+        min-height: 82px;
+
+        .qodef-comment-info {
+            margin: 6px 0 7px;
+            display: inline;
+        }
+
+
+        .replay,
+        .comment-reply-link,
+        .comment-edit-link {
+            float: left;
+            margin-left: 10px;
+            font-size: 13px;
+            color: $first-main-color;
+            font-weight: 600;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+
+
+        .comment-reply-link{
+            margin-left: 0;
+            &:after{
+                content: "\e012";
+                font-family: 'dripicons';
+                font-size: 10px;
+                padding-left: 11px;
+                position: relative;
+                top: 1px;
+            }
+        }
+
+        .comment-edit-link{
+            position: relative;
+            top: 2px;
+        }
+
+        .qodef-comment-name {
+            margin: 0;
+            display: inline;
+        }
+
+        .qodef-comment-date {
+            margin: 0;
+            padding-left: 11px;
+            font-size: 12px;
+            display: inline;
+        }
+
+        .qodef-text-holder {
+            p {
+                margin: 7px 0 3px;
+            }
+
+        }
+
+        .comment-respond {
+            margin: 20px 0;
+
+            .comment-reply-title {
+                margin: 0 0 10px;
+                font-size: 14px;
+            }
+
+            .logged-in-as {
+                margin: 0 0 8px;
+            }
+        }
+
+        #cancel-comment-reply-link {
+            margin-left: 10px;
+            font-size: 12px;
+            color: $first-main-color;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+	
+	    ul, ol {
+		    
+		    li {
+			    display: list-item;
+		    }
+	    }
+
+        li {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+        }
+    }
+}
+
+.qodef-comment-form {
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+    
+    .qodef-comment-form-inner {
+        padding: 57px 0 78px;
+    }
+    
+    .comment-reply-title {
+        margin: 0 0 37px;
+    }
+    
+    .logged-in-as {
+        margin: 0 0 8px;
+    }
+}
+
+@include ipad-portrait {
+
+    .qodef-comment-holder {
+	    
+        .qodef-comment-list {
+	        
+            .children {
+                padding: 0 0 0 40px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+	
+    .qodef-comment-holder {
+	    
+        .qodef-comment-list {
+	        
+            .children {
+                padding: 0;
+            }
+        }
+
+        .qodef-comment-text {
+	        
+            .qodef-comment-date,
+            .qodef-comment-name {
+                float: none;
+            }
+	        
+            .replay,
+            .comment-reply-link,
+            .comment-edit-link {
+                float: none;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+	
+    .qodef-comment-holder {
+
+        .qodef-comment-image {
+            float: none;
+        }
+
+        .qodef-comment-text {
+            padding: 20px 0 0;
+            min-height: inherit;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+%input-style {
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 23px 21px 18px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: inherit;
+    color: #999999;
+    background-color: transparent;
+    border: 1px solid $default-border-color;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+	cursor: pointer;
+    box-sizing: border-box;
+    @include qodefTransition(border-color 0.2s ease-in-out);
+
+    &:focus {
+        color: $default-heading-color;
+        border-color: $default-text-color;
+    }
+
+    @include qodefPlaceholder {
+        color: inherit;
+    }
+}
+
+#respond textarea,
+#respond input[type='text'],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+.post-password-form input[type='password'] {
+    @extend %input-style;
+}
+
+#respond textarea {
+    display: block;
+    padding: 20px 21px 37px;;
+}
+
+p.form-submit {
+    margin: 0;
+}
+
+#submit_comment,
+.post-password-form input[type='submit'] {
+    @include qodefButtonDefaultStyle();
+    @include qodefButtonMediumParams();
+    @include qodefButtonSolidColor();
+	cursor: pointer;
+    border-radius: 0;
+    text-transform: lowercase;
+	
+    &:hover {
+        background-color: #2f2f2f;
+    }
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+
+%cf7-input-style {
+    width: 100%;
+    margin: 0 0 17px;
+    padding: 22px 23px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: inherit;
+    color: $default-text-color;
+    background-color: transparent;
+    border: 1px solid $default-border-color;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+	cursor: pointer;
+    box-sizing: border-box;
+
+    &:focus {
+        color: $default-text-color;
+        background-color: #fafafa;
+        border-color: $default-border-color;
+    }
+	
+	@include qodefPlaceholder {
+		color: inherit;
+	}
+}
+
+.wpcf7-form-control {
+    &.wpcf7-text,
+    &.wpcf7-number,
+    &.wpcf7-date,
+    &.wpcf7-textarea,
+    &.wpcf7-select,
+    &.wpcf7-quiz {
+        @extend %cf7-input-style;
+
+        footer & {
+            margin: 0;
+        }
+    }
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+    @include qodefButtonDefaultStyle();
+    @include qodefButtonMediumParams();
+    @include qodefButtonSolidColor();
+	cursor: pointer;
+    padding: 13px 32px;
+    -webkit-appearance: none!important;
+    border-radius: 0;
+
+    &:hover {
+        @include qodefButtonSolidHoverColor();
+    }
+}
+
+.wpcf7-form p {
+    margin: 0;
+}
+
+.wpcf7-form textarea {
+    vertical-align: middle;
+    padding: 18px 21px 10px!important;
+    margin-bottom: 23px!important;
+}
+
+.qodef-two-columns-form-without-space {
+
+    .wpcf7-form .ajax-loader {
+        display: none;
+    }
+}
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Custom contact form styles - begin
+   ========================================================================== */
+
+.qodef-subscribtion{
+    display: table;
+    border: 1px solid #fff;
+    width: 66%;
+
+    .your-email{
+        display: table-cell;
+        width: 80%;
+
+            input{
+                padding: 11px 10px 11px 29px;
+                border: none;
+                color: #fff;
+                font-weight: 500;
+
+                &:focus {
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+    }
+
+    .wpcf7-submit{
+        display: table-cell!important;
+        vertical-align: middle!important;
+        padding: 0 15px 0 0!important;
+    }
+
+    @include laptop-landscape-medium{
+        width: 100%;
+        .your-email{
+            width: 65%;
+            input {
+                padding: 11px 10px 11px 18px;
+            }
+        }
+    }
+
+    @include phone-portrait{
+        .your-email{
+            width: 60%;
+        }
+    }
+
+    .ajax-loader{
+        display: none!important;
+    }
+}
+
+.qodef-cf-wrapper{
+
+    @include laptop-landscape-medium {
+        input.wpcf7-form-control.wpcf7-submit {
+            padding: 15px 32px;
+        }
+    }
+}
+
+.qodef-cf-button-wrapper{
+    display: inline-block;
+    position: relative;
+
+    input.wpcf7-form-control.wpcf7-submit{
+        padding: 14px 59px 12px 40px;
+    }
+
+    &:after{
+        font-family: "dripicons";
+        content: "\e012";
+        color: #fff;
+        font-size: 17px;
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        @include qodefTransform(translate3d(0,-50%,0));
+        -webkit-transition: -webkit-transform .45s cubic-bezier(0, 0.95, 0.77, 1);
+        transition: transform .45s cubic-bezier(0, 0.95, 0.77, 1);
+    }
+
+    &:hover {
+        &:after {
+            @include qodefTransform(translate3d(6px,-50%,0));
+        }
+    }
+
+    .ajax-loader{
+        display: none!important;
+    }
+}
+
+/* ==========================================================================
+   #Custom contact form styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Global Owl Slider - begin
+   ========================================================================== */
+.qodef-owl-slider {
+	visibility: hidden;
+	
+    .owl-stage-outer {
+        z-index: 1;
+    }
+	
+	&.qodef-slider-is-moving {
+		
+		.owl-item {
+			
+			.qodef-block-drag-link {
+				z-index: -1 !important;
+			}
+		}
+	}
+    
+    &.qodef-slider-has-both-nav {
+        
+        .owl-nav {
+            
+            .owl-prev,
+            .owl-next {
+                $pos: calc(-50% - 21px); // 21 is is half height of pagination control + top margin
+                @include qodefTransform(translateY($pos));
+            }
+        }
+    }
+	
+	.owl-nav {
+		
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			z-index: 3;
+			color: $default-heading-color;
+			@include qodefTransform(translateY(-50%));
+			@include qodefTransition(color .2s ease-out);
+			
+			&:hover {
+				color: $first-main-color;
+			}
+			
+			> span {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 46px;
+				line-height: 1;
+				
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+		}
+		
+		.owl-prev {
+			left: 30px;
+		}
+		
+		.owl-next {
+			right: 30px;
+		}
+	}
+	
+	.owl-dots {
+		text-align: center;
+		margin: 16px 0 0;
+		
+		.owl-dot {
+			display: inline-block;
+			vertical-align: middle;
+			
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				width: 12px;
+				height: 12px;
+				margin: 0 6px;
+				border-radius: 3em;
+				background-color: transparent;
+				border: 2px solid rgba($default-heading-color, .5);
+				box-sizing: border-box;
+				@include qodefTransition(background-color .2s ease-out, border .2s ease-out);
+			}
+			
+			&:hover,
+			&.active {
+				
+				span {
+					background-color: $default-heading-color;
+					border-color: $default-heading-color;
+				}
+			}
+		}
+	}
+	
+	.owl-carousel .owl-item img {
+		-webkit-transform: translateZ(0); //chrome text cut off fix
+	}
+}
+/* ==========================================================================
+   #Global Owl Slider - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #404 styles - start
+   ========================================================================== */
+
+.qodef-404-page {
+
+    &.qodef-wrapper {
+        padding: 0 !important;
+    }
+    
+    .qodef-content {
+        height: 100vh;
+	
+	    .admin-bar & {
+		    height: calc(100vh - 32px);
+	    }
+    }
+
+    .qodef-content-inner {
+        position: relative;
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .qodef-page-not-found {
+        position: relative;
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        padding: 0 32%;
+	    text-align: center;
+
+        .qodef-404-title {
+            margin: 0;
+            display: block;
+            font-size: 232px;
+            font-family: 'Quentin';
+            color: #949494;
+        }
+	
+	    .qodef-404-subtitle {
+            margin: 105px 0 0;
+            display: block;
+            font-family: $default-text-font;
+            font-size: 50px;
+            line-height: 1.3em;
+            color: $default-heading-color;
+            font-weight: 500;
+            text-transform: lowercase;
+        }
+	    
+	    .qodef-404-text {
+		    margin: 18px 0 0;
+            font-size: 17px;
+            line-height: 31px;
+	    }
+
+
+        .qodef-btn {
+            margin: 30px 0 0;
+	
+	        &.qodef-btn-light-style {
+		        color: #585858;
+		        background-color: #fff;
+		        border-color: #fff;
+		
+		        &:hover {
+			        color: #fff !important;
+			        background-color: transparent !important;
+			        border-color: #fff !important;
+		        }
+	        }
+        }
+    }
+
+    @include laptop-landscape-medium{
+        .qodef-page-not-found{
+            padding: 10% 27% 0;
+        }
+    }
+
+    @include ipad-portrait {
+
+        .qodef-page-not-found {
+            padding: 40px 30px;
+
+            .qodef-404-title {
+                margin-top: 30px;
+                font-size: 150px;
+            }
+        }
+    }
+	
+	@include phone-landscape {
+		
+		.qodef-content {
+			height: auto;
+			margin: 0 !important;
+			
+			.admin-bar & {
+				height: auto;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   #404 styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+#qodef-back-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10000;
+
+    &.off {
+        opacity: 0;
+        visibility: hidden;
+        @include qodefTransition(opacity 0.15s ease, visibility .0s .15s);
+    }
+
+    &.on {
+        opacity: 1;
+        visibility: visible;
+        @include qodefTransition(opacity 0.3s ease);
+    }
+
+    .qodef-btt-inner {
+        font-weight: 600;
+
+        .qodef-btt-label {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 40px;
+            @include qodefTransform(rotate(-90deg) translateX(50%) translateY(50%));
+        }
+
+        .qodef-icon-stack {
+            position: absolute;
+            bottom: 280%;
+            left: 73%;
+            @include qodefTransform(translateX(-50%) translateY(0));
+            -webkit-transition: -webkit-transform .45s cubic-bezier(0, 0.95, 0.77, 1);
+            transition: transform .45s cubic-bezier(0, 0.95, 0.77, 1);
+            will-change: transform;
+
+            > span:before {
+                font-size: 16px;
+                font-weight: inherit;
+            }
+        }
+    }
+
+    &.qodef-btt-light {
+        .qodef-btt-inner {
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        .qodef-btt-inner {
+            .qodef-icon-stack {
+                @include qodefTransform(translateX(-50%) translateY(-6px));
+            }
+        }
+    }
+
+    .touch & {
+        display: none;
+    }
+}
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Self Hosted Video styles - begin
+   ========================================================================== */
+.qodef-self-hosted-video-holder {
+    .qodef-video-wrap {
+        .mejs-container,
+        .mejs-overlay-play {
+            height: 100% !important; /*!important because of the inline style*/
+            width: 100% !important; /*!important because of the inline style*/
+        }
+    }
+}
+/* ==========================================================================
+   #Self Hosted Video styles - end
+   ========================================================================== */

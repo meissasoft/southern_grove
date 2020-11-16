@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Clients Carousel shortcode style - begin
+   ========================================================================== */
+
+.qodef-clients-carousel-holder {
+    @include qodefRelativeHolderLayout();
+    
+	.qodef-cc-inner {
+		@include qodefRelativeHolderLayout();
+	}
+	
+	.qodef-cc-item {
+		@include qodefRelativeHolderLayout();
+		
+		.touch & {
+			cursor: pointer;
+		}
+		
+		.qodef-cc-item {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	/***** Hover Types - begin *****/
+	
+	&.qodef-cc-hover-switch-images {
+		
+		.qodef-cc-item {
+			
+			&:hover {
+				
+				.qodef-cc-image {
+					opacity: 0;
+				}
+				
+				.qodef-cc-hover-image {
+					opacity: 1;
+				}
+			}
+			
+			.qodef-cc-image {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 auto;
+				opacity: 1;
+				@include qodefTransition(opacity .15s ease-out);
+			}
+			
+			.qodef-cc-hover-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: auto;
+				opacity: 0;
+				@include qodefTransform(translateX(-50%));
+				@include qodefTransition(opacity .15s ease-out);
+			}
+		}
+	}
+	
+	&.qodef-cc-hover-roll-over {
+		
+		.qodef-cc-item {
+			overflow: hidden;
+			
+			&:hover {
+				
+				.qodef-cc-image {
+					@include qodefTransform(translateY(100%));
+				}
+				
+				.qodef-cc-hover-image {
+					@include qodefTransform(translate(-50%, 0));
+				}
+			}
+			
+			.qodef-cc-image {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 auto;
+				-webkit-transition: -webkit-transform .4s cubic-bezier(0.88, 0.03, 0.25, 1);
+				transition: transform .4s cubic-bezier(0.88, 0.03, 0.25, 1);
+			}
+			
+			.qodef-cc-hover-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: auto;
+				-webkit-transition: -webkit-transform .4s cubic-bezier(0.88, 0.03, 0.25, 1);
+				transition: transform .4s cubic-bezier(0.88, 0.03, 0.25, 1);
+				@include qodefTransform(translate(-50%, -100%));
+			}
+		}
+	}
+	
+	/***** Hover Types - end *****/
+}
+/* ==========================================================================
+   Clients Carousel shortcode style - end
+   ========================================================================== */

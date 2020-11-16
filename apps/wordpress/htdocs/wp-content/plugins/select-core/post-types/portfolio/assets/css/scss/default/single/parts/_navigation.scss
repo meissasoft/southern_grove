@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.qodef-ps-navigation {
+	position: relative;
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	padding: 0;
+    margin: 52px 0 0;
+	clear: both;
+    box-sizing: border-box;
+
+    .qodef-ps-full-width-custom-layout & {
+        padding: 0 40px;
+    }
+	
+	.qodef-ps-back-btn {
+		position: absolute;
+		top: 46%;
+		left: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		@include qodefTransform(translateX(-50%));
+
+		a {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			cursor: pointer;
+			font-size: 23px;
+			line-height: 1;
+			
+			span {
+				display: block;
+				line-height: inherit;
+				font-size: 16px;
+				color: #999999;
+                @include qodefTransition(color .2s ease-in-out);
+				
+				&:before,
+				&:after {
+					display: block;
+					line-height: 14px;
+				}
+
+			}
+
+            &:hover{
+                span {
+                    color: #000;
+                }
+            }
+		}
+	}
+	
+	.qodef-ps-prev,
+	.qodef-ps-next {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		width: 49%;
+		padding: 0;
+		box-sizing: border-box;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			color: #929292;
+
+			.qodef-ps-nav-mark {
+                padding-bottom: 3px;
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+		}
+
+		.qodef-ps-prev-title,
+		.qodef-ps-next-title{
+			margin: 20px 0 5px;
+		}
+
+	}
+	
+	.qodef-ps-prev {
+		
+		a {
+			
+			.qodef-ps-nav-mark {
+				left: 0;
+				padding-right: 10px;
+			}
+		}
+	}
+	
+	.qodef-ps-next {
+		text-align: right;
+		
+		a {
+			
+			.qodef-ps-nav-mark {
+				right: 0;
+				padding-left: 10px;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

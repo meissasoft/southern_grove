@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Pricing Tables shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium {
+	
+	.qodef-pricing-tables {
+		
+		$pricing_table_columns: ('qodef-four-columns', 'qodef-five-columns');
+		@for $i from 0 to length($pricing_table_columns) {
+			&.#{nth($pricing_table_columns, $i+1)} {
+				$column_width: 100%/2;
+				
+				.qodef-price-table {
+					width: $column_width;
+					
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+						
+						&:nth-child(2n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.qodef-pricing-tables {
+		
+		$pricing_table_columns: ('qodef-three-columns');
+		@for $i from 0 to length($pricing_table_columns) {
+			&.#{nth($pricing_table_columns, $i+1)} {
+				
+				.qodef-price-table {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.qodef-pricing-tables {
+		
+		.qodef-price-table {
+			width: 100% !important;
+		}
+	}
+}
+/* ==========================================================================
+   Pricing Tables shortcode responsive style - end
+   ========================================================================== */

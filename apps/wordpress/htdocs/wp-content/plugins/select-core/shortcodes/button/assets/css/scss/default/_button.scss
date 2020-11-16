@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Button shortcode style - begin
+   ========================================================================== */
+
+.qodef-btn {
+    @include qodefButtonDefaultStyle();
+    @include qodefButtonMediumParams();
+    cursor: pointer;
+    
+    &.qodef-btn-simple {
+        padding: 0 !important;
+        color: $default-text-color;
+        background-color: transparent;
+        border: 0;
+        vertical-align: middle;
+
+        .qodef-btn-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:not(.qodef-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $default-heading-color !important;
+        }
+
+        &:not(.qodef-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: transparent !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: transparent !important;
+        }
+    }
+
+    &.qodef-btn-solid {
+        @include qodefButtonSolidColor();
+
+        &:not(.qodef-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.qodef-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $default-heading-color !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $default-heading-color !important;
+        }
+    }
+
+    &.qodef-btn-outline {
+	    @include qodefButtonOutlineColor();
+
+        &:not(.qodef-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.qodef-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+
+    &.qodef-btn-small {
+        @include qodefButtonSmallParams();
+    }
+
+    &.qodef-btn-medium {
+        //same as default
+    }
+
+    &.qodef-btn-large {
+        @include qodefButtonLargeParams();
+    }
+
+    &.qodef-btn-huge {
+        @include qodefButtonHugeParams();
+    }
+
+    &.qodef-btn-icon {
+
+        > i,
+        > span:not(.qodef-btn-text) {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 4px;
+            font-size: 1.142857142857143em;
+            line-height: inherit;
+            -webkit-transition: -webkit-transform .45s cubic-bezier(0, 0.95, 0.77, 1);
+            transition: transform .45s cubic-bezier(0, 0.95, 0.77, 1);
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        &:hover {
+            > i,
+            > span:not(.qodef-btn-text) {
+                @include qodefTransform(translate3d(6px,0,0));
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Button shortcode style - end
+   ========================================================================== */

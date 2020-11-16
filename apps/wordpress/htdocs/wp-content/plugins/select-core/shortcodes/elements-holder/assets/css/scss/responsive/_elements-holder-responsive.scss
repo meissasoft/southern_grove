@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Elements Holder shortcode responsive style - begin
+   ========================================================================== */
+
+.qodef-elements-holder {
+	
+	$columns_label: ('two', 'three', 'four', 'five', 'six');
+	
+	@include laptop-landscape-medium {
+		
+		&.qodef-responsive-mode-1280 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.qodef-#{nth($columns_label,$i+1)}-columns {
+					
+					.qodef-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-left {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-right {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-center {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include ipad-landscape {
+		
+		&.qodef-responsive-mode-1024 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.qodef-#{nth($columns_label,$i+1)}-columns {
+					
+					.qodef-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-left {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-right {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-center {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include ipad-portrait {
+		
+		&.qodef-responsive-mode-768 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.qodef-#{nth($columns_label,$i+1)}-columns {
+					
+					.qodef-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-left {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-right {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-center {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include phone-landscape {
+		
+		&.qodef-responsive-mode-680 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.qodef-#{nth($columns_label,$i+1)}-columns {
+					
+					.qodef-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-left {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-right {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-center {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+	@include phone-portrait {
+		
+		&.qodef-responsive-mode-480 {
+			
+			@for $i from 0 to length($columns_label) {
+				&.qodef-#{nth($columns_label,$i+1)}-columns {
+					
+					.qodef-eh-item {
+						width: 100%;
+						height: auto;
+						display: inline-block;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-left {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: left;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-right {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: right;
+					}
+				}
+			}
+			
+			&.qodef-one-column-alignment-center {
+				
+				.qodef-eh-item {
+					
+					.qodef-eh-item-content {
+						text-align: center;
+					}
+				}
+			}
+		}
+		
+		.qodef-eh-item-content{
+			padding: 0 10px;
+		}
+	}
+}
+/* ==========================================================================
+   Elements Holder shortcode responsive style - end
+   ========================================================================== */

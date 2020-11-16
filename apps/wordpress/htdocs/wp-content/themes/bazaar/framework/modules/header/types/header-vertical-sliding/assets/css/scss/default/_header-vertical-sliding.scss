@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Header Vertical - Sliding style - begin
+   ========================================================================== */
+$vertical-menu-width: 96px;
+
+@import 'blocks/header-vertical-sliding-logo.scss';
+@import 'blocks/header-vertical-sliding-navigation.scss';
+@import 'blocks/header-vertical-sliding-widgets.scss';
+
+.qodef-header-vertical-sliding {
+
+    .qodef-content,
+    footer{
+        padding-left: $vertical-menu-width;
+        box-sizing: border-box;
+    }
+
+    .qodef-vertical-menu-opener{
+        .qodef-fullscreen-image {
+            position: relative;
+            display: block;
+            line-height: 1em;
+            vertical-align: middle;
+            height: 21px;
+
+            img {
+                display: block;
+                height: 100%;
+                @include qodefTransition(opacity .2s ease);
+                &.qodef-fullscreen-image-light {
+                    opacity: 0;
+                    @include qodefTransform(translateY(-100%));
+                }
+            }
+        }
+    }
+
+
+    .qodef-vertical-menu-area {
+        position: fixed;
+        width: $vertical-menu-width;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        height: 100%;
+        z-index: 101;
+        -webkit-backface-visibility: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+
+        .qodef-vertical-menu-area-inner{
+            position: relative;
+            height: 100%;
+        }
+
+        .qodef-vertical-area-background {
+            position: fixed;
+            width: $vertical-menu-width;
+            height: 100%;
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            background-size: cover;
+            border-right: 1px solid $default-border-color;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 1;
+            @include qodefTransition(opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease);
+        }
+
+        .qodef-vertical-menu-holder{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+
+        .qodef-vertical-menu-table{
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qodef-vertical-menu-table-cell{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        &.qodef-with-scroll {
+            overflow: hidden;
+        }
+
+        &.opened{
+            .qodef-vertical-menu-opener{
+
+                a{
+                    &:after{
+                        content: '\4d';
+                        font-family: ElegantIcons;
+                        font-size: 40px;
+                        position: relative;
+                        top: -10px;
+                    }
+                }
+
+                .qodef-fullscreen-image {
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.admin-bar .qodef-vertical-menu-area {
+        top: 33px;
+    }
+
+    .qodef-vertical-menu-area.opened {
+        .qodef-vertical-area-background {
+            background-color: #fff;
+        }
+
+        .qodef-logo-wrapper a{
+            img.qodef-normal-logo {
+                opacity: 1;
+            }
+
+            img.qodef-light-logo {
+                opacity: 0;
+            }
+        }
+
+        .qodef-vertical-menu-opener {
+            .qodef-line {
+                background-color: transparent !important;
+                @include qodefTransition(none);
+            }
+
+            .qodef-line:after {
+                background-color: #fff;
+                top: 0 !important;
+                @include qodefTransform(rotate(45deg));
+                @include qodefTransition(background-color 0.3s ease, transform 0.3s ease);
+            }
+
+            .qodef-line:before {
+                background-color: #fff;
+                top: 0 !important;
+                @include qodefTransform(rotate(-45deg));
+                @include qodefTransition(background-color 0.3s ease, transform 0.3s ease);
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Header Vertical - Sliding style - end
+   ========================================================================== */

@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Footer styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   #Content bottom styles - begin
+   ========================================================================== */
+.qodef-content-bottom .qodef-content-bottom-inner {
+  box-sizing: border-box;
+}
+
+.qodef-content-bottom .qodef-content-bottom-inner.qodef-grid {
+  padding: 20px 0;
+}
+
+.qodef-content-bottom .qodef-content-bottom-inner.qodef-full-width {
+  padding: 20px 50px;
+}
+
+/* ==========================================================================
+   #Content bottom styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Footer style - begin
+   ========================================================================== */
+.qodef-page-footer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-top-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-alignment-center {
+  text-align: center;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-alignment-left {
+  text-align: left;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-alignment-right {
+  text-align: right;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner {
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner.qodef-grid {
+  padding: 76px 0;
+}
+
+.qodef-page-footer .qodef-footer-top-holder .qodef-footer-top-inner.qodef-full-width {
+  padding: 120px 55px 95px;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner {
+  box-sizing: border-box;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner.qodef-grid {
+  padding: 28px 0 23px;
+}
+
+.qodef-page-footer .qodef-footer-bottom-holder .qodef-footer-bottom-inner.qodef-full-width {
+  padding: 39px 65px 34px;
+}
+
+/* Footer uncover - begin
+========================================================================== */
+.no-touch body:not(.error404) footer.qodef-footer-uncover {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  -webkit-transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.no-touch .qodef-right-side-menu-opened footer.qodef-footer-uncover {
+  left: -270px;
+}
+
+/* Footer uncover - end
+========================================================================== */
+/* ==========================================================================
+   Footer style - end
+   ========================================================================== */
+/* ==========================================================================
+   Footer styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/footer-map.css.map */

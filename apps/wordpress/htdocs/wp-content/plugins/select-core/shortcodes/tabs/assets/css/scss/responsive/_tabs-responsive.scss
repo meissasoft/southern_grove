@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Tabs shortcode responsive style - begin
+   ========================================================================== */
+@include ipad-landscape {
+
+	.qodef-tabs {
+
+		&.qodef-tabs-standard {
+
+			.qodef-tabs-nav {
+
+				li {
+
+					a {
+						padding: 17px 18px;
+					}
+				}
+			}
+		}
+
+		&.qodef-tabs-boxed {
+
+			.qodef-tabs-nav {
+
+				li {
+					margin: 0 8px 0 0;
+
+					a {
+						padding: 7px 18px;
+					}
+				}
+			}
+		}
+
+		&.qodef-tabs-simple {
+
+			.qodef-tabs-nav {
+
+				li {
+					margin: 0 26px 0 0;
+				}
+			}
+		}
+
+		&.qodef-tabs-vertical {
+
+			.qodef-tabs-nav {
+				width: 180px;
+			}
+
+			.qodef-tab-container {
+				width: calc(100% - 180px)!important;
+				padding: 0 0 0 30px;
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+
+	.qodef-tabs {
+
+		&.qodef-tabs-standard {
+
+			.qodef-tabs-nav {
+
+				li {
+					display: block;
+					float: none;
+
+					a {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.qodef-tabs-boxed {
+
+			.qodef-tabs-nav {
+
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 8px;
+
+					a {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.qodef-tabs-simple {
+
+			.qodef-tabs-nav {
+
+				li {
+					margin: 0 20px 0 0;
+				}
+			}
+		}
+
+		&.qodef-tabs-vertical {
+
+			.qodef-tabs-nav,
+			.qodef-tab-container {
+				display: inline-block;
+				width: 100%!important;
+				height: auto;
+			}
+
+			.qodef-tabs-nav {
+				border-right: 0;
+
+				li {
+					float: left;
+					margin: 0 20px 0 0;
+				}
+			}
+
+			.qodef-tab-container {
+				padding: 31px 0 0;
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+
+	.qodef-tabs {
+
+		&.qodef-tabs-simple {
+
+			.qodef-tabs-nav {
+				padding: 0 0 20px;
+
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 20px;
+
+					a {
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.qodef-tabs-vertical {
+
+			.qodef-tabs-nav {
+
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 20px;
+
+					a {
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Tabs shortcode responsive style - end
+   ========================================================================== */

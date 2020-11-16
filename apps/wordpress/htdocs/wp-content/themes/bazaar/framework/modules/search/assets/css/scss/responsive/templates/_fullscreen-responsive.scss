@@ -1,0 +1,41 @@
+/* ==========================================================================
+# Fullscreen search responsive - start
+========================================================================== */
+
+.qodef-fullscreen-search-holder {
+
+    @include laptop-landscape-medium{
+        .qodef-search-submit{
+            padding: 23px 0 20px;
+        }
+
+        .qodef-search-field{
+            padding: 23px 21px 8px 0;
+        }
+
+    }
+    
+    @include ipad-landscape {
+        
+        .qodef-form-holder-inner {
+            width: 75%;
+        }
+    }
+    
+    @include ipad-portrait {
+        
+        .qodef-search-submit {
+            font-size: 25px;
+        }
+    }
+    
+    @include phone-portrait {
+        
+        .qodef-form-holder-inner {
+            width: 80%;
+        }
+    }
+}
+/* ==========================================================================
+# Fullscreen search responsive - end
+========================================================================== */

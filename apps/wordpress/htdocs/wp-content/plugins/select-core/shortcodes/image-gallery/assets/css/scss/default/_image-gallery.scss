@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Image Gallery shortcode style - begin
+   ========================================================================== */
+
+.qodef-image-gallery {
+	@include qodefRelativeHolderLayout();
+	
+	&.qodef-has-shadow {
+	
+		.qodef-ig-image-inner {
+			box-shadow: 6px 8px 20px 0 rgba(0, 0, 0, .3);
+		}
+		
+		&.qodef-ig-slider-type,
+		&.qodef-ig-carousel-type {
+			
+			.owl-stage-outer {
+				padding: 0 0 20px;
+			}
+			
+			.qodef-ig-image {
+				box-shadow: 6px 8px 20px 0 rgba(0, 0, 0, .3);
+			}
+		}
+	}
+	
+	.qodef-ig-image {
+		@include qodefRelativeHolderLayout();
+		box-sizing: border-box;
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.qodef-ig-image-inner {
+		@include qodefRelativeHolderLayout();
+	}
+	
+	.qodef-ig-slider {
+		@include qodefRelativeHolderLayout();
+	}
+	
+	/***** Image Gallery Space Between Columns Style - begin *****/
+	
+	.qodef-ig-inner {
+		$space_label: ('no', 'tiny', 'small', 'normal');
+		$space_width: (0, 5, 10, 15);
+		
+		@for $i from 0 to length($space_label) {
+			&.qodef-ig-#{nth($space_label,$i+1)}-space {
+				$column_width: nth($space_width,$i+1);
+				$column_width_margin: $column_width * 2;
+				
+				@if($column_width == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$column_width}px;
+				}
+				
+				.qodef-ig-image {
+					padding: 0 #{$column_width}px;
+					margin: 0 0 #{$column_width_margin}px;
+				}
+			}
+		}
+	}
+	
+	/***** Image Gallery Space Between Columns Style - end *****/
+	
+	/***** Image Gallery Grid Style - begin *****/
+	
+	.qodef-ig-grid {
+		
+		.qodef-ig-image {
+			float: left;
+		}
+		
+		$gallery_columns: ('two', 'three', 'four', 'five', 'six');
+		@for $i from 0 to length($gallery_columns) {
+			&.qodef-ig-#{nth($gallery_columns, $i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.qodef-ig-image {
+					width: $column_width;
+					
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						&:nth-child(#{$i+2}n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/***** Image Gallery Grid Style - end *****/
+	
+	/***** Image Gallery Masonry Style - begin *****/
+	
+	.qodef-ig-masonry {
+		opacity: 0;
+		@include qodefTransition(opacity .2s ease-out);
+		
+		.qodef-ig-grid-sizer {
+			width: 100%;
+		}
+		
+		.qodef-ig-grid-gutter {
+			width: 0;
+		}
+		
+		$masonry_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		@for $i from 0 to length($masonry_columns) {
+			&.qodef-ig-#{nth($masonry_columns,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.qodef-ig-image,
+				.qodef-ig-grid-sizer {
+					width: $column_width;
+				}
+				
+				.qodef-ig-image.qodef-large-masonry-item {
+					width: $column_width * 2;
+				}
+			}
+		}
+	}
+	
+	/***** Image Gallery Masonry Style - end *****/
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-custom-link {
+		
+		.qodef-ig-image {
+			
+			a {
+				
+				&:hover {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+				
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include qodefTransition(opacity .2s ease-in-out);
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-lightbox {
+		
+		.qodef-ig-image {
+			
+			a {
+				
+				&:hover {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+				
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include qodefTransition(opacity .2s ease-in-out);
+				}
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-zoom {
+		
+		.qodef-ig-image {
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include qodefTransform(scale(1.04));
+				}
+			}
+			
+			.qodef-ig-image-inner {
+				overflow: hidden;
+			}
+			
+			img {
+				-webkit-transition: -webkit-transform .3s ease-in-out;
+				-moz-transition: -moz-transform .3s ease-in-out;
+				transition: transform .3s ease-in-out;
+				@include qodefTransform(scale(1));
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-grayscale {
+		
+		.qodef-ig-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include qodefTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image Gallery shortcode style - end
+   ========================================================================== */

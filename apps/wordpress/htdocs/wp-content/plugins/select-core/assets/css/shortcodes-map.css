@@ -1,0 +1,4082 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Shortcodes styles
+   ========================================================================== */
+/* ==========================================================================
+   Accordions shortcode style - begin
+   ========================================================================== */
+.qodef-accordion-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-accordion-holder .qodef-accordion-title {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.qodef-accordion-holder .qodef-accordion-title .qodef-tab-title {
+  display: block;
+  text-transform: lowercase;
+}
+
+.qodef-accordion-holder .qodef-accordion-title .qodef-accordion-mark {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 18px;
+  margin: -1px 0 0;
+  font-size: 24px;
+  line-height: 18px;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.qodef-accordion-holder .qodef-accordion-title .qodef-accordion-mark span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.qodef-accordion-holder .qodef-accordion-title .qodef-accordion-mark span:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-accordion-holder .qodef-accordion-title .qodef-accordion-mark span.qodef_icon_minus {
+  opacity: 0;
+}
+
+.qodef-accordion-holder .qodef-accordion-title .qodef-accordion-mark span.qodef_icon_plus {
+  opacity: 1;
+}
+
+.qodef-accordion-holder .qodef-accordion-title.ui-state-active .qodef-accordion-mark span.qodef_icon_minus, .qodef-accordion-holder .qodef-accordion-title.ui-state-hover .qodef-accordion-mark span.qodef_icon_minus {
+  opacity: 1;
+}
+
+.qodef-accordion-holder .qodef-accordion-title.ui-state-active .qodef-accordion-mark span.qodef_icon_plus, .qodef-accordion-holder .qodef-accordion-title.ui-state-hover .qodef-accordion-mark span.qodef_icon_plus {
+  opacity: 0;
+}
+
+.qodef-accordion-holder span.qodef-accordion-title {
+  display: block;
+  color: #000;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.qodef-accordion-holder span.qodef-accordion-title .qodef-accordion-mark {
+  margin: -2px 0 0;
+}
+
+.qodef-accordion-holder .qodef-accordion-content {
+  margin: 0;
+}
+
+.qodef-accordion-holder .qodef-accordion-content p {
+  color: #949494;
+  font-weight: 300;
+  margin: 0;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed.qodef-white-skin .qodef-accordion-title.ui-state-default {
+  background-color: transparent;
+  color: #fff;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed.qodef-white-skin .qodef-accordion-title.ui-state-default.ui-state-hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed.qodef-white-skin .qodef-accordion-title.ui-state-active {
+  background-color: #fff;
+  color: #000;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title {
+  margin: 15px 0 0;
+  padding: 11px 32px 8px 20px;
+  background-color: #fff;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title:not(.ui-state-active) {
+  border: 1px solid #d3d3d3;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title.ui-state-active {
+  border: 1px solid #000;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title:first-child {
+  margin: 0;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title .qodef-accordion-mark {
+  right: 20px;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title.ui-state-active, .qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-title.ui-state-hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.qodef-accordion-holder.qodef-ac-boxed .qodef-accordion-content {
+  padding: 24px 20px 9px;
+}
+
+.qodef-accordion-holder.qodef-ac-simple {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.qodef-accordion-holder.qodef-ac-simple .qodef-accordion-title {
+  padding: 11px 32px 8px 20px;
+  border-top: 1px solid #e1e1e1;
+}
+
+.qodef-accordion-holder.qodef-ac-simple .qodef-accordion-content {
+  border-top: 1px solid transparent;
+}
+
+.qodef-accordion-holder.qodef-ac-simple .qodef-accordion-content.ui-accordion-content-active {
+  border-color: #e1e1e1;
+}
+
+.qodef-accordion-holder.qodef-ac-simple .qodef-accordion-content {
+  padding: 21px 20px 16px;
+}
+
+/* ==========================================================================
+   Accordions shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+.qodef-banner-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.touch .qodef-banner-holder {
+  cursor: pointer;
+}
+
+.qodef-banner-holder .qodef-banner-overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.qodef-banner-holder.qodef-visible-on-hover:hover .qodef-banner-text-holder {
+  opacity: 1;
+}
+
+.qodef-banner-holder.qodef-visible-on-hover .qodef-banner-text-holder {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.qodef-banner-holder.qodef-disabled .qodef-banner-text-holder {
+  display: none;
+}
+
+.qodef-banner-holder.qodef-zoom-image .qodef-banner-overlay {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.qodef-banner-holder.qodef-zoom-image .qodef-banner-image {
+  overflow: hidden;
+}
+
+.qodef-banner-holder.qodef-zoom-image .qodef-banner-image img {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.7s cubic-bezier(0, 0.95, 0.77, 1);
+  -moz-transition: all 0.7s cubic-bezier(0, 0.95, 0.77, 1);
+  transition: all 0.7s cubic-bezier(0, 0.95, 0.77, 1);
+}
+
+.qodef-banner-holder.qodef-zoom-image:hover .qodef-banner-overlay {
+  opacity: 1;
+}
+
+.qodef-banner-holder.qodef-zoom-image:hover .qodef-banner-image img {
+  -webkit-transform: translate3d(0, 0, 0) scale(1.1);
+  -moz-transform: translate3d(0, 0, 0) scale(1.1);
+  transform: translate3d(0, 0, 0) scale(1.1);
+}
+
+.qodef-banner-holder.qodef-banner-info-centered .qodef-banner-text-holder {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-banner-holder.qodef-banner-info-centered .qodef-banner-text-holder {
+    padding: 10px;
+  }
+  .qodef-banner-holder.qodef-banner-info-centered .qodef-banner-text-holder .qodef-banner-text-inner {
+    vertical-align: middle;
+  }
+  .qodef-banner-holder.qodef-banner-info-centered .qodef-banner-text-holder .qodef-additional-image {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.qodef-banner-holder .qodef-banner-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-banner-holder .qodef-banner-image img {
+  display: block;
+}
+
+.qodef-banner-holder .qodef-banner-text-holder {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-banner-holder .qodef-banner-text-holder {
+    padding: 25px;
+  }
+}
+
+.qodef-banner-holder .qodef-banner-text-outer {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.qodef-banner-holder .qodef-banner-text-inner {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.qodef-banner-holder .qodef-banner-subtitle {
+  margin: 0 0 4px;
+  color: #fff;
+}
+
+.qodef-banner-holder .qodef-banner-title {
+  margin: 0;
+  color: #fff;
+}
+
+.qodef-banner-holder .qodef-banner-title .qodef-banner-title-light {
+  font-weight: 300;
+}
+
+.qodef-banner-holder .qodef-banner-link-text {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 11px 0 0;
+  color: #fff;
+  line-height: 1em;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.qodef-banner-holder .qodef-banner-link-text:hover .qodef-banner-link-hover {
+  width: 100%;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-original {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-original span {
+  color: inherit;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.1%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: width 0.4s ease-in-out;
+  -moz-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-hover span {
+  color: #000;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-icon,
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-icon {
+  margin: 0 2px 0 0;
+  font-size: 15px;
+}
+
+.qodef-banner-holder .qodef-banner-link-text .qodef-banner-link-label {
+  font-size: 14px;
+  line-height: inherit;
+}
+
+.qodef-banner-holder .qodef-banner-link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Button shortcode style - begin
+   ========================================================================== */
+.qodef-btn {
+  font-family: inherit;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  outline: none;
+  line-height: 21px;
+  letter-spacing: 0;
+  font-weight: 600;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  -moz-transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  padding: 12px 32px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.qodef-btn.qodef-btn-simple {
+  padding: 0 !important;
+  color: #949494;
+  background-color: transparent;
+  border: 0;
+  vertical-align: middle;
+}
+
+.qodef-btn.qodef-btn-simple .qodef-btn-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.qodef-btn.qodef-btn-simple:not(.qodef-btn-custom-hover-color):hover {
+  color: #000 !important;
+}
+
+.qodef-btn.qodef-btn-simple:not(.qodef-btn-custom-hover-bg):hover {
+  background-color: transparent !important;
+}
+
+.qodef-btn.qodef-btn-simple:not(.qodef-btn-custom-border-hover):hover {
+  border-color: transparent !important;
+}
+
+.qodef-btn.qodef-btn-solid {
+  color: #fff;
+  background-color: #000;
+  border: 2px solid transparent;
+}
+
+.qodef-btn.qodef-btn-solid:not(.qodef-btn-custom-hover-color):hover {
+  color: #fff !important;
+}
+
+.qodef-btn.qodef-btn-solid:not(.qodef-btn-custom-hover-bg):hover {
+  background-color: #000 !important;
+}
+
+.qodef-btn.qodef-btn-solid:not(.qodef-btn-custom-border-hover):hover {
+  border-color: #000 !important;
+}
+
+.qodef-btn.qodef-btn-outline {
+  color: #000;
+  background-color: transparent;
+  border: 2px solid #000;
+}
+
+.qodef-btn.qodef-btn-outline:not(.qodef-btn-custom-hover-color):hover {
+  color: #fff !important;
+}
+
+.qodef-btn.qodef-btn-outline:not(.qodef-btn-custom-hover-bg):hover {
+  background-color: #000 !important;
+}
+
+.qodef-btn.qodef-btn-outline:not(.qodef-btn-custom-border-hover):hover {
+  border-color: #000 !important;
+}
+
+.qodef-btn.qodef-btn-small {
+  padding: 8px 23px;
+  font-size: 12px;
+}
+
+.qodef-btn.qodef-btn-large {
+  padding: 14px 35px;
+  font-size: 14px;
+}
+
+.qodef-btn.qodef-btn-huge {
+  text-align: center;
+  padding: 18px 47px;
+  font-size: 15px;
+}
+
+.qodef-btn.qodef-btn-icon > i,
+.qodef-btn.qodef-btn-icon > span:not(.qodef-btn-text) {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 4px;
+  font-size: 1.142857142857143em;
+  line-height: inherit;
+  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0, 0.95, 0.77, 1);
+  transition: transform 0.45s cubic-bezier(0, 0.95, 0.77, 1);
+}
+
+.qodef-btn.qodef-btn-icon > i:before,
+.qodef-btn.qodef-btn-icon > span:not(.qodef-btn-text):before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-btn.qodef-btn-icon:hover > i,
+.qodef-btn.qodef-btn-icon:hover > span:not(.qodef-btn-text) {
+  -webkit-transform: translate3d(6px, 0, 0);
+  -moz-transform: translate3d(6px, 0, 0);
+  transform: translate3d(6px, 0, 0);
+}
+
+/* ==========================================================================
+   Button shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Call To Action shortcode style - begin
+   ========================================================================== */
+.qodef-call-to-action-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  /***** Layout Style - begin *****/
+  /***** Layout Style - end *****/
+  /***** Columns Space - begin *****/
+  /***** Columns Space - end *****/
+}
+
+.qodef-call-to-action-holder .qodef-cta-text-holder,
+.qodef-call-to-action-holder .qodef-cta-button-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.qodef-call-to-action-holder .qodef-cta-text-holder h1, .qodef-call-to-action-holder .qodef-cta-text-holder h2, .qodef-call-to-action-holder .qodef-cta-text-holder h3, .qodef-call-to-action-holder .qodef-cta-text-holder h4, .qodef-call-to-action-holder .qodef-cta-text-holder h5, .qodef-call-to-action-holder .qodef-cta-text-holder h6 {
+  margin: 0;
+}
+
+.qodef-call-to-action-holder .qodef-cta-button-holder .qodef-btn {
+  white-space: nowrap;
+}
+
+.qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-inner {
+  display: table;
+}
+
+.qodef-call-to-action-holder.qodef-normal-layout:not(.qodef-content-in-grid) .qodef-cta-inner {
+  width: 100%;
+}
+
+.qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-text-holder,
+.qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-button-holder {
+  display: table-cell;
+  box-sizing: border-box;
+}
+
+.qodef-call-to-action-holder.qodef-normal-layout .qodef-cta-button-holder {
+  text-align: right;
+}
+
+.qodef-call-to-action-holder.qodef-simple-layout .qodef-cta-inner {
+  text-align: center;
+}
+
+.qodef-call-to-action-holder.qodef-simple-layout .qodef-cta-text-holder,
+.qodef-call-to-action-holder.qodef-simple-layout .qodef-cta-button-holder {
+  width: 100%;
+}
+
+.qodef-call-to-action-holder.qodef-simple-layout .qodef-cta-button-holder {
+  margin: 28px 0 0;
+}
+
+.qodef-call-to-action-holder.qodef-two-halves-columns .qodef-cta-text-holder,
+.qodef-call-to-action-holder.qodef-two-halves-columns .qodef-cta-button-holder {
+  width: 50%;
+}
+
+.qodef-call-to-action-holder.qodef-two-thirds-columns .qodef-cta-text-holder {
+  width: 66.66666666666667%;
+}
+
+.qodef-call-to-action-holder.qodef-two-thirds-columns .qodef-cta-button-holder {
+  width: 33.33333333333333%;
+}
+
+.qodef-call-to-action-holder.qodef-three-quarters-columns .qodef-cta-text-holder {
+  width: 75%;
+}
+
+.qodef-call-to-action-holder.qodef-three-quarters-columns .qodef-cta-button-holder {
+  width: 25%;
+}
+
+.qodef-call-to-action-holder.qodef-four-fifths-columns .qodef-cta-text-holder {
+  width: 80%;
+}
+
+.qodef-call-to-action-holder.qodef-four-fifths-columns .qodef-cta-button-holder {
+  width: 20%;
+}
+
+/* ==========================================================================
+   Call To Action shortcode style - end
+   ========================================================================== */
+.qodef-cards-gallery-holder {
+  padding: 10px 0px;
+}
+
+.qodef-cards-gallery-holder .qodef-cards-gallery {
+  width: 100%;
+  position: relative;
+}
+
+.qodef-cards-gallery-holder img {
+  position: relative;
+  display: block;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+.qodef-cards-gallery-holder .fake_card {
+  position: relative;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.qodef-cards-gallery-holder .card {
+  box-sizing: border-box;
+  position: absolute;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.qodef-cards-gallery-holder .card.animating {
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+}
+
+.qodef-cards-gallery-holder .card.animating-siblings {
+  -webkit-transition: all 0.6s cubic-bezier(0, 0, 0, 1);
+  -moz-transition: all 0.6s cubic-bezier(0, 0, 0, 1);
+  transition: all 0.6s cubic-bezier(0, 0, 0, 1);
+  pointer-events: none;
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card {
+  will-change: transform;
+  left: 0;
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card.out {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(6) {
+  -webkit-transform: scale(0.5) translateX(80%);
+  -moz-transform: scale(0.5) translateX(80%);
+  transform: scale(0.5) translateX(80%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(5) {
+  -webkit-transform: scale(0.6) translateX(54%);
+  -moz-transform: scale(0.6) translateX(54%);
+  transform: scale(0.6) translateX(54%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(4) {
+  -webkit-transform: scale(0.7) translateX(35%);
+  -moz-transform: scale(0.7) translateX(35%);
+  transform: scale(0.7) translateX(35%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(3) {
+  -webkit-transform: scale(0.8) translateX(21%);
+  -moz-transform: scale(0.8) translateX(21%);
+  transform: scale(0.8) translateX(21%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:nth-last-child(2) {
+  -webkit-transform: scale(0.9) translateX(9.2%);
+  -moz-transform: scale(0.9) translateX(9.2%);
+  transform: scale(0.9) translateX(9.2%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:not(:last-of-type) {
+  cursor: pointer;
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-left .card:not(:last-of-type):not(.active):hover {
+  margin-left: 10px !important;
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card {
+  will-change: transform;
+  right: 0;
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card.out {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(6) {
+  -webkit-transform: scale(0.5) translateX(-80%);
+  -moz-transform: scale(0.5) translateX(-80%);
+  transform: scale(0.5) translateX(-80%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(5) {
+  -webkit-transform: scale(0.6) translateX(-54%);
+  -moz-transform: scale(0.6) translateX(-54%);
+  transform: scale(0.6) translateX(-54%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(4) {
+  -webkit-transform: scale(0.7) translateX(-35%);
+  -moz-transform: scale(0.7) translateX(-35%);
+  transform: scale(0.7) translateX(-35%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(3) {
+  -webkit-transform: scale(0.8) translateX(-21%);
+  -moz-transform: scale(0.8) translateX(-21%);
+  transform: scale(0.8) translateX(-21%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:nth-last-child(2) {
+  -webkit-transform: scale(0.9) translateX(-9.2%);
+  -moz-transform: scale(0.9) translateX(-9.2%);
+  transform: scale(0.9) translateX(-9.2%);
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:not(:last-of-type) {
+  cursor: pointer;
+}
+
+.qodef-cards-gallery-holder.qodef-shuffled-right .card:not(:last-of-type):not(.active):hover {
+  margin-right: 10px !important;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation img {
+  visibility: hidden;
+}
+
+@-webkit-keyframes qodefCardAppearFromRight {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+    visibility: visible;
+  }
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes qodefCardAppearFromRight {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+    visibility: visible;
+  }
+  30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared img {
+  -webkit-animation: qodefCardAppearFromRight 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  -moz-animation: qodefCardAppearFromRight 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation: qodefCardAppearFromRight 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(1) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(2) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(3) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(4) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(5) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(6) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(7) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-right.qodef-appeared .card:nth-child(8) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+@-webkit-keyframes qodefCardAppearFromLeft {
+  0% {
+    visibility: visible;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  30% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes qodefCardAppearFromLeft {
+  0% {
+    visibility: visible;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  30% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared img {
+  -webkit-animation: qodefCardAppearFromLeft 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  -moz-animation: qodefCardAppearFromLeft 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation: qodefCardAppearFromLeft 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(1) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(2) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(3) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(4) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(5) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(6) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(7) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.no-touch .qodef-cards-gallery-holder.qodef-bundle-animation.qodef-shuffled-left.qodef-appeared .card:nth-child(8) img:not(.qodef-animation-done) {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+/* ==========================================================================
+   Clients Carousel shortcode style - begin
+   ========================================================================== */
+.qodef-clients-carousel-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  /***** Hover Types - begin *****/
+  /***** Hover Types - end *****/
+}
+
+.qodef-clients-carousel-holder .qodef-cc-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-clients-carousel-holder .qodef-cc-item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.touch .qodef-clients-carousel-holder .qodef-cc-item {
+  cursor: pointer;
+}
+
+.qodef-clients-carousel-holder .qodef-cc-item .qodef-cc-item {
+  position: relative;
+  display: block;
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-switch-images .qodef-cc-item:hover .qodef-cc-image {
+  opacity: 0;
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-switch-images .qodef-cc-item:hover .qodef-cc-hover-image {
+  opacity: 1;
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-switch-images .qodef-cc-item .qodef-cc-image {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-switch-images .qodef-cc-item .qodef-cc-hover-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-roll-over .qodef-cc-item {
+  overflow: hidden;
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-roll-over .qodef-cc-item:hover .qodef-cc-image {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-roll-over .qodef-cc-item:hover .qodef-cc-hover-image {
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-roll-over .qodef-cc-item .qodef-cc-image {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.88, 0.03, 0.25, 1);
+  transition: transform 0.4s cubic-bezier(0.88, 0.03, 0.25, 1);
+}
+
+.qodef-clients-carousel-holder.qodef-cc-hover-roll-over .qodef-cc-item .qodef-cc-hover-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.88, 0.03, 0.25, 1);
+  transition: transform 0.4s cubic-bezier(0.88, 0.03, 0.25, 1);
+  -webkit-transform: translate(-50%, -100%);
+  -moz-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+}
+
+/* ==========================================================================
+   Clients Carousel shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Countdown shortcode style - begin
+   ========================================================================== */
+.qodef-countdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-countdown .countdown-rtl {
+  direction: rtl;
+}
+
+.qodef-countdown .countdown-row {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  clear: both;
+}
+
+.qodef-countdown .countdown-row.countdown-show1 .countdown-section {
+  width: 100%;
+}
+
+.qodef-countdown .countdown-row.countdown-show2 .countdown-section {
+  width: 50%;
+}
+
+.qodef-countdown .countdown-row.countdown-show3 .countdown-section {
+  width: 33.33333%;
+}
+
+.qodef-countdown .countdown-row.countdown-show4 .countdown-section {
+  width: 25%;
+}
+
+.qodef-countdown .countdown-row.countdown-show5 .countdown-section {
+  width: 20%;
+}
+
+.qodef-countdown .countdown-row.countdown-show6 .countdown-section {
+  width: 16.66667%;
+}
+
+.qodef-countdown .countdown-row .countdown-section {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.qodef-countdown .countdown-row .countdown-section .countdown-amount {
+  position: relative;
+  display: block;
+  color: #000;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+.qodef-countdown .countdown-row .countdown-section .countdown-period {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 0;
+  padding-top: 6px;
+}
+
+.qodef-countdown.qodef-dark-skin .countdown-row .countdown-section .countdown-amount {
+  color: #000;
+}
+
+.qodef-countdown.qodef-dark-skin .countdown-row .countdown-section .countdown-period {
+  color: #949494;
+}
+
+.qodef-countdown.qodef-light-skin .countdown-row .countdown-section .countdown-amount,
+.qodef-countdown.qodef-light-skin .countdown-row .countdown-section .countdown-period {
+  color: #fff;
+}
+
+/* ==========================================================================
+   Countdown shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Counter shortcode style - begin
+   ========================================================================== */
+.qodef-counter-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.qodef-counter-holder.qodef-counter-boxed {
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+}
+
+.qodef-counter-holder.qodef-counter-boxed .qodef-counter-inner {
+  padding: 55px 0;
+}
+
+.qodef-counter-holder .qodef-counter-inner {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.qodef-counter-holder .qodef-counter {
+  height: 1em;
+  display: inline-block !important;
+  vertical-align: middle;
+  color: #000;
+  font-size: 35px;
+  line-height: 1em;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.qodef-counter-holder .qodef-counter-title {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #000;
+}
+
+.qodef-counter-holder .qodef-counter-text {
+  margin: 14px 0 0;
+}
+
+/* ==========================================================================
+   Counter shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+Crossfade Images shortcode styles - start
+========================================================================== */
+.qodef-crossfade-images {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  box-shadow: 0px 11px 16.92px 1.08px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.qodef-crossfade-images:hover {
+  box-shadow: 0px 13px 18px 1.08px rgba(0, 0, 0, 0.18);
+}
+
+.qodef-crossfade-images .qodef-cfi-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.qodef-crossfade-images .qodef-cfi-img-holder {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.qodef-crossfade-images .qodef-cfi-img-holder .qodef-cfi-img-holder-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.qodef-crossfade-images .qodef-cfi-img-holder .qodef-cfi-img-holder-inner img {
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.qodef-crossfade-images .qodef-cfi-img-holder .qodef-cfi-img-holder-inner .qodef-cfi-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.qodef-crossfade-images .qodef-cfi-title-holder {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.qodef-crossfade-images .qodef-cfi-title-holder .qodef-cfi-title {
+  text-transform: none;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.qodef-crossfade-images:hover .qodef-cfi-img-holder .qodef-cfi-img-holder-inner img {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.qodef-crossfade-images:hover .qodef-cfi-img-holder .qodef-cfi-img-holder-inner .qodef-cfi-image-hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .3s .05s, opacity .3s .05s;
+  transition: transform .3s .05s, opacity .3s .05s;
+}
+
+/* ==========================================================================
+Crossfade Images shortcode styles - end
+========================================================================== */
+/* ==========================================================================
+   Dropcaps shortcode style - begin
+   ========================================================================== */
+.qodef-dropcaps {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  line-height: 42px;
+  font-size: 42px;
+  color: #999;
+  font-weight: 300;
+  text-align: center;
+  margin: 6px 14px 0 8px;
+}
+
+.qodef-dropcaps.qodef-square, .qodef-dropcaps.qodef-circle {
+  height: 35px;
+  width: 35px;
+  font-size: 22px;
+  line-height: 35px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #000;
+  margin: 8px 11px 0 2px;
+  box-sizing: border-box;
+}
+
+.qodef-dropcaps.qodef-circle {
+  border-radius: 3em;
+  margin: 8px 11px 0 2px;
+}
+
+/* ==========================================================================
+   Dropcaps shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Elements Holder shortcode style - begin
+   ========================================================================== */
+.qodef-elements-holder {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.qodef-elements-holder.qodef-eh-full-height {
+  height: 100%;
+}
+
+.qodef-elements-holder.qodef-ehi-float .qodef-eh-item {
+  float: left;
+}
+
+.qodef-elements-holder.qodef-two-columns .qodef-eh-item {
+  width: 50%;
+}
+
+.qodef-elements-holder.qodef-three-columns .qodef-eh-item {
+  width: 33.33333%;
+}
+
+.qodef-elements-holder.qodef-four-columns .qodef-eh-item {
+  width: 25%;
+}
+
+.qodef-elements-holder.qodef-five-columns .qodef-eh-item {
+  width: 20%;
+}
+
+.qodef-elements-holder.qodef-six-columns .qodef-eh-item {
+  width: 16.66667%;
+}
+
+.qodef-elements-holder .qodef-eh-item {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.qodef-elements-holder .qodef-eh-item.qodef-vertical-alignment-top {
+  vertical-align: top;
+}
+
+.qodef-elements-holder .qodef-eh-item.qodef-vertical-alignment-bottom {
+  vertical-align: bottom;
+}
+
+.qodef-elements-holder .qodef-eh-item.qodef-horizontal-alignment-center {
+  text-align: center;
+}
+
+.qodef-elements-holder .qodef-eh-item.qodef-horizontal-alignment-right {
+  text-align: right;
+}
+
+.qodef-elements-holder .qodef-eh-item .qodef-elements-holder-item-inner {
+  width: 100%;
+}
+
+.qodef-elements-holder .qodef-ehi-content {
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   Elements Holder shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Full Screen Sections shortcode style - begin
+   ========================================================================== */
+html.fp-enabled,
+.fp-enabled body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#superContainer {
+  height: 100%;
+  position: relative;
+  /* Touch detection for Windows 8 */
+  -ms-touch-action: none;
+  /* IE 11 on Windows Phone 8.1*/
+  touch-action: none;
+}
+
+.fp-scrollable {
+  overflow: hidden;
+  position: relative;
+}
+
+.fp-scroller {
+  overflow: hidden;
+}
+
+.iScrollIndicator {
+  border: 0 !important;
+}
+
+.fp-notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.fp-auto-height.qodef-fss-item,
+.fp-auto-height .qodef-fss-slide,
+.fp-auto-height .fp-tableCell {
+  height: auto !important;
+}
+
+.fp-responsive .fp-auto-height-responsive.qodef-fss-item,
+.fp-responsive .fp-auto-height-responsive .qodef-fss-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+  height: auto !important;
+}
+
+#fp-nav {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  margin: -32px 0 0;
+  z-index: 1001;
+}
+
+@media only screen and (max-width: 1024px) {
+  #fp-nav {
+    right: 30px;
+  }
+}
+
+#fp-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#fp-nav ul li {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+}
+
+#fp-nav ul li a {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: block;
+  background-color: rgba(80, 80, 80, 0.3);
+  border-radius: 100%;
+  z-index: 1;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#fp-nav ul li a.active, #fp-nav ul li a:hover {
+  background-color: rgba(80, 80, 80, 0.7);
+}
+
+.qodef-light-header #fp-nav ul li a span {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.qodef-light-header #fp-nav ul li a.active span, .qodef-light-header #fp-nav ul li a:hover span {
+  background-color: #fff;
+}
+
+.qodef-dark-header #fp-nav ul li a span {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.qodef-dark-header #fp-nav ul li a.active span, .qodef-dark-header #fp-nav ul li a:hover span {
+  background-color: #000;
+}
+
+#fp-nav ul li a span {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.qodef-full-screen-sections {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-full-screen-sections .qodef-fss-wrapper {
+  visibility: hidden;
+}
+
+.qodef-full-screen-sections .qodef-fss-item {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -moz-transition: -moz-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.active {
+  transform: scale(0.92);
+}
+
+.qodef-full-screen-sections .qodef-fss-item.active.fp-completely {
+  transform: scale(1);
+}
+
+.qodef-full-screen-sections .qodef-fss-item.fp-completely:not(.active) {
+  transform: scale(0.92);
+}
+
+.qodef-full-screen-sections .qodef-fss-item .fp-scroller > .vc_column_container {
+  padding: 0;
+  margin: 0;
+}
+
+.qodef-full-screen-sections .qodef-fss-item .fp-scroller > .vc_column_container > .vc_column-inner {
+  padding: 0;
+  margin: 0;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.qodef-fss-item-va-top .qodef-fss-item-inner {
+  vertical-align: top;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.qodef-fss-item-va-bottom .qodef-fss-item-inner {
+  vertical-align: bottom;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.qodef-fss-item-ha-left .qodef-fss-item-inner {
+  text-align: left;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.qodef-fss-item-ha-center .qodef-fss-item-inner {
+  text-align: center;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.qodef-fss-item-ha-right .qodef-fss-item-inner {
+  text-align: right;
+}
+
+.qodef-full-screen-sections .qodef-fss-item.qodef-fss-item-has-link .qodef-fss-item-inner a {
+  position: relative;
+  z-index: 2;
+}
+
+.qodef-full-screen-sections .qodef-fss-item .qodef-fss-item-inner {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.qodef-full-screen-sections .qodef-fss-item .qodef-fss-item-inner a {
+  position: relative;
+  z-index: 2;
+}
+
+.qodef-full-screen-sections .qodef-fss-item .qodef-fss-item-link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.qodef-full-screen-sections .qodef-fss-nav-holder {
+  position: fixed;
+  bottom: 48px;
+  left: 57px;
+  display: block;
+  width: 55px;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1001;
+}
+
+.qodef-full-screen-sections .qodef-fss-nav-holder a {
+  display: block;
+  font-size: 55px;
+  line-height: 0.9;
+  color: #000;
+  height: auto;
+  opacity: 1;
+  -webkit-transition: color 0.2s ease-out, opacity 0.25s ease-out;
+  -moz-transition: color 0.2s ease-out, opacity 0.25s ease-out;
+  transition: color 0.2s ease-out, opacity 0.25s ease-out;
+}
+
+.qodef-full-screen-sections .qodef-fss-nav-holder a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.qodef-light-header .qodef-full-screen-sections .qodef-fss-nav-holder a {
+  color: #fff;
+}
+
+.qodef-light-header .qodef-full-screen-sections .qodef-fss-nav-holder a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.qodef-dark-header .qodef-full-screen-sections .qodef-fss-nav-holder a {
+  color: #000;
+}
+
+.qodef-dark-header .qodef-full-screen-sections .qodef-fss-nav-holder a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.qodef-full-screen-sections .qodef-fss-nav-holder a span {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-full-screen-sections .qodef-fss-nav-holder a span:before {
+  display: block;
+  line-height: inherit;
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-full-screen-sections .qodef-fss-nav-holder {
+    bottom: 28px;
+    left: 37px;
+  }
+}
+
+/* ==========================================================================
+   Full Screen Sections shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Google Map shortcode style - begin
+   ========================================================================== */
+.qodef-google-map-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-google-map {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.qodef-google-map iframe,
+.qodef-google-map object,
+.qodef-google-map embed {
+  width: 100%;
+  display: block;
+}
+
+.qodef-google-map img {
+  max-width: none;
+}
+
+.qodef-google-map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+}
+
+/* ==========================================================================
+   Google Map shortcode style - end
+   ========================================================================== */
+.qodef-hiding-images {
+  position: relative;
+}
+
+.qodef-hiding-images .qodef-hi-inner {
+  text-align: center;
+}
+
+.qodef-hiding-images .qodef-hi-main-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42.7%;
+}
+
+.qodef-hiding-images .qodef-hi-main-image .qodef-hi-laptop {
+  display: block;
+  position: relative;
+}
+
+.qodef-hiding-images .qodef-hi-main-image .qodef-hi-main-image-holder {
+  position: absolute;
+  height: 74%;
+  left: 14.8%;
+  top: 4.5%;
+  width: 70%;
+  z-index: 20;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+.qodef-hiding-images .qodef-hi-other-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.qodef-hiding-images .qodef-hiding-image-link {
+  position: absolute;
+  top: 4.5%;
+  left: 15.1%;
+  width: 69.42%;
+  height: 73.93%;
+  z-index: 200;
+}
+
+.qodef-hiding-images .qodef-hiding-image-link:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.qodef-hiding-images .qodef-hiding-image-link:hover:after {
+  opacity: 1;
+}
+
+.qodef-hiding-images .qodef-hi-other-image {
+  position: absolute;
+  max-width: 14%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image img {
+  display: block;
+  box-shadow: 0px 27px 27px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.qodef-hiding-images .qodef-hi-other-image > a:hover img {
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(1) {
+  top: 10%;
+  left: 14.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(2) {
+  bottom: 20%;
+  left: 10.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(3) {
+  top: 10%;
+  right: 14.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(4) {
+  bottom: 20%;
+  right: 10.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(5) {
+  top: 10%;
+  left: -2.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(6) {
+  bottom: 20%;
+  left: -6.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(7) {
+  top: 10%;
+  right: -2.5%;
+}
+
+.qodef-hiding-images .qodef-hi-other-image:nth-child(8) {
+  bottom: 20%;
+  right: -6.5%;
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images {
+  visibility: visible;
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image {
+  opacity: 0;
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(1) {
+  -webkit-transform: translate3d(20vw, 5vh, 0);
+  -moz-transform: translate3d(20vw, 5vh, 0);
+  transform: translate3d(20vw, 5vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(2) {
+  -webkit-transform: translate3d(25vw, -5vh, 0);
+  -moz-transform: translate3d(25vw, -5vh, 0);
+  transform: translate3d(25vw, -5vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(3) {
+  -webkit-transform: translate3d(-20vw, 5vh, 0);
+  -moz-transform: translate3d(-20vw, 5vh, 0);
+  transform: translate3d(-20vw, 5vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(4) {
+  -webkit-transform: translate3d(-25vw, -5vh, 0);
+  -moz-transform: translate3d(-25vw, -5vh, 0);
+  transform: translate3d(-25vw, -5vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(5) {
+  -webkit-transform: translate3d(40vw, 10vh, 0);
+  -moz-transform: translate3d(40vw, 10vh, 0);
+  transform: translate3d(40vw, 10vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(6) {
+  -webkit-transform: translate3d(45vw, -10vh, 0);
+  -moz-transform: translate3d(45vw, -10vh, 0);
+  transform: translate3d(45vw, -10vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(7) {
+  -webkit-transform: translate3d(-40vw, 10vh, 0);
+  -moz-transform: translate3d(-40vw, 10vh, 0);
+  transform: translate3d(-40vw, 10vh, 0);
+}
+
+.no-touch .qodef-hiding-images .qodef-hi-other-images .qodef-hi-other-image:nth-child(8) {
+  -webkit-transform: translate3d(-45vw, -10vh, 0);
+  -moz-transform: translate3d(-45vw, -10vh, 0);
+  transform: translate3d(-45vw, -10vh, 0);
+}
+
+.no-touch .qodef-hiding-images.qodef-appeared .qodef-hi-other-image {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -moz-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transition: opacity 0.3s, -webkit-transform 1s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+  transition: opacity 0.3s, transform 1s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+}
+
+.touch .qodef-hiding-images .qodef-hi-other-images {
+  visibility: visible;
+}
+
+/* ==========================================================================
+   Icon List Item shortcode style - begin
+   ========================================================================== */
+.qodef-icon-list-holder {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: auto;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.qodef-icon-list-holder .qodef-il-icon-holder,
+.qodef-icon-list-holder .qodef-il-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.qodef-icon-list-holder .qodef-il-icon-holder {
+  width: 1%;
+}
+
+.qodef-icon-list-holder .qodef-il-icon-holder > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  color: #000;
+  font-size: 17px;
+  line-height: inherit;
+}
+
+.qodef-icon-list-holder .qodef-il-icon-holder > *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-icon-list-holder .qodef-il-text {
+  width: 99%;
+  padding: 0 0 0 13px;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Icon List Item shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+.qodef-iwt {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-iwt .qodef-iwt-icon a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+}
+
+.qodef-iwt .qodef-iwt-icon .qodef-icon-shortcode {
+  line-height: 1;
+}
+
+.qodef-iwt .qodef-iwt-icon .qodef-icon-shortcode.qodef-circle, .qodef-iwt .qodef-iwt-icon .qodef-icon-shortcode.qodef-square, .qodef-iwt .qodef-iwt-icon .qodef-icon-shortcode.qodef-dropcaps.qodef-circle {
+  line-height: 2;
+}
+
+.qodef-iwt .qodef-iwt-title {
+  margin: 0;
+  line-height: 40px;
+  letter-spacing: 0.1em;
+  padding-top: 2px;
+}
+
+.qodef-iwt .qodef-iwt-title a {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  color: inherit;
+}
+
+.qodef-iwt .qodef-iwt-title-text {
+  display: block;
+}
+
+.qodef-iwt .qodef-iwt-text {
+  margin: 8px 0 0;
+  color: #949494;
+}
+
+.qodef-iwt.qodef-iwt-icon-left {
+  width: auto;
+}
+
+.qodef-iwt.qodef-iwt-icon-left .qodef-iwt-icon,
+.qodef-iwt.qodef-iwt-icon-left .qodef-iwt-content {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.qodef-iwt.qodef-iwt-icon-left .qodef-iwt-icon {
+  position: relative;
+  top: 13px;
+  right: 12px;
+}
+
+.qodef-iwt.qodef-iwt-icon-left .qodef-iwt-icon .qodef-icon-shortcode {
+  font-size: 2.5em;
+  color: #949494;
+}
+
+.qodef-iwt.qodef-iwt-icon-left .qodef-iwt-icon img {
+  max-width: none;
+}
+
+.qodef-iwt.qodef-iwt-icon-left .qodef-iwt-content {
+  padding: 0 0 0 13px;
+}
+
+.qodef-iwt.qodef-iwt-icon-left-from-title .qodef-iwt-icon,
+.qodef-iwt.qodef-iwt-icon-left-from-title .qodef-iwt-title-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.qodef-iwt.qodef-iwt-icon-left-from-title .qodef-iwt-icon .qodef-icon-element {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.qodef-iwt.qodef-iwt-icon-left-from-title .qodef-iwt-icon img {
+  max-width: none;
+}
+
+.qodef-iwt.qodef-iwt-icon-left-from-title .qodef-iwt-title-text {
+  padding: 0 0 0 17px;
+}
+
+.qodef-iwt.qodef-iwt-icon-top {
+  text-align: center;
+}
+
+.qodef-iwt.qodef-iwt-icon-top .qodef-iwt-content {
+  padding: 23px 0 0;
+}
+
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Icon shortcode style - begin
+   ========================================================================== */
+.qodef-icon-shortcode {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1em;
+}
+
+.qodef-icon-shortcode.qodef-circle, .qodef-icon-shortcode.qodef-square, .qodef-icon-shortcode.qodef-dropcaps.qodef-circle {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  background-color: #000;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.qodef-icon-shortcode.qodef-circle a, .qodef-icon-shortcode.qodef-square a, .qodef-icon-shortcode.qodef-dropcaps.qodef-circle a {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+}
+
+.qodef-icon-shortcode.qodef-circle .qodef-icon-element, .qodef-icon-shortcode.qodef-square .qodef-icon-element, .qodef-icon-shortcode.qodef-dropcaps.qodef-circle .qodef-icon-element {
+  color: #fff;
+  line-height: inherit;
+}
+
+.qodef-icon-shortcode.qodef-circle {
+  border-radius: 50%;
+}
+
+.qodef-icon-shortcode .qodef-icon-element {
+  display: block;
+  line-height: inherit;
+  -webkit-transition: color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.qodef-icon-shortcode .qodef-icon-element:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-icon-animation-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.15s ease-in-out;
+  -moz-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+}
+
+.qodef-icon-animation-holder.qodef-icon-animation-show {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.qodef-icon-tiny {
+  font-size: 1.33333333em;
+  line-height: .75em;
+  vertical-align: -15%;
+}
+
+.qodef-icon-small {
+  font-size: 2em;
+}
+
+.qodef-icon-medium {
+  font-size: 3em;
+}
+
+.qodef-icon-large {
+  font-size: 4em;
+}
+
+.qodef-icon-huge {
+  font-size: 5em;
+}
+
+/* ==========================================================================
+   Icon shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Image Gallery shortcode style - begin
+   ========================================================================== */
+.qodef-image-gallery {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  /***** Image Gallery Space Between Columns Style - begin *****/
+  /***** Image Gallery Space Between Columns Style - end *****/
+  /***** Image Gallery Grid Style - begin *****/
+  /***** Image Gallery Grid Style - end *****/
+  /***** Image Gallery Masonry Style - begin *****/
+  /***** Image Gallery Masonry Style - end *****/
+  /***** Custom Link Behavior Style - begin *****/
+  /***** Custom Link Behavior Style - end *****/
+  /***** Lightbox Behavior Style - begin *****/
+  /***** Lightbox Behavior Style - end *****/
+  /***** Zoom Behavior Style - begin *****/
+  /***** Zoom Behavior Style - end *****/
+  /***** Grayscale Behavior Style - begin *****/
+  /***** Grayscale Behavior Style - end *****/
+}
+
+.qodef-image-gallery.qodef-has-shadow .qodef-ig-image-inner {
+  box-shadow: 6px 8px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.qodef-image-gallery.qodef-has-shadow.qodef-ig-slider-type .owl-stage-outer, .qodef-image-gallery.qodef-has-shadow.qodef-ig-carousel-type .owl-stage-outer {
+  padding: 0 0 20px;
+}
+
+.qodef-image-gallery.qodef-has-shadow.qodef-ig-slider-type .qodef-ig-image, .qodef-image-gallery.qodef-has-shadow.qodef-ig-carousel-type .qodef-ig-image {
+  box-shadow: 6px 8px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.qodef-image-gallery .qodef-ig-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.qodef-image-gallery .qodef-ig-image a, .qodef-image-gallery .qodef-ig-image img {
+  position: relative;
+  display: block;
+}
+
+.qodef-image-gallery .qodef-ig-image-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-image-gallery .qodef-ig-slider {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-no-space {
+  margin: 0;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-no-space .qodef-ig-image {
+  padding: 0 0px;
+  margin: 0 0 0px;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-tiny-space {
+  margin: 0 -5px;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-tiny-space .qodef-ig-image {
+  padding: 0 5px;
+  margin: 0 0 10px;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-small-space {
+  margin: 0 -10px;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-small-space .qodef-ig-image {
+  padding: 0 10px;
+  margin: 0 0 20px;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-normal-space {
+  margin: 0 -15px;
+}
+
+.qodef-image-gallery .qodef-ig-inner.qodef-ig-normal-space .qodef-ig-image {
+  padding: 0 15px;
+  margin: 0 0 30px;
+}
+
+.qodef-image-gallery .qodef-ig-grid .qodef-ig-image {
+  float: left;
+}
+
+.qodef-image-gallery .qodef-ig-grid.qodef-ig-two-columns .qodef-ig-image {
+  width: 50%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-two-columns .qodef-ig-image:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+.qodef-image-gallery .qodef-ig-grid.qodef-ig-three-columns .qodef-ig-image {
+  width: 33.33333%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-three-columns .qodef-ig-image:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+.qodef-image-gallery .qodef-ig-grid.qodef-ig-four-columns .qodef-ig-image {
+  width: 25%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-four-columns .qodef-ig-image:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+.qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image {
+  width: 20%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-five-columns .qodef-ig-image:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+.qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image {
+  width: 16.66667%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .qodef-image-gallery .qodef-ig-grid.qodef-ig-six-columns .qodef-ig-image:nth-child(6n+1) {
+    clear: both;
+  }
+}
+
+.qodef-image-gallery .qodef-ig-masonry {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.qodef-image-gallery .qodef-ig-masonry .qodef-ig-grid-sizer {
+  width: 100%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry .qodef-ig-grid-gutter {
+  width: 0;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-two-columns .qodef-ig-image,
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-two-columns .qodef-ig-grid-sizer {
+  width: 50%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-two-columns .qodef-ig-image.qodef-large-masonry-item {
+  width: 100%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-image,
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-grid-sizer {
+  width: 33.33333%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-three-columns .qodef-ig-image.qodef-large-masonry-item {
+  width: 66.66667%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-image,
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-grid-sizer {
+  width: 25%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-four-columns .qodef-ig-image.qodef-large-masonry-item {
+  width: 50%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image,
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-grid-sizer {
+  width: 20%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-five-columns .qodef-ig-image.qodef-large-masonry-item {
+  width: 40%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image,
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-grid-sizer {
+  width: 16.66667%;
+}
+
+.qodef-image-gallery .qodef-ig-masonry.qodef-ig-six-columns .qodef-ig-image.qodef-large-masonry-item {
+  width: 33.33333%;
+}
+
+.qodef-image-gallery.qodef-image-behavior-custom-link .qodef-ig-image a:hover:after {
+  opacity: 1;
+}
+
+.qodef-image-gallery.qodef-image-behavior-custom-link .qodef-ig-image a:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.qodef-image-gallery.qodef-image-behavior-lightbox .qodef-ig-image a:hover:after {
+  opacity: 1;
+}
+
+.qodef-image-gallery.qodef-image-behavior-lightbox .qodef-ig-image a:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.touch .qodef-image-gallery.qodef-image-behavior-zoom .qodef-ig-image {
+  cursor: pointer;
+}
+
+.qodef-image-gallery.qodef-image-behavior-zoom .qodef-ig-image:hover img {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.qodef-image-gallery.qodef-image-behavior-zoom .qodef-ig-image .qodef-ig-image-inner {
+  overflow: hidden;
+}
+
+.qodef-image-gallery.qodef-image-behavior-zoom .qodef-ig-image img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -moz-transition: -moz-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.qodef-image-gallery.qodef-image-behavior-grayscale .qodef-ig-image {
+  overflow: hidden;
+}
+
+.touch .qodef-image-gallery.qodef-image-behavior-grayscale .qodef-ig-image {
+  cursor: pointer;
+}
+
+.qodef-image-gallery.qodef-image-behavior-grayscale .qodef-ig-image:hover img {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.qodef-image-gallery.qodef-image-behavior-grayscale .qodef-ig-image img {
+  filter: url("img/desaturate.svg#grayscale");
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: gray;
+  filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   Image Gallery shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Image Gallery shortcode style - begin
+   ========================================================================== */
+.qodef-image-marquee-holder {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.qodef-image-marquee-holder .qodef-image-marquee {
+  position: relative;
+  width: 124%;
+  left: -12%;
+}
+
+.qodef-image-marquee-holder .qodef-image img {
+  display: block;
+}
+
+.qodef-image-marquee-holder .qodef-image.qodef-original {
+  position: relative;
+}
+
+.qodef-image-marquee-holder .qodef-image.qodef-aux {
+  position: absolute;
+  top: 0;
+}
+
+/* ==========================================================================
+	Image Gallery shortcode style - begin
+	========================================================================== */
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+.qodef-image-with-text-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  /***** Custom Link Behavior Style - begin *****/
+  /***** Custom Link Behavior Style - end *****/
+  /***** Lightbox Behavior Style - begin *****/
+  /***** Lightbox Behavior Style - end *****/
+  /***** Zoom Behavior Style - begin *****/
+  /***** Zoom Behavior Style - end *****/
+  /***** Grayscale Behavior Style - begin *****/
+  /***** Grayscale Behavior Style - end *****/
+}
+
+.qodef-image-with-text-holder .qodef-iwt-custom-link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.qodef-image-with-text-holder.qodef-has-shadow .qodef-iwt-image {
+  box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.13);
+}
+
+.qodef-image-with-text-holder .qodef-iwt-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-image-with-text-holder .qodef-iwt-image a, .qodef-image-with-text-holder .qodef-iwt-image img {
+  position: relative;
+  display: block;
+}
+
+.qodef-image-with-text-holder:not(.qodef-iwt-text-over-image) .qodef-iwt-text-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-image-with-text-holder:not(.qodef-iwt-text-over-image) .qodef-iwt-title {
+  margin: 32px 0 0;
+}
+
+.qodef-image-with-text-holder:not(.qodef-iwt-text-over-image) .qodef-iwt-text {
+  margin: 14px 0 0;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-custom-link .qodef-iwt-image a:hover:after {
+  opacity: 1;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-custom-link .qodef-iwt-image a:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-lightbox .qodef-iwt-image a:hover:after {
+  opacity: 1;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-lightbox .qodef-iwt-image a:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-zoom .qodef-iwt-image {
+  overflow: hidden;
+}
+
+.touch .qodef-image-with-text-holder.qodef-image-behavior-zoom .qodef-iwt-image {
+  cursor: pointer;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-zoom .qodef-iwt-image:hover img {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-zoom .qodef-iwt-image img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -moz-transition: -moz-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-grayscale .qodef-iwt-image {
+  overflow: hidden;
+}
+
+.touch .qodef-image-with-text-holder.qodef-image-behavior-grayscale .qodef-iwt-image {
+  cursor: pointer;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-grayscale .qodef-iwt-image:hover img {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.qodef-image-with-text-holder.qodef-image-behavior-grayscale .qodef-iwt-image img {
+  filter: url("img/desaturate.svg#grayscale");
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: gray;
+  filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image .qodef-iwt-text-holder {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image .qodef-iwt-text-holder .qodef-iwt-title {
+  margin-top: 0;
+  -webkit-transform: translate3d(0, 40px, 0);
+  -moz-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+  -webkit-transition: all 0s 0.2s;
+  -moz-transition: all 0s 0.2s;
+  transition: all 0s 0.2s;
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image .qodef-iwt-text-holder .qodef-iwt-title:after {
+  content: '';
+  display: block;
+  margin: 15px auto 0;
+  width: 64px;
+  height: 3px;
+  background-color: #000;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0s 0.2s;
+  -moz-transition: all 0s 0.2s;
+  transition: all 0s 0.2s;
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image .qodef-iwt-text-holder .qodef-iwt-text {
+  font-family: 'Quentin';
+  font-size: 30px;
+  -webkit-transform: translate3d(0, 40px, 0);
+  -moz-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+  -webkit-transition: all 0s 0.2s;
+  -moz-transition: all 0s 0.2s;
+  transition: all 0s 0.2s;
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image:hover .qodef-iwt-text-holder {
+  opacity: 1;
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image:hover .qodef-iwt-title,
+.qodef-image-with-text-holder.qodef-iwt-text-over-image:hover .qodef-iwt-text {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.4s cubic-bezier(0, 0.95, 0.77, 1);
+  -moz-transition: all 0.4s cubic-bezier(0, 0.95, 0.77, 1);
+  transition: all 0.4s cubic-bezier(0, 0.95, 0.77, 1);
+}
+
+.qodef-image-with-text-holder.qodef-iwt-text-over-image:hover .qodef-iwt-title:after {
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: all 0.4s cubic-bezier(0.88, 0.03, 0.25, 1) 0.1s;
+  -moz-transition: all 0.4s cubic-bezier(0.88, 0.03, 0.25, 1) 0.1s;
+  transition: all 0.4s cubic-bezier(0.88, 0.03, 0.25, 1) 0.1s;
+}
+
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Pie Chart shortcode style - begin
+   ========================================================================== */
+.qodef-pie-chart-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.qodef-pie-chart-holder .qodef-pc-percentage {
+  position: relative;
+  display: block;
+  height: 176px;
+  width: 176px;
+  line-height: 176px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.qodef-pie-chart-holder .qodef-pc-percentage canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.qodef-pie-chart-holder .qodef-pc-percentage .qodef-pc-percent {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #000;
+  font-size: 35px;
+  line-height: inherit;
+  font-weight: 600;
+}
+
+.qodef-pie-chart-holder .qodef-pc-percentage .qodef-pc-percent:after {
+  position: relative;
+  top: -15px;
+  content: '%';
+  font-size: 15px;
+}
+
+.qodef-pie-chart-holder .qodef-pc-text-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  margin: 30px 0 0;
+}
+
+.qodef-pie-chart-holder .qodef-pc-text-holder .qodef-pc-title {
+  margin: 0;
+}
+
+.qodef-pie-chart-holder .qodef-pc-text-holder .qodef-pc-text {
+  margin: 14px 0 0;
+}
+
+/* ==========================================================================
+   Pie Chart shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+.qodef-pricing-tables {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  clear: both;
+}
+
+.qodef-pricing-tables .qodef-pt-wrapper {
+  position: relative;
+}
+
+.qodef-pricing-tables.qodef-pt-no-space .qodef-pt-wrapper {
+  margin: 0;
+}
+
+.qodef-pricing-tables.qodef-pt-no-space .qodef-price-table {
+  padding: 0 0px;
+  margin: 0 0 0px;
+}
+
+.qodef-pricing-tables.qodef-pt-tiny-space .qodef-pt-wrapper {
+  margin: 0 -5px;
+}
+
+.qodef-pricing-tables.qodef-pt-tiny-space .qodef-price-table {
+  padding: 0 5px;
+  margin: 0 0 10px;
+}
+
+.qodef-pricing-tables.qodef-pt-small-space .qodef-pt-wrapper {
+  margin: 0 -10px;
+}
+
+.qodef-pricing-tables.qodef-pt-small-space .qodef-price-table {
+  padding: 0 10px;
+  margin: 0 0 20px;
+}
+
+.qodef-pricing-tables.qodef-pt-normal-space .qodef-pt-wrapper {
+  margin: 0 -15px;
+}
+
+.qodef-pricing-tables.qodef-pt-normal-space .qodef-price-table {
+  padding: 0 15px;
+  margin: 0 0 30px;
+}
+
+.qodef-pricing-tables.qodef-two-columns .qodef-price-table {
+  width: 50%;
+}
+
+.qodef-pricing-tables.qodef-three-columns .qodef-price-table {
+  width: 33.33333%;
+}
+
+.qodef-pricing-tables.qodef-four-columns .qodef-price-table {
+  width: 25%;
+}
+
+.qodef-pricing-tables.qodef-five-columns .qodef-price-table {
+  width: 20%;
+}
+
+.qodef-price-table {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  box-sizing: border-box;
+}
+
+.qodef-price-table .qodef-pt-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #f2f2f2;
+}
+
+.qodef-price-table .qodef-pt-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.qodef-price-table .qodef-pt-inner ul li {
+  margin: 0;
+  padding: 17px 30px;
+  text-align: left;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-title-holder {
+  position: relative;
+  text-align: left;
+  padding-bottom: 13px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-title-holder .qodef-pt-title {
+  display: block;
+  margin: 20px 0 15px;
+  padding: 28px 0 0 38px;
+  box-sizing: border-box;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-prices {
+  position: relative;
+  padding: 0 0 2px 63px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-prices .qodef-pt-value {
+  position: relative;
+  vertical-align: middle;
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: 500;
+  color: #000;
+  left: 3px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-prices .qodef-pt-price {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  left: -5px;
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: 500;
+  color: #000;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-prices .qodef-pt-mark {
+  position: relative;
+  display: block;
+  margin: 1px 0 0;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-subtitle {
+  padding: 22px 40px 22px 68px;
+  font-size: 17px;
+  color: #949494;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-separator {
+  padding: 0 69px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-separator .qodef-separator {
+  border-bottom: 3px solid #000;
+  margin: 0;
+  width: 32%;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-content {
+  padding: 12px 0 12px 35px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-content ul li {
+  padding: 17px 30px 11px;
+  line-height: 1;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-content ul li:before {
+  padding-right: 13px;
+  content: "\4e";
+  font-family: "ElegantIcons";
+  color: #000;
+  font-size: 18px;
+  position: relative;
+  top: 5px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-button {
+  padding: 73px 0 67px 69px;
+}
+
+.qodef-price-table .qodef-pt-inner ul li.qodef-pt-button a {
+  color: #000;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner {
+  background-color: #000;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-title {
+  color: #fff;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-prices .qodef-pt-value {
+  color: #fff;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-prices .qodef-pt-price {
+  color: #fff;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-separator .qodef-separator {
+  border-color: #fff;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-content ul li:before {
+  color: #fff;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-button a {
+  color: #fff;
+}
+
+.qodef-price-table.dark-skin .qodef-pt-inner .qodef-pt-button a:hover {
+  color: #fff !important;
+}
+
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Progress Bar shortcode style - begin
+   ========================================================================== */
+.qodef-progress-bar {
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-progress-bar .qodef-pb-title-holder {
+  position: relative;
+  margin: 10px 0 12px;
+}
+
+.qodef-progress-bar .qodef-pb-title-holder .qodef-pb-title {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 100;
+}
+
+.qodef-progress-bar .qodef-pb-percent {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0;
+  z-index: 10;
+}
+
+.qodef-progress-bar .qodef-pb-percent:after {
+  content: '%';
+}
+
+.qodef-progress-bar .qodef-pb-content-holder {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  background-color: #dbdbdb;
+}
+
+.qodef-progress-bar .qodef-pb-content-holder .qodef-pb-content {
+  height: 6px;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* ==========================================================================
+   Progress Bar shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+.qodef-section-title-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.qodef-section-title-holder .qodef-st-title {
+  display: block;
+  margin: 0;
+}
+
+.qodef-section-title-holder .qodef-st-title .qodef-st-title-bold {
+  font-weight: 700;
+}
+
+.qodef-section-title-holder .qodef-st-title .qodef-st-title-light {
+  font-weight: 300;
+}
+
+.qodef-section-title-holder .qodef-st-subtitle {
+  display: block;
+  margin: 0 0 12px;
+  font-family: 'Quentin', serif;
+  font-size: 40px;
+}
+
+.qodef-section-title-holder .qodef-separator {
+  border-bottom: 3px solid #000;
+  margin: 18px 0 10px;
+  width: 65px;
+}
+
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Separator shortcode style - begin
+   ========================================================================== */
+.qodef-separator-holder {
+  position: relative;
+  height: auto;
+  font-size: 0;
+  line-height: 1em;
+}
+
+.qodef-separator-holder.qodef-separator-center {
+  text-align: center;
+}
+
+.qodef-separator-holder.qodef-separator-left {
+  text-align: left;
+}
+
+.qodef-separator-holder.qodef-separator-right {
+  text-align: right;
+}
+
+.qodef-separator-holder.qodef-separator-full-width .qodef-separator {
+  width: 100% !important;
+}
+
+.qodef-separator {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: 1px solid #ebebeb;
+  margin: 10px 0;
+}
+
+/* ==========================================================================
+   Separator shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Single Image shortcode style - begin
+   ========================================================================== */
+.qodef-single-image-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  /***** Custom Link Behavior Style - begin *****/
+  /***** Custom Link Behavior Style - end *****/
+  /***** Lightbox Behavior Style - begin *****/
+  /***** Lightbox Behavior Style - end *****/
+  /***** Zoom Behavior Style - begin *****/
+  /***** Zoom Behavior Style - end *****/
+  /***** Grayscale Behavior Style - begin *****/
+  /***** Grayscale Behavior Style - end *****/
+  /***** Moving Behavior Style - begin *****/
+  /***** Moving Behavior Style - end *****/
+}
+
+.qodef-single-image-holder.qodef-has-shadow .qodef-si-inner {
+  box-shadow: 6px 8px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.qodef-single-image-holder .qodef-si-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-single-image-holder .qodef-si-inner a, .qodef-single-image-holder .qodef-si-inner img {
+  position: relative;
+  display: block;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-custom-link .qodef-si-inner a:hover:after {
+  opacity: 1;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-custom-link .qodef-si-inner a:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-lightbox .qodef-si-inner a:hover:after {
+  opacity: 1;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-lightbox .qodef-si-inner a:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-zoom .qodef-si-inner {
+  overflow: hidden;
+}
+
+.touch .qodef-single-image-holder.qodef-image-behavior-zoom .qodef-si-inner {
+  cursor: pointer;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-zoom .qodef-si-inner:hover img {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.qodef-single-image-holder.qodef-image-behavior-zoom .qodef-si-inner img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -moz-transition: -moz-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.qodef-single-image-holder.qodef-image-behavior-grayscale .qodef-si-inner {
+  overflow: hidden;
+}
+
+.touch .qodef-single-image-holder.qodef-image-behavior-grayscale .qodef-si-inner {
+  cursor: pointer;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-grayscale .qodef-si-inner:hover img {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-grayscale .qodef-si-inner img {
+  filter: url("img/desaturate.svg#grayscale");
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: gray;
+  filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-moving .qodef-si-inner {
+  overflow: hidden;
+  padding: 10% 0;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 120%;
+  -webkit-transition: background 0.7s ease-out;
+  -moz-transition: background 0.7s ease-out;
+  transition: background 0.7s ease-out;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-moving .qodef-si-inner:hover {
+  background-position: 90% center;
+}
+
+.touch .qodef-single-image-holder.qodef-image-behavior-moving .qodef-si-inner {
+  cursor: pointer;
+}
+
+.qodef-single-image-holder.qodef-image-behavior-moving .qodef-si-inner img {
+  z-index: -1;
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-single-image-holder.qodef-image-behavior-moving .qodef-si-inner {
+    padding: 0;
+    background: none;
+  }
+  .qodef-single-image-holder.qodef-image-behavior-moving .qodef-si-inner img {
+    z-index: inherit;
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Single Image shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Social Share shortcode style - begin
+   ========================================================================== */
+.qodef-social-share-holder {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.qodef-social-share-holder ul {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List type - begin
+========================================================================== */
+.qodef-social-share-holder.qodef-list .qodef-social-title {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  color: #949494;
+  font-weight: 600;
+}
+
+.qodef-social-share-holder.qodef-list li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0 13px 3px 0;
+}
+
+.qodef-social-share-holder.qodef-list li:last-child {
+  margin: 0 0 3px;
+}
+
+.qodef-social-share-holder.qodef-list li a {
+  font-size: 11px;
+}
+
+/* List type - end
+========================================================================== */
+/* Dropdown type - begin
+========================================================================== */
+.qodef-social-share-holder.qodef-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown-opener {
+  display: block;
+  color: #949494;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown-opener .qodef-social-share-title {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown-opener .social_share {
+  font-size: 12px;
+  color: #000;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown-opener:hover {
+  color: #000;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown-opener:hover .social_share {
+  color: inherit;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown {
+  position: relative;
+  visibility: hidden;
+  z-index: 950;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul {
+  position: relative;
+  display: block;
+  z-index: 990;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li {
+  width: 88px;
+  height: 28px;
+  line-height: 28px;
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  font-size: 12px;
+  color: #949494;
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.2s ease-out 0s, visibility 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+  -moz-transition: opacity 0.2s ease-out 0s, visibility 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+  transition: opacity 0.2s ease-out 0s, visibility 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:not(:first-child) {
+  border-top: none;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-facebook-share:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-twitter-share:hover {
+  background-color: #00aced;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-google_plus-share:hover {
+  background-color: #dd4b39;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-linkedin-share:hover {
+  background-color: #007bb5;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-tumblr-share:hover {
+  background-color: #32506d;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-pinterest-share:hover {
+  background-color: #cb2027;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li.qodef-vk-share:hover {
+  background-color: #45668e;
+  color: #fff;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li * {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li a {
+  color: inherit !important;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(1) {
+  bottom: -28px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(2) {
+  bottom: -56px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(3) {
+  bottom: -84px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(4) {
+  bottom: -112px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(5) {
+  bottom: -140px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(6) {
+  bottom: -168px;
+}
+
+.qodef-social-share-holder.qodef-dropdown .qodef-social-share-dropdown ul li:nth-child(7) {
+  bottom: -196px;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li {
+  /* opacity and visibility need to be different, but not background-color */
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li:nth-child(2) {
+  -webkit-transition: opacity 0.2s ease-out 0.2s, visibility 0.2s ease-out 0.2s, background-color 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out 0.2s, visibility 0.2s ease-out 0.2s, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out 0.2s, visibility 0.2s ease-out 0.2s, background-color 0.2s ease-out;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li:nth-child(3) {
+  -webkit-transition: opacity 0.2s ease-out 0.3s, visibility 0.2s ease-out 0.3s, background-color 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out 0.3s, visibility 0.2s ease-out 0.3s, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out 0.3s, visibility 0.2s ease-out 0.3s, background-color 0.2s ease-out;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li:nth-child(4) {
+  -webkit-transition: opacity 0.2s ease-out 0.4s, visibility 0.2s ease-out 0.4s, background-color 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out 0.4s, visibility 0.2s ease-out 0.4s, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out 0.4s, visibility 0.2s ease-out 0.4s, background-color 0.2s ease-out;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li:nth-child(5) {
+  -webkit-transition: opacity 0.2s ease-out 0.5s, visibility 0.2s ease-out 0.5s, background-color 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out 0.5s, visibility 0.2s ease-out 0.5s, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out 0.5s, visibility 0.2s ease-out 0.5s, background-color 0.2s ease-out;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li:nth-child(6) {
+  -webkit-transition: opacity 0.2s ease-out 0.6s, visibility 0.2s ease-out 0.6s, background-color 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out 0.6s, visibility 0.2s ease-out 0.6s, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out 0.6s, visibility 0.2s ease-out 0.6s, background-color 0.2s ease-out;
+}
+
+.qodef-social-share-holder.qodef-dropdown:hover .qodef-social-share-dropdown ul li:nth-child(7) {
+  -webkit-transition: opacity 0.2s ease-out 0.7s, visibility 0.2s ease-out 0.7s, background-color 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out 0.7s, visibility 0.2s ease-out 0.7s, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out 0.7s, visibility 0.2s ease-out 0.7s, background-color 0.2s ease-out;
+}
+
+/* Dropdown type - end
+========================================================================== */
+/* ==========================================================================
+   Social Share shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Tabs shortcode style - begin
+   ========================================================================== */
+.qodef-tabs {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-tabs .qodef-tabs-nav {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qodef-tabs .qodef-tabs-nav li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.qodef-tabs .qodef-tabs-nav li a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+  text-transform: uppercase;
+}
+
+.qodef-tabs .qodef-tab-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-tabs .qodef-tab-container p {
+  margin: 0;
+}
+
+.qodef-tabs.qodef-tabs-standard .qodef-tabs-nav li {
+  padding-right: 0;
+}
+
+.qodef-tabs.qodef-tabs-standard .qodef-tabs-nav li a {
+  padding: 19px 46px;
+  font-size: 13px;
+  line-height: 25px;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  text-transform: lowercase;
+}
+
+.qodef-tabs.qodef-tabs-standard .qodef-tabs-nav li.ui-state-active a {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.qodef-tabs.qodef-tabs-standard .qodef-tab-container {
+  margin: 35px 0 0;
+}
+
+.qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li {
+  margin: 0 15px 0 0;
+}
+
+.qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li a {
+  padding: 9px 50px;
+  font-size: 13px;
+  line-height: 47px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fafafa;
+  text-transform: lowercase;
+}
+
+.qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li.ui-state-active a,
+.qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li.ui-state-hover a {
+  color: #fff;
+  background-color: #000;
+}
+
+.qodef-tabs.qodef-tabs-boxed .qodef-tabs-nav li:last-child {
+  margin: 0;
+}
+
+.qodef-tabs.qodef-tabs-boxed .qodef-tab-container {
+  margin: 35px 0 0;
+}
+
+.qodef-tabs.qodef-tabs-simple .qodef-tabs-nav {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li {
+  margin: 0 31px 0 0;
+}
+
+.qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li a {
+  padding: 13px 0;
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: #949494;
+}
+
+.qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li.ui-state-active a,
+.qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li.ui-state-hover a {
+  color: #000;
+}
+
+.qodef-tabs.qodef-tabs-simple .qodef-tabs-nav li:last-child {
+  margin: 0;
+}
+
+.qodef-tabs.qodef-tabs-simple .qodef-tab-container {
+  padding: 31px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav {
+  display: table-cell;
+  vertical-align: top;
+  width: 140px;
+  height: 100%;
+  border-right: 1px solid #e1e1e1;
+  box-sizing: border-box;
+}
+
+.qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li {
+  display: block;
+  float: none;
+  margin: 0 0 15px;
+}
+
+.qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li a {
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #949494;
+  text-transform: lowercase;
+}
+
+.qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li.ui-state-active a,
+.qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li.ui-state-hover a {
+  color: #000;
+}
+
+.qodef-tabs.qodef-tabs-vertical .qodef-tabs-nav li:last-child {
+  margin: 0;
+}
+
+.qodef-tabs.qodef-tabs-vertical .qodef-tab-container {
+  display: table-cell;
+  vertical-align: top;
+  width: calc(100% - 140px);
+  height: 100%;
+  padding: 0 0 0 65px;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Tabs shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+# Team style - begin
+========================================================================== */
+.touch .qodef-team .qodef-team-social-holder {
+  cursor: pointer;
+}
+
+.qodef-team {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+}
+
+.qodef-team .qodef-team-inner {
+  text-align: center;
+}
+
+.qodef-team p {
+  margin: 0;
+}
+
+.qodef-team .qodef-team-social-wrapp {
+  margin: 17px 0 0 0;
+}
+
+.qodef-team .qodef-team-social-wrapp .qodef-icon-shortcode {
+  font-size: 16px;
+  margin: 0 4px;
+  color: #000;
+}
+
+.qodef-team .qodef-team-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.qodef-team .qodef-team-image img {
+  display: block;
+}
+
+.qodef-team .qodef-team-image:hover .qodef-team-image-overlay {
+  opacity: 1;
+}
+
+.qodef-team .qodef-team-image .qodef-team-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(67, 74, 84, 0.35);
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.qodef-team .qodef-team-image .qodef-team-image-overlay .qodef-team-social-holder-between {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.qodef-team .qodef-team-image .qodef-team-image-overlay .qodef-team-social-holder-between .qodef-team-social {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.qodef-team .qodef-team-info {
+  text-align: center;
+}
+
+.qodef-team .qodef-team-info .qodef-team-title-holder .qodef-team-name {
+  margin-top: 29px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.qodef-team .qodef-team-info .qodef-team-position {
+  margin: 0;
+}
+
+.qodef-team .qodef-team-info .qodef-team-description {
+  margin-top: 6px;
+}
+
+/* Team type main info below image - end
+========================================================================== */
+/* ==========================================================================
+# Team style - end
+========================================================================== */
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.curtains {
+  width: 100%;
+}
+
+.curtains > li {
+  -webkit-transform: translateZ(0);
+  background: white;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.curtains > li.hidden {
+  display: none;
+}
+
+.curtains > li:first-child {
+  z-index: 2;
+}
+
+.qodef-uncovering-section-on-page:not(.qodef-header-bottom) .qodef-page-header {
+  -webkit-transition: top 0.6s ease;
+  -moz-transition: top 0.6s ease;
+  transition: top 0.6s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.qodef-uncovering-section-on-page:not(.qodef-header-bottom).qodef-header-top-enabled .qodef-top-bar {
+  -webkit-transition: top 0.6s ease;
+  -moz-transition: top 0.6s ease;
+  transition: top 0.6s ease;
+  position: fixed;
+  top: -45px;
+  left: 0;
+}
+
+.qodef-uncovering-section-on-page:not(.qodef-header-bottom).qodef-header-top-enabled:not(.qodef-sticky-header-appear) .qodef-top-bar {
+  top: 0;
+}
+
+.qodef-uncovering-section-on-page:not(.qodef-header-bottom).qodef-header-top-enabled:not(.qodef-sticky-header-appear) .qodef-page-header {
+  top: 45px;
+}
+
+.qodef-uncovering-section-on-page footer {
+  display: none;
+}
+
+.qodef-uncovering-sections {
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.qodef-uncovering-sections ul, .qodef-uncovering-sections li {
+  margin: 0;
+  padding: 0;
+}
+
+.qodef-uncovering-sections.qodef-loaded {
+  opacity: 1;
+}
+
+.qodef-uncovering-sections .qodef-uss-item {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.qodef-uncovering-sections .qodef-uss-item .qodef-uss-image-holder {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 135%;
+  will-change: transform;
+  background-position: center;
+  background-size: cover;
+}
+
+.qodef-uncovering-sections .qodef-uss-item.qodef-uss-item-va-top .qodef-uss-item-inner {
+  vertical-align: top;
+}
+
+.qodef-uncovering-sections .qodef-uss-item.qodef-uss-item-va-bottom .qodef-uss-item-inner {
+  vertical-align: bottom;
+}
+
+.qodef-uncovering-sections .qodef-uss-item.qodef-uss-item-ha-left .qodef-uss-item-inner {
+  text-align: left;
+}
+
+.qodef-uncovering-sections .qodef-uss-item.qodef-uss-item-ha-center .qodef-uss-item-inner {
+  text-align: center;
+}
+
+.qodef-uncovering-sections .qodef-uss-item.qodef-uss-item-ha-right .qodef-uss-item-inner {
+  text-align: right;
+}
+
+.qodef-uncovering-sections .qodef-uss-item.qodef-uss-item-has-link .qodef-uss-item-inner a {
+  position: relative;
+}
+
+.qodef-uncovering-sections .qodef-uss-item .qodef-uss-item-outer {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.qodef-uncovering-sections .qodef-uss-item .qodef-uss-item-inner {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.qodef-uncovering-sections .qodef-uss-item .qodef-uss-item-inner a {
+  position: relative;
+}
+
+.qodef-uncovering-sections .qodef-uss-item .qodef-uss-item-link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.qodef-fss-shadow {
+  background: #323134;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  opacity: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: opacity;
+}
+
+/* ==========================================================================
+   Video Button shortcode start styles
+   ========================================================================== */
+.qodef-video-button-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.qodef-video-button-holder .qodef-video-button-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.qodef-video-button-holder .qodef-video-button-image img {
+  display: block;
+}
+
+.qodef-video-button-holder .qodef-video-button-play,
+.qodef-video-button-holder .qodef-video-button-play-image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.qodef-video-button-holder .qodef-video-button-play .qodef-video-button-play-inner,
+.qodef-video-button-holder .qodef-video-button-play-image .qodef-video-button-play-inner {
+  position: relative;
+  top: 50%;
+  left: 0;
+  display: block;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.qodef-video-button-holder .qodef-video-button-play .qodef-video-button-play-inner > span,
+.qodef-video-button-holder .qodef-video-button-play-image .qodef-video-button-play-inner > span {
+  -webkit-transition: all 0.35s cubic-bezier(0.38, 3, 0.57, 1.6);
+  -moz-transition: all 0.35s cubic-bezier(0.38, 3, 0.57, 1.6);
+  transition: all 0.35s cubic-bezier(0.38, 3, 0.57, 1.6);
+  will-change: transform;
+}
+
+.qodef-video-button-holder .qodef-video-button-play {
+  color: #000;
+  font-size: 106px;
+  line-height: 1;
+}
+
+.qodef-video-button-holder .qodef-video-button-play span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+.qodef-video-button-holder .qodef-video-button-play span:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-video-button-holder .qodef-video-button-play:hover .qodef-video-button-play-inner > span {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.qodef-video-button-holder .qodef-video-button-play-image.qodef-vb-has-hover-image:hover img:first-child {
+  opacity: 0;
+}
+
+.qodef-video-button-holder .qodef-video-button-play-image.qodef-vb-has-hover-image:hover img:nth-child(2) {
+  opacity: 1;
+}
+
+.qodef-video-button-holder .qodef-video-button-play-image img {
+  display: block;
+  margin: 0 auto;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.qodef-video-button-holder .qodef-video-button-play-image img:first-child {
+  position: relative;
+  opacity: 1;
+}
+
+.qodef-video-button-holder .qodef-video-button-play-image img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateZ(0);
+  -moz-transform: translateX(-50%) translateZ(0);
+  transform: translateX(-50%) translateZ(0);
+}
+
+.rev_slider_wrapper .qodef-video-button-holder .qodef-video-button-play-image img:nth-child(2) {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* ==========================================================================
+   Video Button shortcode end styles
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/select-core/assets/css/shortcodes-map.css.map */

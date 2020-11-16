@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Product Info shortcode responsive styles - begin
+   ========================================================================== */
+
+@include ipad-landscape{
+	.qodef-product-info {
+		.qodef-pi-text-holder {
+
+			@include phone-portrait{
+				.qodef-pi-text-right,
+				.qodef-pi-text-left{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   Product Info responsive styles - end
+   ========================================================================== */

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Search responsive styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+# Search template responsive style - begin
+========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-search-page-holder article .qodef-post-image {
+    width: 80px;
+  }
+  .qodef-search-page-holder article .qodef-post-title-area {
+    padding: 0 0 0 105px;
+    min-height: 80px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-search-page-holder article .qodef-post-image {
+    width: 60px;
+  }
+  .qodef-search-page-holder article .qodef-post-title-area {
+    padding: 0 0 0 80px;
+    min-height: 60px;
+  }
+}
+
+/* ==========================================================================
+# Search template responsive style - end
+========================================================================== */
+/* ==========================================================================
+# Fullscreen search responsive - start
+========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-fullscreen-search-holder .qodef-search-submit {
+    padding: 23px 0 20px;
+  }
+  .qodef-fullscreen-search-holder .qodef-search-field {
+    padding: 23px 21px 8px 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-fullscreen-search-holder .qodef-form-holder-inner {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-fullscreen-search-holder .qodef-search-submit {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-fullscreen-search-holder .qodef-form-holder-inner {
+    width: 80%;
+  }
+}
+
+/* ==========================================================================
+# Fullscreen search responsive - end
+========================================================================== */
+/* ==========================================================================
+   Search responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/search-map-responsive.css.map */

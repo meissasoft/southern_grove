@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Portfolio Single - Huge Images layout style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+
+    &.qodef-ps-huge-images-layout {
+        padding: 0 4%;
+        box-sizing: border-box;
+
+        .qodef-ps-info-holder {
+            padding-left: 18px;
+        }
+
+        .qodef-portfolio-single-likes {
+            display: inline-block;
+            padding-top: 31px;
+            a {
+                padding-right: 10px;
+                i {
+                    font-size: 13px;
+                }
+
+                span {
+                    font-size: 12px;
+                    color: $first-main-color;
+                    letter-spacing: 0.1em;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding-left: 11px;
+
+                    &:nth-child(3) {
+                        padding-left: 5px;
+
+                        &:after {
+                            content: "";
+                            border-right: 1px solid #d3d3d3;
+                            padding-left: 26px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .qodef-ps-image-holder {
+
+            .qodef-ps-image {
+                margin: 0 0 30px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .qodef-ps-content-item {
+            margin: 0 0 19px;
+
+            .qodef-ps-info-title {
+                color: #000;
+            }
+
+            p {
+                color: $default-text-color;
+                letter-spacing: 0;
+                font-weight: 300;
+                line-height: 31px;
+
+            }
+        }
+
+        .qodef-ps-info-item {
+
+            &:not(.qodef-ps-content-title) {
+                &:not(.qodef-ps-content-item){
+                    margin: 6px 0 2px;
+
+                    .qodef-ps-info-title {
+                        padding-right: 10px;
+                        color: #000;
+                    }
+
+
+                    p,a {
+                        display: inline-block;
+                        color: #b1b1b1;
+                        text-transform: capitalize;
+                    }
+
+                    a:hover{
+                        color: #000;
+                    }
+
+                    a:not(last-child):not(.qodef-share-link){
+                        &:after{
+                            content: ",";
+                        }
+                    }
+
+                }
+
+            }
+
+            &.qodef-ps-content-title{
+                margin: 0 0 9px;
+                text-transform: lowercase;
+            }
+
+
+            &.qodef-ps-custom-field {
+                margin-top: 5px;
+                margin-bottom: 3px;
+
+                .qodef-ps-info-title {
+                    padding-right: 10px;
+                    color: #000;
+                }
+
+                p {
+                    display: inline-block;
+                    color: #b1b1b1;
+                }
+
+            }
+
+            &.qodef-ps-social-share {
+                display: inline;
+                padding-left: 54px;
+
+                a{
+                    color: #929292;
+
+                    &:hover{
+                        color: #000;
+                    }
+                }
+
+                &:before {
+                    content: "share";
+                    font-size: 12px;
+                    color: $first-main-color;
+                    font-weight: 300;
+                    line-height: 25px;
+                    position: relative;
+                    bottom: 1px;
+                    padding-right: 15px;
+                }
+            }
+
+        }
+
+        .qodef-ps-social{
+            margin-top: 35px;
+        }
+
+        .qodef-ps-like{
+            display: inline;
+
+            a{
+                font-size: 13px;
+
+                span{
+                    font-size: 12px;
+                    color: $default-text-color;
+                }
+
+                &:hover{
+                    color: #000;
+                }
+
+                i{
+                    padding-right: 12px;
+                }
+            }
+        }
+
+        @include laptop-landscape {
+            padding: 0 40px;
+        }
+
+        @include ipad-portrait {
+            padding: 0 30px;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Huge Images layout style - end
+   ========================================================================== */

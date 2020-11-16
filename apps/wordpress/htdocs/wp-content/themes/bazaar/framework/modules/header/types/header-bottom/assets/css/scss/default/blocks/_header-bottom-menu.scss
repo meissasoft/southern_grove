@@ -1,0 +1,51 @@
+.qodef-header-bottom {
+    .qodef-menu-area {
+        .qodef-position-left-inner,
+        .qodef-position-right-inner {
+            height: 100%;
+        }
+        .qodef-bottom-menu-left-widget-holder {
+            @include qodefRelativeHolderLayout();
+        }
+    }
+    .qodef-vertical-menu-area {
+        position: fixed;
+        width: $vertical-menu-width;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        height: 100%;
+        z-index: 111;
+        -webkit-backface-visibility: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        @include qodefTransform(translate3d($vertical-menu-width,0,0));
+        @include qodefTransition(transform .6s cubic-bezier(.165,.84,.44,1));
+
+        .qodef-vertical-menu-area-inner{
+            position: relative;
+            height: 100%;
+        }
+    }
+
+    &.admin-bar .qodef-vertical-menu-area {
+        top: 33px;
+    }
+
+    .qodef-content {
+        @include qodefTransition(transform .6s cubic-bezier(.165,.84,.44,1));
+    }
+
+    .qodef-vertical-menu-area.opened {
+        @include qodefTransform(translate3d(0,0,0));
+        @include qodefBoxShadow(-1px 0 4px 0 rgba(0,0,0,.1));
+    }
+
+    &.qodef-header-bottom-opened {
+        .qodef-content {
+            @include qodefTransform(translate3d(-$vertical-menu-width,0,0));
+        }
+    }
+}

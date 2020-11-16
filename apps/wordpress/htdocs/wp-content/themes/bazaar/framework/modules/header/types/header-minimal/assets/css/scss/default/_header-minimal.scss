@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Header Minimal style - begin
+   ========================================================================== */
+
+.qodef-header-minimal {
+	
+    .qodef-page-header {
+	    
+	    .qodef-menu-area {
+		
+		    .qodef-position-right-inner {
+			    height: auto;
+		    }
+	    }
+	
+	    .qodef-position-left:before,
+	    .qodef-position-right:before {
+		    content: "";
+	    }
+	
+	    .qodef-sticky-header {
+		
+		    .qodef-position-left-inner {
+			    height: auto;
+		    }
+		
+		    .qodef-vertical-align-containers .qodef-position-right .qodef-position-right-inner {
+			    height: auto;
+		    }
+	    }
+    }
+}
+/* ==========================================================================
+   Header Minimal style - end
+   ========================================================================== */

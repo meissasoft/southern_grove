@@ -1,0 +1,85 @@
+/* Single posts navigation styles - begin
+    ====================================================================== */
+
+.qodef-blog-single-navigation {
+    position: relative;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+
+    .qodef-blog-single-navigation-inner {
+        padding: 78px 0 30px;
+    }
+
+    .qodef-blog-single-prev,
+    .qodef-blog-single-next {
+
+        color: $default-text-color;
+
+        .qodef-blog-single-nav-mark {
+            font-size: 48px;
+            line-height: inherit;
+            color: inherit;
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        .qodef-blog-single-nav-label {
+            color: inherit;
+        }
+
+        &:hover {
+            color: $first-main-color;
+        }
+    }
+
+    .qodef-blog-single-prev {
+        float: left;
+
+        .qodef-blog-single-nav-mark,
+        .qodef-blog-single-nav-label {
+            float: left;
+        }
+
+        .qodef-blog-single-nav-mark {
+            margin: 0 14px 0 0;
+        }
+    }
+
+    .qodef-blog-single-next {
+        float: right;
+
+        .qodef-blog-single-nav-mark,
+        .qodef-blog-single-nav-label {
+            float: right;
+        }
+
+        .qodef-blog-single-nav-mark {
+            margin: 0 0 0 14px;
+        }
+    }
+}
+
+.qodef-single-links-pages {
+    clear: both;
+    margin: 20px 0 5px;
+
+    .qodef-single-links-pages-inner {
+
+        > a,
+        > span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px 5px 0;
+        }
+    }
+}
+/* Single posts navigation styles - end
+    ====================================================================== */

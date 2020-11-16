@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Single Image shortcode style - begin
+   ========================================================================== */
+
+.qodef-single-image-holder {
+    @include qodefRelativeHolderLayout();
+
+	&.qodef-has-shadow {
+
+		.qodef-si-inner {
+			box-shadow: 6px 8px 20px 0 rgba(0, 0, 0, .3);
+		}
+	}
+	
+	.qodef-si-inner {
+		@include qodefRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-custom-link {
+		
+		.qodef-si-inner {
+			
+			a {
+				
+				&:hover {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+				
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include qodefTransition(opacity .2s ease-in-out);
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-lightbox {
+		
+		.qodef-si-inner {
+			
+			a {
+				
+				&:hover {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+				
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include qodefTransition(opacity .2s ease-in-out);
+				}
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-zoom {
+		
+		.qodef-si-inner {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include qodefTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				-webkit-transition: -webkit-transform .3s ease-in-out;
+				-moz-transition: -moz-transform .3s ease-in-out;
+				transition: transform .3s ease-in-out;
+				@include qodefTransform(scale(1));
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-grayscale {
+		
+		.qodef-si-inner {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include qodefTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+	
+	/***** Moving Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-moving {
+		
+		.qodef-si-inner {
+			overflow: hidden;
+			padding: 10% 0;
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-size: 120%;
+			@include qodefTransition(background .7s ease-out);
+			
+			&:hover {
+				background-position: 90% center;
+			}
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			img {
+				z-index: -1;
+				max-width: 80%;
+			}
+			
+			@include ipad-landscape {
+				padding: 0;
+				background: none;
+				
+				img {
+					z-index: inherit;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	
+	/***** Moving Behavior Style - end *****/
+}
+/* ==========================================================================
+   Single Image shortcode style - end
+   ========================================================================== */

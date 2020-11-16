@@ -1,0 +1,290 @@
+/* Woocommerce Product List Animated Shortcode - begin
+========================================================================== */
+
+.qodef-pla-holder {
+    @include qodefRelativeHolderLayout();
+    opacity:0;
+
+    .touch & {
+        opacity: 1;
+    }
+
+    .qodef-pla-item {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        width: 100%;
+        padding: 0;
+        z-index: 100;
+        text-align: center;
+        box-sizing: border-box;
+        @include qodefTransform(translate3d(0,200px,0));
+        will-change: transform;
+
+        .no-touch & {
+            &.qodef-pla-animated {
+                @include qodefTransform(translate3d(0,0,0));
+                -webkit-transition: -webkit-transform 2s cubic-bezier(0,0,0,1), opacity .6s;
+                transition: transform 2s cubic-bezier(0,0,0,1), opacity .6s;
+            }
+        }
+
+        &:hover {
+
+            .qodef-pla-price {
+                opacity: 0;
+                @include qodefTransform(translateX(100%));
+            }
+
+            .qodef-pla-add-to-cart {
+                opacity: 1;
+                @include qodefTransform(translateX(0));
+                @include qodefTransition(all .4s cubic-bezier(0, 0.95, 0.77, 1) .1s);
+            }
+        }
+
+        .touch & {
+            cursor: pointer;
+            @include qodefTransform(translate3d(0,0,0));
+            opacity:1;
+        }
+    }
+
+
+    &.qodef-pla-animation-disabled{
+        opacity: 1;
+        
+        .qodef-pla-item{
+            @include qodefTransform(translate3d(0, 0, 0));
+        }
+    }
+
+    $animated_list_columns: ('two', 'three', 'four', 'five', 'six');
+
+    @for $i from 0 to length($animated_list_columns) { 
+        &.qodef-#{nth($animated_list_columns,$i+1)}-columns {
+            $column_width: 100%/($i+2);
+
+            .qodef-pla-item {
+                width: $column_width;
+
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    &:nth-child(#{$i+2}n+1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+
+    .qodef-pla-inner {
+        margin: 25px 0 29px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+
+        .qodef-pla-image {
+            @include qodefRelativeHolderLayout();
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .qodef-pla-onsale,
+            .qodef-pla-out-of-stock,
+            .qodef-pla-new-product {
+                position: absolute;
+                display: block;
+                top: 0;        
+                width: auto;
+                height: 29px;
+                color: #fff;
+                font-size: 10px;
+                line-height: 29px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                padding: 0 20px;
+                margin: 0;
+                background-color: $default-heading-color;
+                text-align: center;
+                z-index: 2;
+                box-sizing: border-box;
+                @include qodefTransform(translateZ(0));
+
+            }
+
+            .qodef-pla-onsale {
+                left: 0;
+            }
+
+            .qodef-pla-out-of-stock,
+            .qodef-pla-new-product {
+                right: 0;
+            }
+        }
+            
+        .qodef-pla-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 10px 15px;
+            opacity: 0;
+            background-color: transparent;
+            box-sizing: border-box;
+            @include qodefTransition(opacity .2s ease-out, background-color .2s ease-out);
+        }
+
+        .qodef-pla-text-outer {
+            position: relative;
+            display: table;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        
+            .qodef-pla-text-inner {
+                position: relative;
+                display: table-cell;
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+
+                .button.added {
+                    display: none;
+                }
+            }
+        }
+
+        .qodef-pla-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .qodef-pla-text-wrapper {
+        @include qodefRelativeHolderLayout();
+        margin: 0 0 31px;
+        overflow: hidden;
+
+        .qodef-pla-title {
+            margin: 0;
+            text-transform: lowercase;
+        }
+
+        .qodef-pla-price-holder{
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 0 25px;
+            margin: auto;
+            min-width: 30%;
+        }
+
+        .qodef-pla-price {
+            opacity: 1;
+            font-size: 12px;
+            font-weight: 300;
+            color: #949494;
+            @include qodefTransform(translateX(0));
+            @include qodefTransition(all .3s);
+
+            * {
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            del {
+                color: $default-text-color;
+            }
+
+            ins {
+                text-decoration: none;
+            }
+        }
+
+        .qodef-pla-add-to-cart{
+            opacity: 0;
+            display: block;
+            width: 100%;
+            text-transform: lowercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            @include qodefTransform(translateX(-50%));
+            @include qodefTransition(all .4s cubic-bezier(0, 0.95, 0.77, 1));
+
+            a {
+                color: #949494;
+                white-space: nowrap;
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+                font-size: 12px;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #a19f9f;
+                }
+
+                &:after {
+                    content: '\e87a';
+                    padding-left: 10px;
+                    font-family: 'Linearicons-Free';
+                    position: relative;
+                    top: 1px;
+                }
+            }
+        }
+
+        .qodef-pla-rating-holder {
+            @include qodefRelativeHolderLayout();
+            line-height: 1;
+            margin: 10px 0 20px;
+        }
+
+        .qodef-pla-rating {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "ElegantIcons";
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: 3px;
+            color: $default-heading-color;                
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+
+            &:before {
+                content: "\e031\e031\e031\e031\e031";
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+
+                &:before {
+                    content: "\e033\e033\e033\e033\e033";
+                }
+            }
+        }
+    }
+}
+
+/* Woocommerce Product List Animated Shortcode - end
+========================================================================== */

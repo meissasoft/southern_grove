@@ -1,0 +1,271 @@
+/* ==========================================================================
+   Header responsive styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Header responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-paspartu-enabled .qodef-page-header .qodef-vertical-align-containers {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-drop-down .wide .second > .inner > ul {
+    width: 950px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-page-header {
+    display: none;
+  }
+  .qodef-drop-down .wide .second > .inner > ul {
+    width: 768px;
+  }
+}
+
+/* ==========================================================================
+   Header responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Fixed header responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .qodef-boxed .qodef-page-header .qodef-fixed-wrapper.fixed {
+    width: 1000px;
+  }
+}
+
+/* ==========================================================================
+   Fixed header responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Standard style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1300px) {
+  .qodef-header-standard .qodef-menu-area .qodef-grid {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Header Standard style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Sliding responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 1490px) and (max-width: 1650px) {
+  .qodef-header-vertical-sliding .qodef-grid,
+  .qodef-header-vertical-sliding .qodef-container-inner,
+  .qodef-header-vertical-sliding .qodef-grid-section .qodef-section-inner,
+  .qodef-header-vertical-sliding .qodef-slider .carousel-inner .qodef-slider-content-outer {
+    width: 1100px;
+  }
+}
+
+@media only screen and (min-width: 1314px) and (max-width: 1490px) {
+  .qodef-header-vertical-sliding .qodef-grid,
+  .qodef-header-vertical-sliding .qodef-container-inner,
+  .qodef-header-vertical-sliding .qodef-grid-section .qodef-section-inner,
+  .qodef-header-vertical-sliding .qodef-slider .carousel-inner .qodef-slider-content-outer {
+    width: 1035px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1314px) {
+  .qodef-header-vertical-sliding .qodef-grid,
+  .qodef-header-vertical-sliding .qodef-container-inner,
+  .qodef-header-vertical-sliding .qodef-grid-section .qodef-section-inner,
+  .qodef-header-vertical-sliding .qodef-slider .carousel-inner .qodef-slider-content-outer {
+    width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .qodef-header-vertical-sliding .qodef-404-page .qodef-content {
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-header-vertical-sliding .qodef-vertical-menu-area {
+    display: none;
+  }
+  .qodef-header-vertical-sliding .qodef-content,
+  .qodef-header-vertical-sliding footer {
+    padding-left: 0;
+  }
+  .qodef-header-vertical-sliding .carousel-inner {
+    left: 0 !important;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Header Vertical - Sliding responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 1025px) {
+  .qodef-header-vertical .qodef-404-page .qodef-content {
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .qodef-header-vertical .qodef-vertical-menu-area {
+    padding: 75px 35px 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-header-vertical .qodef-vertical-menu-area {
+    display: none;
+  }
+  .qodef-header-vertical .qodef-content,
+  .qodef-header-vertical footer {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 950px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 768px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 768px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .qodef-header-vertical .qodef-grid,
+  .qodef-header-vertical .qodef-container-inner,
+  .qodef-header-vertical .qodef-row-grid-section {
+    width: 90%;
+  }
+}
+
+/* ==========================================================================
+   Header Vertical responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Mobile header responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-mobile-header {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Mobile header responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Sticky header responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .qodef-boxed .qodef-page-header .qodef-sticky-header {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-boxed.qodef-sticky-up-mobile-header .mobile-header-appear .qodef-mobile-header-inner {
+    width: 818px;
+    left: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-boxed.qodef-sticky-up-mobile-header .mobile-header-appear .qodef-mobile-header-inner {
+    width: 650px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-boxed.qodef-sticky-up-mobile-header .mobile-header-appear .qodef-mobile-header-inner {
+    width: 470px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-boxed.qodef-sticky-up-mobile-header .mobile-header-appear .qodef-mobile-header-inner {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .qodef-boxed.qodef-sticky-up-mobile-header .mobile-header-appear .qodef-mobile-header-inner {
+    width: 92%;
+  }
+}
+
+/* ==========================================================================
+   Sticky header responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Top header responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-top-bar-in-grid-padding .qodef-top-bar .qodef-grid .qodef-vertical-align-containers {
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-top-bar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Top header responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/header-map-responsive.css.map */

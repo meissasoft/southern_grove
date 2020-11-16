@@ -1,0 +1,113 @@
+/* ==========================================================================
+   WooCommerce Cart page responsive styles - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+    .qodef-woocommerce-page.woocommerce-cart {
+        .woocommerce > form,
+        .cart-collaterals {
+            float: none;
+            width: 100%;
+        }
+    }
+}
+
+@include ipad-portrait {
+	
+	.qodef-woocommerce-page {
+		
+		table.cart {
+			
+			td.actions {
+				
+				.coupon {
+					
+					input[type="text"] {
+						width: 180px;
+						margin: 0 17px 0 0;
+						padding: 9px 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.qodef-woocommerce-page.woocommerce-cart {
+        .woocommerce > form table.cart {
+            tr.cart_item{
+                td.product-thumbnail,
+                td.product-price{
+                    display: none;
+                }
+
+                td.product-name{
+                    a{
+                        top: 2px;
+                        position: relative;
+                    }
+                }
+
+                .qodef-quantity-buttons{
+                    background-color: transparent;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 80px;
+                    height: 40px;
+                    line-height: 43px;
+
+                    .qodef-quantity-label{
+                        display: none;
+                    }
+                }
+
+                td.product-subtotal{
+                    line-height: 43px;
+                }
+            }
+
+            td.actions {
+                .coupon {
+                    float: none;
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .cart-collaterals {
+
+            tr {
+                display: inline-block;
+                width: 100%;
+
+                th {
+                    float: left;
+                }
+                td {
+                    float: right;
+                }
+
+                &.shipping {
+                    th, td {
+                        float: none;
+                        display: inline-block;
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .checkout-button{
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+	}
+}
+/* ==========================================================================
+   WooCommerce Cart page responsive styles - end
+   ========================================================================== */

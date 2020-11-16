@@ -1,0 +1,554 @@
+/*==========================================================================
+# Fullscreen menu style - begin
+========================================================================== */
+
+/* Fullscreen general style - begin
+========================================================================== */
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-fullscreen-menu-opener .qodef-fullscreen-image {
+    img {
+        &.qodef-fullscreen-image-dark{
+            opacity: 0;
+        }
+        &.qodef-fullscreen-image-light {
+            opacity: 1;
+        }
+    }
+}
+
+.qodef-fullscreen-menu-opener {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    .qodef-fullscreen-image {
+        position: relative;
+        display: block;
+        line-height: 1em;
+        vertical-align: middle;
+        height: 16px;
+
+        img {
+            height: 100%;
+            @include qodefTransition(opacity .2s ease);
+            &.qodef-fullscreen-image-light {
+                opacity: 0;
+                @include qodefTransform(translateY(-100%));
+            }
+        }
+    }
+
+    &.qodef-fm-opened {
+        &:after {
+            content: '\4d';
+            font-family: ElegantIcons;
+            font-size: 36px;
+            position: relative;
+            top: -4px;
+            right: -10px;
+        }
+    }
+}
+
+.qodef-fullscreen-menu-opened {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    
+    &.admin-bar {
+        top: 32px;
+        height: calc(100% - 32px);
+    }
+    
+    .qodef-top-bar {
+        visibility: hidden;
+    }
+
+    .qodef-page-header{
+        z-index: 111;
+    }
+
+    .qodef-fullscreen-menu-opener{
+        visibility: visible;
+        .qodef-fullscreen-image{
+            visibility: hidden;
+        }
+    }
+
+    .qodef-logo-wrapper{
+        visibility: hidden;
+    }
+
+    .qodef-fullscreen-menu-holder-outer {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+}
+
+.qodef-fullscreen-menu-holder-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden !important;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 110; /* this has to be between header z-index and content z-index */
+}
+
+
+.qodef-fullscreen-menu-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: table;
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+.qodef-fullscreen-menu-holder-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 100px 0;
+}
+
+.touch {
+
+    .qodef-fullscreen-menu-holder-outer {
+        display: none;
+    }
+
+    .qodef-fullscreen-menu-opened .qodef-fullscreen-menu-holder-outer {
+        display: block;
+    }
+}
+
+nav.qodef-fullscreen-menu {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    text-align: left;
+
+    ul {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            a {
+                position: relative;
+                display: inline-block;
+	            vertical-align: middle;
+                margin: 3px 0;
+	            font-size: 46px;
+                font-weight: 600;
+	            line-height: 1.46em;
+            }
+
+            ul {
+                padding: 13px 0 10px;
+
+                &.sub_menu {
+                    display: none;
+
+                    li{
+                        a{
+                            span{
+                                &:before{
+                                    height: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                li {
+                    &.current-menu-ancestor > a,
+                    &.current-menu-item > a {
+                        color: #dadada;
+                    }
+
+                    a{
+                        font-size: 20px;
+                        color: #949494;
+                        font-weight: 300;
+                    }
+
+
+                    ul {
+
+                        li {
+
+                            a {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > ul {
+        display: block;
+
+        > li {
+
+            > a {
+                color: #000;
+
+                > span {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    overflow: hidden;
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        height: 3px;
+                        background-color: rgba($first-main-color,.7);
+                        opacity: 0;
+                        @include qodefTransform(scaleX(0));
+                    }
+
+                    &:before {
+                        opacity: 1;
+                        left: 0;
+                        -webkit-transform-origin: 0% 50%;
+                        transform-origin: 0% 50%;
+                    }
+
+                    &:after {
+                        right: 0;
+                        -webkit-transform-origin: 100% 50%;
+                        transform-origin: 100% 50%;
+                        -webkit-transition: -webkit-transform .2s, opacity .0s .2s;
+                        transition: transform .2s, opacity .0s .2s;
+                    }
+                }
+            }
+
+            &:hover{
+                >a >span{
+                    &:before,
+                    &:after {
+                        opacity: 1;
+                        @include qodefTransform(scaleX(1));
+                    }
+
+                    &:before {
+                        opacity: 0;
+                        -webkit-transition: -webkit-transform .2s, opacity .0s .2s;
+                        transition: transform .2s, opacity .0s .2s;
+                    }
+
+                    &:after {
+                        -webkit-transition: -webkit-transform .0s .2s, opacity .0s .2s;
+                        transition: transform .0s .2s, opacity .0s .2s;
+                    }
+                }
+            }
+
+            &.qodef-active-item {
+                > a {
+                    color: #000;
+
+                    span{
+                        &:after {
+                            -webkit-transition: -webkit-transform .0s .2s, opacity .0s .2s;
+                            transition: transform .0s .2s, opacity .0s .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.qodef-fullscreen-below-menu-widget-holder {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qodef-fullscreen-above-menu-widget-holder {
+    text-align: center;
+}
+
+/* Fullscreen general style - end
+========================================================================== */
+
+/* Fullscreen fade animations general - begin
+========================================================================== */
+
+@-webkit-keyframes fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-moz-keyframes fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-webkit-keyframes fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+    100% {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@-moz-keyframes fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+    100% {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+    100% {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+.qodef-fade-push-text-right .qodef-fullscreen-menu-holder-outer,
+.qodef-fade-push-text-top .qodef-fullscreen-menu-holder-outer,
+.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden !important;
+    z-index: 110;
+    opacity: 0;
+}
+
+.qodef-fullscreen-fade-out .qodef-fullscreen-menu-holder-outer {
+    -webkit-animation: fade_out .25s linear both;
+    -moz-animation: fade_out .25s linear both;
+    animation: fade_out .25s linear both;
+}
+
+.qodef-fullscreen-menu-opened.qodef-fullscreen-fade-in .qodef-fullscreen-menu-holder-outer {
+    -webkit-animation: fade_in .25s linear both;
+    -moz-animation: fade_in .25s linear both;
+    animation: fade_in .25s linear both;
+}
+
+/* Fullscreen fade animations general - end
+========================================================================== */
+
+/* Fullscreen animation push text right - begin
+========================================================================== */
+
+@-webkit-keyframes push_text_right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes push_text_right {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes push_text_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.qodef-fullscreen-menu-opened.qodef-fade-push-text-right .qodef-fullscreen-menu-holder-outer nav > ul > li > a,
+.qodef-fullscreen-menu-opened.qodef-fade-push-text-right .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-below-menu-widget-holder > div,
+.qodef-fullscreen-menu-opened.qodef-fade-push-text-right .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-above-menu-widget-holder > div {
+    @include qodefAnimation(push_text_right .4s cubic-bezier(0.175, 0.885, 0.32, 1) both);
+}
+
+.qodef-fade-push-text-right.qodef-push-nav-right .qodef-fullscreen-menu-holder-outer nav,
+.qodef-fade-push-text-right.qodef-push-nav-right .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-below-menu-widget-holder,
+.qodef-fade-push-text-right.qodef-push-nav-right .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-above-menu-widget-holder {
+    @include qodefTransition(opacity .45s cubic-bezier(0, 0.95, 0.77, 1));
+    opacity:0;
+}
+
+/* Fullscreen animation push text right - end
+========================================================================== */
+
+/* Fullscreen animation push text top - begin
+========================================================================== */
+
+@-webkit-keyframes push_text_top {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes push_text_top {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes push_text_top {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.qodef-fullscreen-menu-opened.qodef-fade-push-text-top .qodef-fullscreen-menu-holder-outer nav > ul > li > a,
+.qodef-fullscreen-menu-opened.qodef-fade-push-text-top .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-below-menu-widget-holder > div,
+.qodef-fullscreen-menu-opened.qodef-fade-push-text-top .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-above-menu-widget-holder > div {
+    @include qodefAnimation(push_text_top .4s ease-out both .5s);
+}
+
+.qodef-fade-push-text-top.qodef-push-text-top .qodef-fullscreen-menu-holder-outer nav,
+.qodef-fade-push-text-top.qodef-push-text-top .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-below-menu-widget-holder,
+.qodef-fade-push-text-top.qodef-push-text-top .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-above-menu-widget-holder {
+    @include qodefTransform(translateY(-30px));
+    @include qodefTransition(all .75s ease-out);
+}
+
+/* Fullscreen animation push text top - end
+========================================================================== */
+
+/* Fullscreen animation fade text scaledown - begin
+========================================================================== */
+
+.qodef-fullscreen-menu-opened.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer nav,
+.qodef-fullscreen-menu-opened.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-below-menu-widget-holder,
+.qodef-fullscreen-menu-opened.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-above-menu-widget-holder {
+    opacity: 1;
+    @include qodefTransform(scale(1));
+    @include qodefTransition(all .25s linear 0.1s);
+}
+
+.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer nav,
+.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-below-menu-widget-holder,
+.qodef-fade-text-scaledown .qodef-fullscreen-menu-holder-outer .qodef-fullscreen-above-menu-widget-holder {
+    opacity: 0;
+    @include qodefTransform(scale(1.1));
+    @include qodefTransition(all .25s linear 0.1s);
+}
+
+/* Fullscreen animation fade text scaledown - end
+========================================================================== */
+
+/* ==========================================================================
+# Fullscreen menu style - end
+==========================================================================*/

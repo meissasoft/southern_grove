@@ -1,0 +1,188 @@
+.qodef-cards-gallery-holder {
+    padding: 10px 0px;
+
+    .qodef-cards-gallery {
+        width: 100%;
+        position: relative;
+    }
+
+    img {
+        position: relative;
+        display: block;
+        box-shadow: 0 0 15px 5px rgba(0,0,0,.05);
+    }
+
+    .fake_card {
+        position: relative;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .card {
+        box-sizing: border-box;
+        position: absolute;
+        @include qodefTransition(all .15s ease);
+
+        &.animating {
+            @include qodefTransition(all 1s cubic-bezier(.19,1,.22,1));
+            pointer-events:none;
+        }
+
+        &.animating-siblings {
+            @include qodefTransition(all .6s cubic-bezier(0,0,0,1));
+            pointer-events:none;
+        }
+    }
+
+    &.qodef-shuffled-left .card {
+        will-change:transform;
+        left:0;
+
+        &.out {
+            @include qodefTransform(translateX(-100%));
+        }
+
+        &:nth-last-child(6) {
+            @include qodefTransform(scale(.5) translateX(80%));
+        }
+
+        &:nth-last-child(5) {
+            @include qodefTransform(scale(.6) translateX(54%));
+        }
+
+        &:nth-last-child(4) {
+            @include qodefTransform(scale(.7) translateX(35%));
+        }
+
+        &:nth-last-child(3) {
+            @include qodefTransform(scale(.8) translateX(21%));
+        }
+
+        &:nth-last-child(2) {
+            @include qodefTransform(scale(.9) translateX(9.2%));
+        }
+
+        &:not(:last-of-type) {
+            cursor: pointer;
+        }
+
+        &:not(:last-of-type):not(.active):hover {
+            margin-left: 10px !important;
+        }
+    }
+
+    &.qodef-shuffled-right .card {
+        will-change:transform;
+        right:0;
+
+        &.out {
+            @include qodefTransform(translateX(100%));
+        }
+
+        &:nth-last-child(6) {
+            @include qodefTransform(scale(.5) translateX(-80%));
+        }
+
+        &:nth-last-child(5) {
+            @include qodefTransform(scale(.6) translateX(-54%));
+        }
+
+        &:nth-last-child(4) {
+            @include qodefTransform(scale(.7) translateX(-35%));
+        }
+
+        &:nth-last-child(3) {
+            @include qodefTransform(scale(.8) translateX(-21%));
+        }
+
+        &:nth-last-child(2) {
+            @include qodefTransform(scale(.9) translateX(-9.2%));
+        }
+
+        &:not(:last-of-type) {
+            cursor: pointer;
+        }
+
+        &:not(:last-of-type):not(.active):hover {
+            margin-right: 10px !important;
+        }
+    }
+
+    .no-touch &.qodef-bundle-animation {
+        img {
+            visibility: hidden;
+        }
+
+        &.qodef-shuffled-right.qodef-appeared {
+            @include keyframes(qodefCardAppearFromRight) {
+                0% {
+                    @include qodefTransform(translate3d(100%,0,0));
+                    opacity:0;
+                    visibility: visible;
+                }
+
+                30% {
+                    opacity:1;
+                    visibility: visible;
+                }
+
+                100% {
+                    visibility: visible;
+                    @include qodefTransform(translate3d(0,0,0));
+                }
+            }
+
+            img {
+                @include qodefAnimation(qodefCardAppearFromRight 1s cubic-bezier(.19,1,.22,1) forwards);
+            }
+
+            .card {
+                @for $i from 1 through 8 {
+                    &:nth-child(#{$i}) {
+                        img:not(.qodef-animation-done) {
+                            -webkit-animation-delay: $i * .2s;
+                            animation-delay: $i * .2s;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.qodef-shuffled-left.qodef-appeared {
+            @include keyframes(qodefCardAppearFromLeft) {
+                0% {
+                    visibility: visible;
+                    @include qodefTransform(translate3d(-100%,0,0));
+                    opacity:0;
+                }
+
+                30% {
+                    visibility: visible;
+                    opacity:1;
+                }
+
+                100% {
+                    visibility: visible;
+                    @include qodefTransform(translate3d(0,0,0));
+                }
+            }
+
+            img {
+                @include qodefAnimation(qodefCardAppearFromLeft 1s cubic-bezier(.19,1,.22,1) forwards);
+            }
+
+            .card {
+                @for $i from 1 through 8 {
+                    &:nth-child(#{$i}) {
+                        img:not(.qodef-animation-done) {
+                            -webkit-animation-delay: $i * .2s;
+                            animation-delay: $i * .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

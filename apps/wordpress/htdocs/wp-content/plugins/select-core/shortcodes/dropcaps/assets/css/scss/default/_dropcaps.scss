@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Dropcaps shortcode style - begin
+   ========================================================================== */
+
+.qodef-dropcaps {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    line-height: 42px;
+    font-size: 42px;
+    color: #999;
+    font-weight: 300;
+    text-align: center;
+    margin: 6px 14px 0 8px;
+
+    &.qodef-square {
+        height: 35px;
+        width: 35px;
+        font-size: 22px;
+        line-height: 35px;
+        font-weight: 600;
+        color: #fff;
+        background-color: $default-heading-color;
+        margin: 8px 11px 0 2px;
+        box-sizing: border-box;
+    }
+
+    &.qodef-circle {
+        @extend .qodef-square;
+        border-radius: 3em;
+        margin: 8px 11px 0 2px;
+    }
+}
+/* ==========================================================================
+   Dropcaps shortcode style - end
+   ========================================================================== */

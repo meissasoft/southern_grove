@@ -1,0 +1,203 @@
+// widgets spacing
+$widget-bottom-margin: 45px;
+$widget-bottom-padding: 15px;
+$widget-inner-padding: 15px;
+
+// widget color
+$widget-background-color: #fff;
+
+// list items dimensions
+$widget-list-item-height: 18px;
+$widget-list-item-padding: 15px;
+
+// list items color
+$widget-list-item-background-color: #ffffff;
+
+// list items border
+$widget-list-item-border-color: $default-border-color;
+$widget-list-item-border-width: 1px;
+$widget-list-item-border-style: solid;
+
+// text
+$widget-text-color: inherit;
+$widget-heading-color: #000;
+
+// links
+$widget-link-color: $first-main-color;
+$widget-link-hover-color: #000;
+
+// specific widgets
+$widget-search-form-height: 52px;
+$widget-tag-cloud-height: 30px;
+
+aside.qodef-sidebar,
+.wpb_widgetised_column {
+    @import 'widgets/default-wordpress-widgets-flat';
+
+    position: relative;
+    z-index: 11;
+    margin: 0 0 60px;
+
+    div.widget {
+        margin-bottom: 28px;
+
+        ul {
+            margin-top: -2px;
+            li {
+                padding: 4px 0;
+            }
+        }
+
+        &.widget_search {
+            div.input-holder {
+                border-color: #d3d3d3;
+                input {
+                    color: #b5b5b5;
+                    font-size: 14px;
+                    height: 43px;
+                    line-height: calc(43px - 2px);
+                }
+
+                button {
+                    height: 43px;
+                    line-height: calc(43px - 2px);
+                    color: #b5b5b5;
+                    font-size: 16px;
+                    padding: 0 6px;
+                }
+            }
+        }
+
+        &.qodef-search-post-type-widget {
+            div.qodef-search-post-type {
+                border-color: #d3d3d3;
+                input {
+                    color: #b5b5b5;
+                    font-size: 14px;
+                    height: 43px;
+                    line-height: calc(43px - 2px);
+                }
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .textwidget p {
+            margin-top: 13px;
+        }
+
+        color: $default-text-color;
+
+        &:first-child{
+            .qodef-widget-title-holder{
+                .qodef-widget-title{
+                    margin-top: 0;
+                    line-height: 1;
+                }
+            }
+        }
+
+        &:last-child {
+            margin: 0 !important;
+        }
+
+        &.widget_nav_menu {
+            padding-top: 16px;
+
+            .menu {
+                > li{
+                    padding: 0;
+
+                    > a{
+                        text-transform: none;
+                        display: block;
+                        padding: 1px 0 9px;
+
+                        &:after{
+                            display: none;
+                        }
+
+
+
+                        &:hover {
+                            padding-left: 0;
+
+                            &:after {
+                                left: auto;
+                            }
+                        }
+                    }
+
+                    &.menu-item-has-children{
+                        > a:after {
+                            display: block;
+                            font-family: "ElegantIcons";
+                            content: "\43";
+                            left: auto;
+                            right: 0;
+                            top: 50%;
+                            @include qodefTransform(translateY(-50%));
+                        }
+                    }
+                }
+            }
+
+            .sub-menu {
+                display: none;
+                border: 0;
+                margin: 18px 0 16px;
+            }
+
+            .current-menu-ancestor > .sub-menu,
+            .current-menu-parent > .sub-menu {
+                display: block;
+            }
+        }
+    }
+}
+
+.page {
+    &:not(.page-template-blog-standard) {
+        aside.qodef-sidebar {
+            div.widget {
+                &.widget_nav_menu {
+                    .menu {
+                        > li {
+                            > a {
+                                color: #323232;
+                                text-transform: uppercase;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.qodef-woocommerce-page{
+    aside.qodef-sidebar{
+        .widget{
+            &:first-child{
+                .qodef-widget-title{
+                    margin-top: 9px;
+                }
+            }
+        }
+    }
+
+    &.archive{
+        aside.qodef-sidebar{
+            .widget{
+                &:first-child{
+                    .qodef-widget-title{
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

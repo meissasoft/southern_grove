@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+	&.qodef-pl-standard-shader {
+		&.qodef-pl-shadow-around-item {
+			.qodef-pl-item-inner {
+				-webkit-box-shadow: 5px 5px 20px -2px rgba(0,0,0,.1);
+				-moz-box-shadow: 5px 5px 20px -2px rgba(0,0,0,.1);
+				box-shadow: 5px 5px 20px -2px rgba(0,0,0,.1);
+			}
+		}
+
+		article {
+			.qodef-pli-image {
+				overflow: hidden;
+
+				img {
+					@include qodefTransition(all .4s);
+				}
+
+				&:after {
+					@include qodefAbsoluteHolderLayout();
+					content: '';
+					z-index: 1;
+					background-color: rgba(0,0,0, 0.6);
+					opacity: 0;
+					@include qodefTransition(opacity .6s cubic-bezier(.12,.68,.43,.95));
+				}
+			}
+
+			.qodef-pli-link {
+				z-index: 2;
+			}
+
+			&:hover {
+				.qodef-pli-image {
+					img {
+						@include qodefTransform(scale(1.05));
+					}
+
+					&:after,
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.qodef-pli-text-holder {
+			@include qodefRelativeHolderLayout();
+			margin: 35px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - end
+   ========================================================================== */
