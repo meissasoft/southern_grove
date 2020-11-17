@@ -1,0 +1,220 @@
+/*
+Theme Name: Business Space
+Template: agency-starter
+Version: 1.0.4
+Requires PHP: 5.6
+Tested up to: 5.5.0
+Author: wpbusinessthemes
+Author URI: https://wpfreetheme.space/
+Description: Business Space is Responsice and fully customizable theme, which You can use to develop range of various websites with WordPress. The theme well suited for architecture, interior designers, business, consultant, finance, corporate, freelancer, agency, business promotion, electrician, industries, education, SEO, construction, fashion, eCommerce, online shop, health & medical, Beauty & spa salons, wedding, photography, gym, lawyer, restaurant, hotel, blog, magazine, travel agency and many other websites. The theme uses bootstrap framework and responsive design will render very well on any viewing devices. You can use header image, header Add, header footer styles and content customization, WooCommerce supported header and hero content to build your site in a snap. More details, see: https://wpfreetheme.space/product/agency-starter-theme/
+Tags: one-column,two-columns,left-sidebar,right-sidebar,custom-background,custom-colors,custom-header,custom-menu,featured-images,flexible-header,microformats,post-formats,rtl-language-support,sticky-post,threaded-comments,translation-ready,blog,e-commerce,theme-options
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:business-space
+*/
+
+/* 
+ * YITH button 
+ */
+.woocommerce a.button.yith-wcqv-button {
+	color:#1fb5ff;
+	background-color: transparent;
+	padding: 5px;
+	font-weight:400;
+}
+
+.woocommerce ul.products a.compare {
+	text-decoration: initial;
+	box-shadow:initial;
+}
+
+.woocommerce ul.products a.added_to_cart {
+	text-decoration: initial;
+	box-shadow:initial;
+}
+.woocommerce a.button.yith-wcqv-button:hover,
+.woocommerce a.button.yith-wcqv-button:focus,
+.woocommerce ul.products a.compare:hover,
+.woocommerce ul.products a.compare:focus,
+.woocommerce ul.products a.added_to_cart:focus,
+.woocommerce ul.products a.added_to_cart:hover {
+	text-decoration: underline;
+	color:#1fb5ff;
+}
+
+.center-text {
+	text-align:center;
+}
+
+.box-layout-style #top-banner img {
+	width:100%;
+}
+
+.top-banner {
+	margin-bottom:10px;
+}
+
+.menu-social-container {
+    display: flex;
+    justify-content: center;
+}
+
+.social-navigation {
+    float: initial;
+}
+
+.site-footer {
+    padding: 1em 0 1em;
+}
+
+.site-footer .social-navigation {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.site-header .contact-info .fa {
+    font-size: 1.2em;
+    vertical-align: middle;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    min-width: 32px;
+    margin: 0px;
+    text-align: center;
+}
+
+.error-404.not-found {
+	text-align:center;
+}
+
+#secondary .widget {
+   box-shadow: 1px 3px 15px #ececec;
+}
+
+#featured_slider .carousel-navigation .carousel-next {
+    right: 24px;
+}
+
+
+#featured_slider .carousel-navigation a {
+	background-color: #eeecec5e;
+    border-radius: 24px;
+}
+
+.site-header .contact-ribbon {
+    min-height: 34px;
+}
+
+/* shape devider */
+.custom-shape-divider-bottom-1598097848 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1598097848 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 55px;
+}
+
+.custom-shape-divider-bottom-1598097848 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.hero-callout .call-to-action {
+    border-radius: 24px;
+}
+.hero-callout .call-to-action:hover {
+    background-color: #1fb5ff;
+	border: 1px solid #1fb5ff;
+	color:#fff;
+}
+/*--------------------------------------------------
+=>> Theme Page Header Area
+--------------------------------------------------*/
+
+.theme-page-header-area { 
+	position: relative; 
+	padding: 4rem 0; 
+	width: 100%; 
+	height: 100%; 
+}
+.theme-page-header-area:after {
+	background: url("img/shadow.png") no-repeat;
+    z-index: 1;
+    background-position: center bottom;
+    content: '';
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    right: 0;
+    height: 31px;
+}
+.theme-page-header-area {
+    padding: 4rem 0 7rem 0;
+}
+.theme-page-header-area .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+#masthead .overlay {
+	background-color: rgba(0, 0, 0, 0.60);
+}
+
+.page-header-title { position: relative; word-wrap: break-word; }
+.page-header-title h1 { font-size: 3.2rem; margin: 0; }
+
+
+/*--------------------------------------------------
+=>> Theme Breadcrumbs Area
+--------------------------------------------------*/
+
+.page-breadcrumb { 
+	list-style: none; 
+	margin: 0; 
+	padding: 0.825rem 0 0; 
+	font-weight: 600;
+}
+.page-breadcrumb.text-right {
+	padding-top: 0.713rem;
+	padding-bottom: 0.713rem;
+}
+.page-breadcrumb > li { 
+	display: inline-block; 
+}
+.page-breadcrumb > li + li:before {  
+	font-family: fontAwesome; 
+	content: "\f105"; 
+	padding: 0 0.625rem 0 0.625rem;
+    font-weight: 600;
+}
+.page-breadcrumb > li a {  }
+.page-breadcrumb > li a:hover,
+.page-breadcrumb > li.active { 
+	
+}
+@media (max-width: 768px) {
+	.page-header-title, 
+	.page-breadcrumb.text-right {
+		text-align: center !important;
+	}		
+}
+
+.cart-contents-count span {
+    left: 19px;
+}
+
+.post {
+    box-shadow: 1px 3px 15px #ececec;
+}

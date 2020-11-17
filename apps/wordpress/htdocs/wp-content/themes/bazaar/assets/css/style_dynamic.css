@@ -43,6 +43,9 @@ nav.qodef-fullscreen-menu ul li ul li ul li a:hover, nav.qodef-fullscreen-menu u
 /* generated in C:\Bitnami\wordpress-5.5.3-0\apps\wordpress\htdocs\wp-content\themes\bazaar\framework\modules\header\types\top-header\admin\custom-styles\top-header-custom-styles.php bazaar_qodef_header_top_bar_styles function */
 .qodef-top-bar-background { height: 91px;}
 
+/* generated in C:\Bitnami\wordpress-5.5.3-0\apps\wordpress\htdocs\wp-content\themes\bazaar\framework\modules\header\admin\custom-styles\header-custom-styles.php bazaar_qodef_header_menu_area_styles function */
+.qodef-page-header .qodef-menu-area { height: 0px !important;}
+
 /* generated in C:\Bitnami\wordpress-5.5.3-0\apps\wordpress\htdocs\wp-content\themes\bazaar\framework\modules\header\admin\custom-styles\header-custom-styles.php bazaar_qodef_main_menu_styles function */
 .qodef-main-menu > ul > li > a { color: #98805b;font-family: Playfair Display SC;font-size: 22px;line-height: 40px;}
 
